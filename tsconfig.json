@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "@/types/*": [
+        "./src/types/*",
+        "./src/types/index"
+      ],
+      "@/api/*": [
+        "./src/api/*",
+        "./src/api/index"
+      ]
+    },
+    "removeComments": true
+  },
+  "include": [
+    "src"
+  ]
+}

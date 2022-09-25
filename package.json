@@ -1,0 +1,40 @@
+{
+  "name": "jsx-to-md",
+  "version": "0.0.0",
+  "private": false,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "lint-code": "npx lint-staged",
+    "lint-msg": "npx commitlint --edit",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access=public --registry https://registry.npmjs.org"
+  },
+  "keywords": [
+    "md",
+    "markdown",
+    "jsx"
+  ],
+  "author": "Eyelly Wu",
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix -f table"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@eyelly/prettier-config": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-formatter-table": "^7.32.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "package.json": "^2.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  }
+}
