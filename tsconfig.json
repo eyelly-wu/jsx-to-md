@@ -1,20 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "ESNext",
+    "module": "CommonJS",
     "target": "ESNext",
-    "moduleResolution": "node",
-    "paths": {
-      "@/types/*": [
-        "./src/types/*",
-        "./src/types/index"
-      ],
-      "@/api/*": [
-        "./src/api/*",
-        "./src/api/index"
-      ]
-    },
-    "removeComments": true
+    "moduleResolution": "Node",
+    "removeComments": true,
+    "jsx": "react",
+    "outDir": "dist",
+    "declaration": true,
+    "strictBindCallApply": true,
   },
   "include": [
     "src"

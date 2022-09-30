@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": false,
   "description": "",
-  "main": "index.js",
+  "main": "./dist/lib/index.js",
   "scripts": {
     "prepare": "husky install",
     "lint-code": "npx lint-staged",
     "lint-msg": "npx commitlint --edit",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm publish --access=public --registry https://registry.npmjs.org"
+    "test": "vitest --ui",
+    "publish": "npm publish --access=public --registry https://registry.npmjs.org",
+    "dev": "tsc --watch"
   },
   "keywords": [
     "md",
@@ -25,16 +26,21 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@eyelly/prettier-config": "^1.0.0",
+    "@types/node": "^18.7.23",
+    "@types/react": "^18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
+    "@vitest/coverage-istanbul": "^0.23.4",
+    "@vitest/ui": "^0.23.4",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-formatter-table": "^7.32.1",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "package.json": "^2.0.1",
     "prettier": "^2.7.1",
-    "typescript": "^4.8.3"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3",
+    "vitest": "^0.23.4"
   }
 }
