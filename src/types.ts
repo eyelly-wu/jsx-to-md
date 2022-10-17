@@ -3,3 +3,9 @@ export type Element = {
   props: null | Record<string, any>
   children?: Array<JSX.Element>
 }
+
+export type Config = {
+  entry: string
+  output: string
+  params: Record<string, unknown>
+}
