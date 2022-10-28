@@ -21,12 +21,14 @@ specifiers:
   shelljs: ^0.8.5
   ts-node: ^10.9.1
   ts-node-dev: ^2.0.0
+  tsconfig-paths: ^4.1.0
   typescript: ^4.8.3
   vitest: ^0.23.4
 
 dependencies:
   shelljs: registry.npmmirror.com/shelljs/0.8.5
   ts-node-dev: registry.npmmirror.com/ts-node-dev/2.0.0_i7crlymf22c7hnawxb4tbubvdq
+  tsconfig-paths: registry.npmmirror.com/tsconfig-paths/4.1.0
 
 devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.1.2
@@ -2694,7 +2696,6 @@ packages:
     version: 2.2.1
     engines: {node: '>=6'}
     hasBin: true
-    dev: true
 
   registry.npmmirror.com/jsonfile/6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jsonfile/-/jsonfile-6.1.0.tgz}
@@ -4006,6 +4007,17 @@ packages:
       v8-compile-cache-lib: registry.npmmirror.com/v8-compile-cache-lib/3.0.1
       yn: registry.npmmirror.com/yn/3.1.1
     dev: true
+
+  registry.npmmirror.com/tsconfig-paths/4.1.0:
+    resolution: {integrity: sha512-AHx4Euop/dXFC+Vx589alFba8QItjF+8hf8LtmuiCwHyI4rHXQtOOENaM8kvYf5fR0dRChy3wzWIZ9WbB7FWow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsconfig-paths/-/tsconfig-paths-4.1.0.tgz}
+    name: tsconfig-paths
+    version: 4.1.0
+    engines: {node: '>=6'}
+    dependencies:
+      json5: registry.npmmirror.com/json5/2.2.1
+      minimist: registry.npmmirror.com/minimist/1.2.6
+      strip-bom: registry.npmmirror.com/strip-bom/3.0.0
+    dev: false
 
   registry.npmmirror.com/tsconfig/7.0.0:
     resolution: {integrity: sha512-vZXmzPrL+EmC4T/4rVlT2jNVMWCi/O4DIiSj3UHg1OE5kCKbk4mfrXc6dZksLgRM/TZlKnousKH9bbTazUWRRw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tsconfig/-/tsconfig-7.0.0.tgz}

@@ -12,8 +12,33 @@ switch (true) {
     break
   case params.includes('run'):
     {
+      const workingDir = process.cwd()
       const runScriptPath = join(__dirname, './run.tsx')
+      const sourceTsConfigPath = join(workingDir, 'tsconfig.json')
+      const targetTsConfigPath = join(__dirname, 'tsconfig.json')
       const config = getConfig()
+
+      try {
+        const tsConfig = require(sourceTsConfigPath)
+
+        tsConfig.compilerOptions.baseUrl = workingDir
+
+        if (Array.isArray(tsConfig.include) && tsConfig.include.length > 0) {
+          tsConfig.include = tsConfig.include.map((item) => {
+            return workingDir + '/' + item
+          })
+        }
+
+        tsConfig['ts-node'] = {
+          require: ['tsconfig-paths/register'],
+        }
+
+        writeFileSync(targetTsConfigPath, JSON.stringify(tsConfig), {
+          encoding: 'utf8',
+        })
+      } catch (error) {
+        console.log(error)
+      }
 
       if (config.length == 0) {
         console.log('no config')
@@ -26,30 +51,26 @@ switch (true) {
 
         const runScipt = `
 import { writeFileSync } from 'node:fs'
-// const fs = require('fs')
-// const { writeFileSync } = fs
 import { join } from 'node:path'
-// const path = require('path')
-// const { join } = path
-// const Doc = require('${entry}')
 import Doc from '${entry}'
 import React, { render } from '../lib/'
-// const React = require('../lib/')
-// const { render } = React
 
 const res = render(<Doc {...(${paramsStr}) as any}/>)
 
 writeFileSync('${output}', res, {
   encoding: 'utf8',
 })
-        `
-
+`
         // Generate temp script file
         writeFileSync(runScriptPath, runScipt, {
           encoding: 'utf8',
         })
 
-        exec('npx ts-node-dev --respawn ' + runScriptPath)
+        process.chdir(join(__dirname))
+
+        const command = `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${runScriptPath}`
+
+        exec(command)
       })
     }
     break
