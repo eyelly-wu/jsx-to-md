@@ -11,9 +11,9 @@ function Code(props: CodeBlockProps) {
   if (isInline) return <>{`\`${children}\``}</>
   return (
     <>
-      {`\`\`\`${langType}\n`}
+      {`\n\`\`\`${langType}\n`}
       <>{{ children }}</>
-      {`\n\`\`\``}
+      {`\n\`\`\`\n`}
     </>
   )
 }

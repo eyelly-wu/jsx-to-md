@@ -155,12 +155,12 @@ foo()`}
         </>,
       )
 
-      const expectRes = `\`\`\`Java
+      const expectRes = `\n\`\`\`Java
 function Foo(){
 }
 
 foo()
-\`\`\``
+\`\`\`\n`
       console.log(res)
       expect(res).toBe(expectRes)
     })
