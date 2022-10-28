@@ -1,5 +1,5 @@
 export type Element = {
-  type: (props: any) => JSX.Element
+  type: ((props: any) => JSX.Element) | string
   props: null | Record<string, any>
   children?: Array<JSX.Element>
 }

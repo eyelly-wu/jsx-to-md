@@ -9,9 +9,10 @@ function Header({ level, children }: HeaderProps) {
   return <>{`\n${Array(level).fill('#').join('')} ${children}\n`}</>
 }
 
-const hn = (level: HeaderProps['level'], props: { children: string }) => (
-  <Header level={level} {...props} />
-)
+const hn = (
+  level: HeaderProps['level'],
+  props: Pick<HeaderProps, 'children'>,
+) => <Header level={level} {...props} />
 
 export const H1 = hn.bind(null, 1)
 
