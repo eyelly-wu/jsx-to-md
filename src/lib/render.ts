@@ -1,7 +1,9 @@
 import { Element } from '../types'
 
+const noEndNodes = ['br']
+
 function getChildren(children: JSX.Element[]) {
-  const res = children.reduce((res, child) => {
+  const res = children?.reduce?.((res, child) => {
     if (Array.isArray(child)) {
       res.push(...child)
     } else {
@@ -11,6 +13,59 @@ function getChildren(children: JSX.Element[]) {
   }, [])
 
   return res
+}
+
+function renderHtmlNode(
+  type: string,
+  props: Record<string, unknown> = {},
+  children: any[],
+) {
+  const propsStr = Object.entries(props || {}).reduce(
+    (res, [name, value], index) => {
+      if (index == 0) {
+        res += ' '
+      }
+      switch (name) {
+        case 'style':
+          // eslint-disable-next-line no-case-declarations
+          const styleStr = Object.entries(value).reduce(
+            (styleRes, [styleName, styleValue]) => {
+              styleName = styleName
+                .replace(/(?<=[a-z])(?=[A-Z])/g, '-')
+                .toLowerCase()
+
+              styleValue =
+                typeof styleValue === 'number' ? styleValue + 'px' : styleValue
+
+              styleRes += `${styleName}: ${styleValue};`
+
+              return styleRes
+            },
+            '',
+          )
+          value = styleStr
+        // eslint-disable-next-line no-fallthrough
+        default:
+          res += `${name}="${value}" `
+          break
+      }
+      return res
+    },
+    '',
+  )
+
+  const preffix = `<${type}${propsStr}>`
+  const suffix = `</${type}>`
+  const childrenStr = children.reduce((res, item) => {
+    res += renderImpl(item)
+    return res
+  }, '')
+
+  if (noEndNodes.includes(type)) {
+    return preffix.replace('>', '/>')
+  }
+
+  return `${preffix}\n${childrenStr}\n${suffix}`
 }
 
 function renderImpl(
@@ -25,7 +80,7 @@ function renderImpl(
   const { ref = { skipRenderChildren: false } } = params || {}
 
   if (!element) return ''
-  if (typeof element === 'string') return element
+  if (['string', 'number'].includes(typeof element)) return element + ''
   if (typeof element === 'object' && element == null) return ''
 
   let res = ''
@@ -35,6 +90,10 @@ function renderImpl(
     isRenderChildFromProp ? props.children : children,
   )
 
+  if (typeof element.type === 'string') {
+    return renderHtmlNode(type as string, props, children)
+  }
+
   ref.skipRenderChildren = isRenderChildFromProp
 
   const currentParams = {
@@ -43,8 +102,7 @@ function renderImpl(
     },
   }
 
-  const typeOfType = typeof type
-  if (typeOfType === 'function') {
+  if (typeof type === 'function') {
     const renderRes = type({
       ...(props || {}),
       children: currentChildren,
