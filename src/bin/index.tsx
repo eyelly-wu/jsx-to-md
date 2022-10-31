@@ -13,7 +13,6 @@ switch (true) {
   case params.includes('run'):
     {
       const workingDir = process.cwd()
-      const runScriptPath = join(__dirname, './run.tsx')
       const sourceTsConfigPath = join(workingDir, 'tsconfig.json')
       const targetTsConfigPath = join(__dirname, 'tsconfig.json')
       const config = getConfig()
@@ -45,9 +44,12 @@ switch (true) {
         break
       }
 
-      config.forEach((configItem) => {
+      process.chdir(join(__dirname))
+
+      const commands = config.reduce((res, configItem, index) => {
         const { entry, output, params = {} } = configItem
         const paramsStr = JSON.stringify(params)
+        const runScriptPath = join(__dirname, `./run${index}.tsx`)
 
         const runScipt = `
 import { writeFileSync } from 'node:fs'
@@ -66,12 +68,12 @@ writeFileSync('${output}', res, {
           encoding: 'utf8',
         })
 
-        process.chdir(join(__dirname))
-
         const command = `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${runScriptPath}`
 
-        exec(command)
-      })
+        res.push(command)
+        return res
+      }, [])
+      exec(commands.join(' & '))
     }
     break
   default:
