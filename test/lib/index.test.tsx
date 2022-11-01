@@ -371,7 +371,7 @@ foo()
         columns.forEach(({ fieldName, title, align = 'left' }, i) => {
           const isLastColumn = columns.length - 1 == i
           if (dataI == 0) {
-            _title += getItem(title, isLastColumn)
+            _title += (i == 0 ? '\n' : '') + getItem(title, isLastColumn)
             _align += getItem(alignMarkMap[align], isLastColumn)
           }
           if (isLastColumn) {

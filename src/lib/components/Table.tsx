@@ -29,7 +29,7 @@ function Header({ columns }: Pick<TableProps, 'columns'>) {
       align: [],
     },
   )
-  return <>{`|${title.join('|')}|\n|${align.join('|')}|\n`}</>
+  return <>{`\n|${title.join('|')}|\n|${align.join('|')}|\n`}</>
 }
 
 function Body({ columns, data }: TableProps) {
