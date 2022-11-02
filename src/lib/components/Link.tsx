@@ -2,11 +2,10 @@ import React from '../index'
 
 export interface LinkProps {
   href: string
-  title: string | JSX.Element
-  children?: unknown
+  children: unknown
 }
 
-function LinkImpl({ href, children }: Omit<LinkProps, 'title'>) {
+function LinkImpl({ href, children }: LinkProps) {
   return (
     <>
       [<>{children}</>]{`(${href})`}
@@ -14,13 +13,6 @@ function LinkImpl({ href, children }: Omit<LinkProps, 'title'>) {
   )
 }
 
-export default function Link({ href, title, children }: LinkProps) {
-  return (
-    <LinkImpl
-      href={href}
-      children={
-        Array.isArray(children) && children.length > 0 ? children : [title]
-      }
-    />
-  )
+export default function Link(props: LinkProps) {
+  return <LinkImpl {...props} />
 }

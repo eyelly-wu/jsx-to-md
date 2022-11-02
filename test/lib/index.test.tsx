@@ -207,7 +207,7 @@ foo()
     it('Single', () => {
       const res = render(
         <>
-          <Link href={url} title={label} />
+          <Link href={url}>{label}</Link>
         </>,
       )
 
@@ -220,7 +220,7 @@ foo()
           {Array(10)
             .fill(0)
             .map(() => (
-              <Link href={url} title={label} />
+              <Link href={url}>{label}</Link>
             ))}
         </>,
       )
