@@ -10,7 +10,8 @@
     "lint-msg": "npx commitlint --edit",
     "test": "vitest --ui",
     "publish": "npm publish --access=public --registry https://registry.npmjs.org",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "coverage": "vitest --coverage"
   },
   "bin": {
     "jtm": "./dist/bin/index.js"

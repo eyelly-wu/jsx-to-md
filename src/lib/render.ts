@@ -1,6 +1,21 @@
 import { Element } from '../types'
 
-const noEndNodes = ['br']
+const blockNodes = [
+  'div',
+  'p',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'table',
+  'tbody',
+  'tr',
+  'th',
+  'td',
+]
+const noEndNodes = ['br', 'input', 'img', 'hr', 'meta']
 
 function getChildren(children: JSX.Element[]) {
   const res = children?.reduce?.((res, child) => {
@@ -19,6 +34,7 @@ function renderHtmlNode(
   type: string,
   props: Record<string, unknown> = {},
   children: any[],
+  htmlLevel: number,
 ) {
   const propsStr = Object.entries(props || {}).reduce(
     (res, [name, value], index) => {
@@ -46,7 +62,7 @@ function renderHtmlNode(
           value = styleStr
         // eslint-disable-next-line no-fallthrough
         default:
-          res += `${name}="${value}" `
+          res += `${name}="${value}"`
           break
       }
       return res
@@ -56,28 +72,56 @@ function renderHtmlNode(
 
   const preffix = `<${type}${propsStr}>`
   const suffix = `</${type}>`
-  const childrenStr = children.reduce((res, item) => {
-    res += renderImpl(item)
+  const preffixSpace = ' '.repeat(htmlLevel * 2)
+  const suffixsSpace = ' '.repeat((htmlLevel - 1) * 2)
+  const childrenStr = children.reduce((res, item, index) => {
+    let extra = ''
+    if (
+      typeof item.type === 'string' &&
+      blockNodes.includes(item.type) &&
+      index > 0
+    ) {
+      extra = '\n' + preffixSpace
+    }
+    res +=
+      extra +
+      renderImpl(item, {
+        htmlLevel: htmlLevel + 1,
+      })
     return res
   }, '')
 
   if (noEndNodes.includes(type)) {
-    return preffix.replace('>', '/>')
+    return preffix.replace('>', ' />')
   }
 
-  return `${preffix}\n${childrenStr}\n${suffix}`
+  if (childrenStr === '') {
+    return `${preffix}${suffix}`
+  }
+
+  if (
+    (childrenStr?.includes?.('<') && childrenStr?.includes?.('>')) ||
+    childrenStr?.includes?.('\\n') ||
+    childrenStr?.includes?.('\n')
+  ) {
+    const currentPreffixSpace = type === 'pre' ? '' : preffixSpace
+    return `${preffix}\n${currentPreffixSpace}${childrenStr}\n${suffixsSpace}${suffix}`
+  }
+
+  return `${preffix}${childrenStr}${suffix}`
 }
 
 function renderImpl(
   element: Element,
   params?: {
-    ref: {
+    ref?: {
       skipRenderChildren: boolean
     }
+    htmlLevel: number
   },
 ): string {
   // console.log({ currentElement: element, children: element?.children })
-  const { ref = { skipRenderChildren: false } } = params || {}
+  const { ref = { skipRenderChildren: false }, htmlLevel = 1 } = params || {}
 
   if (!element) return ''
   if (['string', 'number'].includes(typeof element)) return element + ''
@@ -91,7 +135,7 @@ function renderImpl(
   )
 
   if (typeof element.type === 'string') {
-    return renderHtmlNode(type as string, props, children)
+    return renderHtmlNode(type as string, props, children, htmlLevel)
   }
 
   ref.skipRenderChildren = isRenderChildFromProp
@@ -100,6 +144,7 @@ function renderImpl(
     ref: {
       skipRenderChildren: false,
     },
+    htmlLevel: 1,
   }
 
   if (typeof type === 'function') {

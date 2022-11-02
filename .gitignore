@@ -2,3 +2,4 @@ node_modules/
 dist/
 run*
 src/.DS_Store
+coverage/
