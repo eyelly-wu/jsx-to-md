@@ -6,7 +6,14 @@ type HeaderProps = {
 }
 
 function Header({ level, children }: HeaderProps) {
-  return <>{`\n${Array(level).fill('#').join('')} ${children}\n`}</>
+  return (
+    <>
+      {'\n'}
+      {Array(level).fill('#').join('') + ' '}
+      {children}
+      {'\n'}
+    </>
+  )
 }
 
 const hn = (
