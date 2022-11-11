@@ -6,6 +6,10 @@ export interface LinkProps {
 }
 
 function LinkImpl({ href, children }: LinkProps) {
+  if (href?.startsWith?.('#')) {
+    href = href?.toLocaleLowerCase()?.replace(' ', '-')
+  }
+
   return (
     <>
       [<>{children}</>]{`(${href})`}

@@ -42,6 +42,11 @@ function renderHtmlNode(
         res += ' '
       }
       switch (name) {
+        case 'href':
+          if (type === 'a' && (value as string)?.startsWith?.('#')) {
+            value = (value as string)?.toLowerCase?.()?.replace(' ', '-')
+          }
+          break
         case 'style':
           // eslint-disable-next-line no-case-declarations
           const styleStr = Object.entries(value).reduce(
@@ -60,11 +65,10 @@ function renderHtmlNode(
             '',
           )
           value = styleStr
-        // eslint-disable-next-line no-fallthrough
-        default:
-          res += `${name}="${value}"`
           break
       }
+
+      res += `${name}="${value}"`
       return res
     },
     '',
