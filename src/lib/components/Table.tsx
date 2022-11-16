@@ -13,7 +13,7 @@ export interface TableProps {
 
 const alignMarkMap = {
   left: ':-',
-  center: '-',
+  center: ':-:',
   right: '-:',
 }
 
