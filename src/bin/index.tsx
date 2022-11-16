@@ -46,34 +46,54 @@ switch (true) {
 
       process.chdir(join(__dirname))
 
-      const commands = config.reduce((res, configItem, index) => {
+      const filenames = config.reduce((res, configItem, index) => {
         const { entry, output, params = {} } = configItem
         const paramsStr = JSON.stringify(params)
-        const runScriptPath = join(__dirname, `./run${index}.tsx`)
-
-        const runScipt = `
-import { writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+        const originFilename = `render${index}`
+        const filename = `${originFilename}.tsx`
+        const runScriptPath = join(__dirname, filename)
+        const runScript = `
+import { writeFileSync, existsSync } from 'node:fs'
 import Doc from '${entry}'
 import React, { render } from '../lib/'
 
 const res = render(<Doc {...(${paramsStr}) as any}/>)
 
-writeFileSync('${output}', res, {
-  encoding: 'utf8',
-})
+try {
+  const isExist = existsSync('${output}')
+  writeFileSync('${output}', res, {
+    encoding: 'utf8',
+  })
+  console.log(\`${new Date().toLocaleTimeString()} ${output} has been ${'${ isExist?"updated":"created" }'} \`)
+} catch (err) {
+  console.error(err)
+}
 `
         // Generate temp script file
-        writeFileSync(runScriptPath, runScipt, {
+        writeFileSync(runScriptPath, runScript, {
           encoding: 'utf8',
         })
 
-        const command = `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${runScriptPath}`
-
-        res.push(command)
+        res.push(originFilename)
         return res
       }, [])
-      exec(commands.join(' & '))
+
+      const runScript = `
+${filenames
+  .map((item) => {
+    return `import './${item}'\n`
+  })
+  .join('')}
+      `
+      writeFileSync(join(__dirname, 'run.tsx'), runScript, {
+        encoding: 'utf8',
+      })
+      exec(
+        `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${join(
+          __dirname,
+          'run.tsx',
+        )}`,
+      )
     }
     break
   default:
