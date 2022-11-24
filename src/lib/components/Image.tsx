@@ -2,10 +2,10 @@ import React from '../index'
 
 export interface ImageProps {
   alt: string
-  href: string
+  src: string
   title: string
 }
 
-export default function Image({ alt, href, title }: ImageProps) {
-  return <>{`![${alt}](${href} '${title}')`}</>
+export default function Image({ alt, src, title }: ImageProps) {
+  return <>{`![${alt}](${src} '${title}')`}</>
 }

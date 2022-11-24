@@ -173,7 +173,7 @@ foo()
     it('Single', () => {
       const res = render(
         <>
-          <Image alt={label} href={url} title={label} />
+          <Image alt={label} src={url} title={label} />
         </>,
       )
 
@@ -186,7 +186,7 @@ foo()
           {Array(10)
             .fill(0)
             .map(() => (
-              <Image alt={label} href={url} title={label} />
+              <Image alt={label} src={url} title={label} />
             ))}
         </>,
       )
