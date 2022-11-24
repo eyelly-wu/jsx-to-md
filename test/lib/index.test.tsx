@@ -364,7 +364,7 @@ foo()
 
         const alignMarkMap = {
           left: ':-',
-          center: '-',
+          center: ':-:',
           right: '-:',
         }
 
