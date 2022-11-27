@@ -3,3 +3,4 @@ dist/
 run*
 src/.DS_Store
 coverage/
+.log/

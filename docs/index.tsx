@@ -1,26 +1,31 @@
-import React, { Break, CodeBlock, H1, InlineCode } from '../src/lib'
+import { i18n, setI18N } from 'i18n-pro'
+import React from '@lib'
+import Top from './Top'
+import Vision from './Vision'
+import Feature from './Feature'
+import LiveDemo from './LiveDemo'
+import Principle from './Principle'
+import Usage from './Usage'
+import en from '../i18n/en.json'
 
-export default function Doc() {
+export default function Doc({ locale }) {
+  setI18N({
+    locale,
+    langs: {
+      en,
+    },
+  })
+  global.i18n = i18n
+  global.docLocale = locale
+
   return (
     <>
-      <H1>jsx-to-md</H1>
-      <>
-        a tool help to generate MarkDown file from <InlineCode>JSX</InlineCode>{' '}
-        file
-      </>
-      <H1>Install</H1>
-      <CodeBlock langType="bash">
-        npm i jsx-to-md
-        <Break />
-        yarn add jsx-to-md
-        <Break />
-        ts pnpm i jsx-to-md
-        <Break />
-        teaaadddcccd
-        <Break />
-      </CodeBlock>
-      <H1>Description</H1>
-      abcdasdfad你真的好像你
+      <Top />
+      <Vision />
+      <Feature />
+      <LiveDemo />
+      <Principle />
+      <Usage />
     </>
   )
 }

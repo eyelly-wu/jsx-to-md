@@ -9,8 +9,20 @@
     "outDir": "dist",
     "declaration": true,
     "strictBindCallApply": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@lib": [
+        "./src/lib/index.ts"
+      ],
+      "@bin/*": [
+        "./src/bin/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "docs",
+    "global.d.ts"
   ]
 }
