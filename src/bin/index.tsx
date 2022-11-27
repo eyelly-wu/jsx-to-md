@@ -39,14 +39,14 @@ switch (true) {
         console.log(error)
       }
 
-      if (config.length == 0) {
+      if (config?.source?.length == 0) {
         console.log('no config')
         break
       }
 
       process.chdir(join(__dirname))
 
-      const filenames = config.reduce((res, configItem, index) => {
+      const filenames = config?.source?.reduce((res, configItem, index) => {
         const { entry, output, params = {} } = configItem
         const paramsStr = JSON.stringify(params)
         const originFilename = `render${index}`

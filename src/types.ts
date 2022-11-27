@@ -4,8 +4,12 @@ export type Element = {
   children?: Array<JSX.Element>
 }
 
-export type Config = {
+type Source = {
   entry: string
   output: string
   params: Record<string, unknown>
+}
+
+export type Config = {
+  source: Source[]
 }
