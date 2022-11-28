@@ -31,7 +31,7 @@ export const Bold = base.bind(null, 'bold')
 export const BoldItalic = base.bind(null, 'bolditalic')
 
 function StrikeThroughImpl({ children }: { children: string }) {
-  return <>{`~~~${children}~~~`}</>
+  return <>{`~~${children}~~`}</>
 }
 
 export function StrikeThrough({ children }: { children: string }) {

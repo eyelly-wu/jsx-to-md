@@ -83,7 +83,7 @@ describe('test component render', () => {
         '__bold__',
         '***bold italic***',
         '___bold italic___',
-        '~~~Strike Through~~~',
+        '~~Strike Through~~',
       ].join(''),
     )
   })
