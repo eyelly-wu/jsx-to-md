@@ -146,12 +146,13 @@ describe('test component render', () => {
     it('Code Block', () => {
       const res = render(
         <>
-          <CodeBlock langType="Java">
-            {`function Foo(){
+          <CodeBlock
+            langType="Java"
+            code={`function Foo(){
 }
 
 foo()`}
-          </CodeBlock>
+          />
         </>,
       )
 

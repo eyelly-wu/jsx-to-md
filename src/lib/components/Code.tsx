@@ -7,15 +7,8 @@ type CodeBlockProps = {
 }
 
 function Code(props: CodeBlockProps) {
-  const { isInline, children, langType = 'js' } = props
-  if (isInline) return <>{`\`${children}\``}</>
-  return (
-    <>
-      {`\n\`\`\`${langType}\n`}
-      <>{{ children }}</>
-      {`\n\`\`\`\n`}
-    </>
-  )
+  const { children } = props
+  return <>{`\`${children}\``}</>
 }
 
 export const InlineCode = ({
@@ -25,8 +18,14 @@ export const InlineCode = ({
 )
 
 export const CodeBlock = ({
-  children,
-  langType,
-}: Omit<CodeBlockProps, 'isInline'>) => (
-  <Code langType={langType} isInline={false} children={children} />
-)
+  code,
+  langType = 'js',
+}: Omit<CodeBlockProps, 'isInline' | 'children'> & { code: string }) => {
+  return (
+    <>
+      {`\n\`\`\`${langType}\n`}
+      {code}
+      {`\n\`\`\`\n`}
+    </>
+  )
+}
