@@ -147,7 +147,6 @@ describe('test component render', () => {
       const res = render(
         <>
           <CodeBlock
-            langType="Java"
             code={`function Foo(){
 }
 
@@ -156,7 +155,7 @@ foo()`}
         </>,
       )
 
-      const expectRes = `\n\`\`\`Java
+      const expectRes = `\n\`\`\`js
 function Foo(){
 }
 
@@ -230,6 +229,22 @@ foo()
         .fill(0)
         .map(() => `[${label}](${url})`)
         .join('')
+
+      expect(res).toBe(expectRes)
+    })
+
+    it('anchor:Link', () => {
+      const res = render(<Link href="#Achor">Anchor</Link>)
+
+      const expectRes = '[Anchor](#achor)'
+
+      expect(res).toBe(expectRes)
+    })
+
+    it('anchor:a', () => {
+      const res = render(<a href="#Achor">Anchor</a>)
+
+      const expectRes = '<a href="#achor">Anchor</a>'
 
       expect(res).toBe(expectRes)
     })
@@ -413,6 +428,11 @@ foo()
         'style: height&marginRight',
         <div style={{ height: 10, marginRight: 10 }}></div>,
         '<div style="height: 10px;margin-right: 10px;"></div>',
+      ],
+      [
+        'style: height&color',
+        <div style={{ height: 10, color: 'red' }}></div>,
+        '<div style="height: 10px;color: red;"></div>',
       ],
       [
         'nest',

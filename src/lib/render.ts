@@ -32,7 +32,8 @@ function getChildren(children: JSX.Element[]) {
 
 function renderHtmlNode(
   type: string,
-  props: Record<string, unknown> = {},
+  props: Record<string, unknown>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any[],
   htmlLevel: number,
 ) {
@@ -129,7 +130,6 @@ function renderImpl(
 
   if (!element) return ''
   if (['string', 'number'].includes(typeof element)) return element + ''
-  if (typeof element === 'object' && element == null) return ''
 
   let res = ''
   const { type, props, children } = element
