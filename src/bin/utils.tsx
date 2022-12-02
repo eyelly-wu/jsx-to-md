@@ -24,3 +24,18 @@ export function getConfig() {
 
   return config
 }
+
+export function getArgs(args: string[]) {
+  const argObject = args.reduce((res, item, index) => {
+    if (item?.startsWith('--')) {
+      if (index === args.length - 1 || item[index + 1]?.startsWith('--')) {
+        res[item] = true
+      } else {
+        res[item] = args[index + 1]
+      }
+    }
+    return res
+  }, {} as any)
+
+  return argObject
+}

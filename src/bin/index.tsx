@@ -2,7 +2,7 @@
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { exec } from 'shelljs'
-import { initConfig, getConfig } from './utils'
+import { initConfig, getConfig, getArgs } from './utils'
 
 const params = process.argv.slice(2)
 
@@ -12,6 +12,8 @@ switch (true) {
     break
   case params.includes('run'):
     {
+      const argsObject = getArgs(params)
+      const { ['--watch']: watch = true } = argsObject
       const workingDir = process.cwd()
       const sourceTsConfigPath = join(workingDir, 'tsconfig.json')
       const targetTsConfigPath = join(__dirname, 'tsconfig.json')
@@ -89,7 +91,7 @@ ${filenames
         encoding: 'utf8',
       })
       exec(
-        `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${join(
+        `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${watch} ${join(
           __dirname,
           'run.tsx',
         )}`,
