@@ -72,7 +72,7 @@ const images = [
   {
     title: 'codecov',
     alt: 'codecov',
-    src: 'https://codecov.io/gh/eyelly-wu/jsx-to-md/branch/main/graph/badge.svg?token=758C46SIE7',
+    src: 'https://codecov.io/gh/eyelly-wu/jsx-to-md/branch/main/graph/badge.svg?token=tocki8cvYM',
   },
 ] as const
 

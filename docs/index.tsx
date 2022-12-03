@@ -7,6 +7,7 @@ import LiveDemo from './LiveDemo'
 import Principle from './Principle'
 import Usage from './Usage'
 import en from '../i18n/en.json'
+import CommandLine from './CommandLine'
 
 export default function Doc({ locale }) {
   setI18N({
@@ -26,6 +27,7 @@ export default function Doc({ locale }) {
       <LiveDemo />
       <Principle />
       <Usage />
+      <CommandLine />
     </>
   )
 }
