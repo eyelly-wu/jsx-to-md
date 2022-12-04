@@ -22,6 +22,7 @@ import React, {
   Column,
   TaskList,
   render,
+  List,
 } from '../../src/lib'
 
 describe('test component render', () => {
@@ -332,6 +333,86 @@ foo()
 `
 
       // console.log(res)
+      expect(res).toBe(expectRes)
+    })
+  })
+
+  describe('Special List', () => {
+    it('Order List', () => {
+      const list = Array(3)
+        .fill(0)
+        .map((item, i) => `Item ${i + 1}`)
+
+      const res = render(
+        <>
+          <List items={['O', ...list]}></List>
+        </>,
+      )
+
+      const expectRes =
+        '\n' + list.map((item, i) => `${i + 1}. ${item}\n`).join('') + '\n'
+
+      expect(res).toBe(expectRes)
+    })
+
+    it('Unorder List', () => {
+      const list = Array(3)
+        .fill(0)
+        .map((item, i) => `Item ${i + 1}`)
+
+      const res = render(
+        <>
+          <List items={['U', ...list]} />
+        </>,
+      )
+
+      const expectRes = '\n' + list.map((item) => `* ${item}\n`).join('') + '\n'
+
+      expect(res).toBe(expectRes)
+    })
+
+    it('Nested List', () => {
+      const res = render(
+        <>
+          <List
+            items={[
+              'U',
+              [
+                'Unorder List 1',
+                [
+                  'O',
+                  [
+                    'Nested Order List 1',
+                    [
+                      'U',
+                      'Nested Unorder List 1',
+                      'Nested Unorder List 2',
+                      'Nested Unorder List 3',
+                    ],
+                  ],
+                  'Nested Order List 2',
+                  'Nested Order List 3',
+                ],
+              ],
+              'Unorder List 2',
+              'Unorder List 3',
+            ]}
+          />
+        </>,
+      )
+
+      const expectRes = `
+* Unorder List 1
+   1. Nested Order List 1
+      * Nested Unorder List 1
+      * Nested Unorder List 2
+      * Nested Unorder List 3
+   2. Nested Order List 2
+   3. Nested Order List 3
+* Unorder List 2
+* Unorder List 3
+
+`
       expect(res).toBe(expectRes)
     })
   })

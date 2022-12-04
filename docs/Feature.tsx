@@ -1,15 +1,18 @@
-import React, { Break, H1, UnorderList, ListItem } from '@lib'
+import React, { Break, H1, List } from '@lib'
 
 export default function Vision() {
   return (
     <>
       <Break />
       <H1>{i18n('特性')}</H1>
-      <UnorderList>
-        <ListItem>{i18n('实时渲染生成')}</ListItem>
-        <ListItem>{i18n('支持原生 HTML')}</ListItem>
-        <ListItem>{i18n('支持多个文档同时渲染')}</ListItem>
-      </UnorderList>
+      <List
+        items={[
+          'U',
+          i18n('实时渲染生成'),
+          i18n('支持原生 HTML'),
+          i18n('支持多个文档同时渲染'),
+        ]}
+      />
     </>
   )
 }

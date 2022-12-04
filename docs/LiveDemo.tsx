@@ -1,18 +1,15 @@
-import React, { Break, H1, UnorderList, ListItem, Link, Image } from '@lib'
+import React, { H1, Link, Image, List } from '@lib'
 import { localeFileNameMap } from './constants'
 
 export default function LiveDemo() {
-  console.log({
-    localeFileNameMap,
-    locale: global.docLocale,
-  })
   const filename = localeFileNameMap[global.docLocale]
 
   return (
     <>
       <H1>Live Demo</H1>
-      <UnorderList>
-        <ListItem>
+      <List
+        items={[
+          'u',
           <Link
             href={
               'https://codesandbox.io/p/github/eyelly-wu/jsx-to-md-demo/main?file=' +
@@ -20,9 +17,7 @@ export default function LiveDemo() {
             }
           >
             Open in CodeSandbox
-          </Link>
-        </ListItem>
-        <ListItem>
+          </Link>,
           <Link
             href={`https://stackblitz.com/github/eyelly-wu/jsx-to-md-demo?file=${filename}`}
           >
@@ -31,9 +26,9 @@ export default function LiveDemo() {
               title="Open in StackBlitz"
               src="https://developer.stackblitz.com/img/open_in_stackblitz_small.svg"
             />
-          </Link>
-        </ListItem>
-      </UnorderList>
+          </Link>,
+        ]}
+      />
     </>
   )
 }
