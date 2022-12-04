@@ -21,17 +21,24 @@ export function ListImpl({
 
   return (
     <>
+      {'\n'}
       {(childrenProp as JSX.Element[]).map((item, index) => {
         const mark = isOrdered ? `${index + 1}.` : markProp
 
+        const isExistNested = (item as any)?.children?.some?.((childItem) =>
+          [OderList, UnorderList].includes(childItem.type),
+        )
+        const suffix = isExistNested ? '' : '\n'
+
         return (
           <>
-            {`${level > 1 && index == 0 ? '\n\n' : ''}${preffix}${mark} `}
+            {`${preffix}${mark} `}
             <>{item}</>
-            <>{'\n'}</>
+            <>{suffix}</>
           </>
         )
       })}
+      {level == 1 ? '\n' : ''}
     </>
   )
 }

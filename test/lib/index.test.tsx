@@ -267,7 +267,8 @@ foo()
         </>,
       )
 
-      const expectRes = list.map((item, i) => `${i + 1}. ${item}\n`).join('')
+      const expectRes =
+        '\n' + list.map((item, i) => `${i + 1}. ${item}\n`).join('') + '\n'
 
       expect(res).toBe(expectRes)
     })
@@ -287,7 +288,7 @@ foo()
         </>,
       )
 
-      const expectRes = list.map((item) => `* ${item}\n`).join('')
+      const expectRes = '\n' + list.map((item) => `* ${item}\n`).join('') + '\n'
 
       expect(res).toBe(expectRes)
     })
@@ -317,22 +318,18 @@ foo()
         </>,
       )
 
-      const expectRes = `* Unorder List 1
-
+      const expectRes = `
+* Unorder List 1
    1. Nested Order List 1
-
       * Nested Unorder List 1
       * Nested Unorder List 2
       * Nested Unorder List 3
-
    2. Nested Order List 2
    3. Nested Order List 3
-
 * Unorder List 2
 * Unorder List 3
-`
 
-      // console.log(res)
+`
       expect(res).toBe(expectRes)
     })
   })
