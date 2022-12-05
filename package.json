@@ -9,7 +9,7 @@
     "lint-code": "npx lint-staged",
     "lint-msg": "npx commitlint --edit",
     "test": "vitest --ui",
-    "publish": "npm publish --access=public --registry https://registry.npmjs.org",
+    "publish": "rimraf dist && tsc && node ./dist/src/bin/index.js run --watch false && npm publish --access=public --registry https://registry.npmjs.org",
     "dev": "tsc --watch",
     "coverage": "vitest --coverage",
     "docs": "node ./dist/src/bin/index.js run",
@@ -48,6 +48,7 @@
     "i18n-pro": "^1.3.2",
     "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
+    "rimraf": "^3.0.2",
     "vitest": "^0.23.4"
   },
   "dependencies": {
