@@ -208,11 +208,13 @@ foo()
     it('Single', () => {
       const res = render(
         <>
-          <Link href={url}>{label}</Link>
+          <Link title="title" href={url}>
+            {label}
+          </Link>
         </>,
       )
 
-      expect(res).toBe(`[${label}](${url})`)
+      expect(res).toBe(`[${label}](${url} "title")`)
     })
 
     it('Multiple', () => {
@@ -221,14 +223,16 @@ foo()
           {Array(10)
             .fill(0)
             .map(() => (
-              <Link href={url}>{label}</Link>
+              <Link title="title" href={url}>
+                {label}
+              </Link>
             ))}
         </>,
       )
 
       const expectRes = Array(10)
         .fill(0)
-        .map(() => `[${label}](${url})`)
+        .map(() => `[${label}](${url} "title")`)
         .join('')
 
       expect(res).toBe(expectRes)
