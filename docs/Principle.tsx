@@ -13,7 +13,7 @@ export default function Principle() {
       </UnorderList>
       <Break />
       <Bold>{i18n('命令行工具')}</Bold>：
-      {i18n('解析配置文件、执行 render 逻辑，最后生成 Markdown 文件 ')}
+      {i18n('解析配置文件、执行 render 逻辑，最后生成 Markdown 文件')}
       <Break />
       <Break />
       <Bold>{i18n('函数API')}</Bold>：

@@ -150,11 +150,76 @@ function CommandList() {
   )
 }
 
+function CommandProp() {
+  const columns: Column[] = [
+    {
+      title: i18n('参数名'),
+      fieldName: 'name',
+      align: 'center',
+    },
+    {
+      title: i18n('参数值'),
+      fieldName: 'value',
+      align: 'center',
+    },
+    {
+      title: i18n('适用命令'),
+      fieldName: 'command',
+      align: 'center',
+    },
+    {
+      title: i18n('用法'),
+      fieldName: 'usage',
+    },
+    {
+      title: i18n('说明'),
+      fieldName: 'description',
+    },
+  ]
+
+  type CommandRecordItem = Record<
+    'name' | 'value' | 'command' | 'usage' | 'description',
+    string | JSX.Element | number
+  >
+
+  const data: CommandRecordItem[] = [
+    {
+      name: '--watch',
+      value: ' `true` \\| `false` ',
+      command: ' `run` ',
+      usage: (
+        <>
+          `npx jtm run`
+          <br />
+          `npx jtm run --watch true`
+          <br />
+          `npx jtm run --watch false`
+        </>
+      ),
+      description: (
+        <>
+          {i18n(
+            '指定是否启用文件监听，该配置默认开启，启用后相关文件变化会重新生成 Markdown 文件',
+          )}
+        </>
+      ),
+    },
+  ]
+
+  return (
+    <>
+      <H3>{i18n('命令参数')}</H3>
+      <Table columns={columns} data={data} />
+    </>
+  )
+}
+
 function Command() {
   return (
     <>
       <H2>2. {i18n('命令')}</H2>
       <CommandList />
+      <CommandProp />
     </>
   )
 }

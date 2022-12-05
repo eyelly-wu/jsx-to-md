@@ -1,20 +1,20 @@
 import React, { Image, Link, Break } from '@lib'
 import { linkObj, imageObj, langs } from './constants'
+import { version } from '../package.json'
 
 const sperator = ' | '
 
 function renderLanguage() {
   const res = langs.reduce((res, item, index) => {
     const { code, locale, name } = item
+    const BASE_URL = 'https://github.com/eyelly-wu/jsx-to-md/'
+    const EN_URL = `${BASE_URL}tree/v${version}#readme`
+    const OTHER_URL = `${BASE_URL}blob/v${version}/README_${locale}.md`
 
     if (global.docLocale == code) {
       res.push(name)
     } else {
-      res.push(
-        <Link href={`./README${code != 'en' ? '_' + locale : ''}.md`}>
-          {name}
-        </Link>,
-      )
+      res.push(<Link href={code === 'en' ? EN_URL : OTHER_URL}>{name}</Link>)
     }
 
     if (index != langs.length - 1) {
