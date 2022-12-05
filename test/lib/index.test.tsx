@@ -178,7 +178,9 @@ foo()
         </>,
       )
 
-      expect(res).toBe(`![${label}](${url} '${label}')`)
+      const expectRes = `![${label}](${url} "${label}")`
+
+      expect(res).toBe(expectRes)
     })
 
     it('Multiple', () => {
@@ -194,7 +196,7 @@ foo()
 
       const expectRes = Array(10)
         .fill(0)
-        .map(() => `![${label}](${url} '${label}')`)
+        .map(() => `![${label}](${url} "${label}")`)
         .join('')
 
       expect(res).toBe(expectRes)
