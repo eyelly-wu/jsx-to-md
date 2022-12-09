@@ -1,13 +1,20 @@
 import { HTMLElement, InnerRenderProps } from 'src/types'
-import { BLOCK_NODES, NO_END_NODES } from '../constant'
+import { BLOCK_NODES, NO_END_NODES, STRING_HEADINGS } from '../constant'
 import renderElement from './renderElement'
 
 export default function renderHTMLElement(
   element: HTMLElement,
   params: InnerRenderProps,
 ) {
-  const { type, props, children = [] } = element
+  const { type, props: propsProp, children = [] } = element
   const { htmlLevel = 1, ...restParams } = params
+
+  const props = { ...(propsProp || {}) }
+
+  if (STRING_HEADINGS.includes(type)) {
+    delete props?.skip
+  }
+
   const propsStr = Object.entries(props || {}).reduce(
     (res, [name, value], index) => {
       if (index == 0) {

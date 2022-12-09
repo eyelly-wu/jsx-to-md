@@ -3,6 +3,7 @@ import React from '../index'
 type HeaderProps = {
   level: 1 | 2 | 3 | 4 | 5 | 6
   children: string | string[]
+  skip?: boolean
 }
 
 function Header({ level, children }: HeaderProps) {

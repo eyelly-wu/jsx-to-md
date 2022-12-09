@@ -64,6 +64,8 @@ function generateStrTableByIndent(
   headings: { level: number; title: string; href: string }[],
   renderProps: RenderTOCProps,
 ) {
+  if (headings.length == 0) return ''
+
   const {
     text = 'Table of Contents',
     open = true,

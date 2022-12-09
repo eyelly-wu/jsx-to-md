@@ -1,6 +1,6 @@
 export type Element = {
   type: ((props?: unknown) => JSX.Element) | string
-  props: { [key: string]: unknown; children?: JSX.Element[] }
+  props: { [key: string]: unknown; children?: JSX.Element[] } | null
   children?: JSX.Element[]
 }
 

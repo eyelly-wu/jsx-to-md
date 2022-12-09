@@ -23,4 +23,5 @@ export const NO_END_NODES = ['br', 'input', 'img', 'hr', 'meta']
 
 export const FUNC_HEADINGS = [H1, H2, H3, H4, H5, H6]
 
-export const TABLE_OF_CONTENTS_PLACEHOLDER = Math.random().toString(32).slice(2)
+export const TABLE_OF_CONTENTS_PLACEHOLDER =
+  '\n' + Math.random().toString(32).slice(2) + '\n'

@@ -759,5 +759,33 @@ const b = 'b'
 <h2>c</h2>`
       expect(res).toBe(expectRes)
     })
+
+    it('empty Heading', () => {
+      const res = render(
+        <>
+          <TableOfContents />
+          <H1></H1>
+          <h2></h2>
+        </>,
+      )
+      const expectRes = `
+#${' '}
+<h2></h2>`
+      expect(res).toBe(expectRes)
+    })
+
+    it('skip', () => {
+      const res = render(
+        <>
+          <TableOfContents />
+          <H1 skip>A</H1>
+          <h2 skip>B</h2>
+        </>,
+      )
+      const expectRes = `
+# A
+<h2>B</h2>`
+      expect(res).toBe(expectRes)
+    })
   })
 })

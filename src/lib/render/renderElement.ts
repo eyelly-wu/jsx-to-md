@@ -40,7 +40,7 @@ export default function renderElement(
 
   if (typeof type === 'string') {
     const currentRes = renderHTMLElement(element as HTMLElement, params)
-    if (STRING_HEADINGS.includes(type)) {
+    if (STRING_HEADINGS.includes(type) && !props?.skip) {
       headingNodes.push({
         type,
         content: currentRes,
@@ -62,7 +62,7 @@ export default function renderElement(
       children: currentChildren,
     })
     let currentRes = renderElement(renderRes, currentParams)
-    if (FUNC_HEADINGS.includes(type)) {
+    if (FUNC_HEADINGS.includes(type) && !props?.skip) {
       headingNodes.push({
         type: H1,
         content: currentRes,
