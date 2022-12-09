@@ -1,5 +1,5 @@
 import { i18n, setI18N } from 'i18n-pro'
-import React from '@lib'
+import React, { TableOfContents } from '@lib'
 import Top from './Top'
 import Vision from './Vision'
 import Feature from './Feature'
@@ -22,6 +22,7 @@ export default function Doc({ locale }) {
   return (
     <>
       <Top />
+      <TableOfContents text={i18n('目录')} open={false} />
       <Vision />
       <Feature />
       <LiveDemo />

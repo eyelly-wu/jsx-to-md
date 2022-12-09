@@ -62,5 +62,7 @@
   "用于替代 Markdown 语法的基础组件": "Basic components for replacing Markdown syntax",
   "render 函数": "Render function",
   "渲染 JSX 编写的内容，返回生成的字符内容": "Render the content written by JSX and return the generated character content",
-  "解析配置文件、执行 render 逻辑，最后生成 Markdown 文件": "Parse configuration files, execute render logic, and finally generate Markdown files"
+  "解析配置文件、执行 render 逻辑，最后生成 Markdown 文件": "Parse configuration files, execute render logic, and finally generate Markdown files",
+  "目录": "Table of Contents",
+  "支持生成目录": "Support generate table of contents"
 }

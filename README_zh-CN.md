@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     一款支持通过 JSX 来编写 Markdown 的工具
 
-[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.5.0#readme) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.6.0#readme) | 简体中文
 
 
   </p>
@@ -13,6 +13,29 @@
 [![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")
 </div>
 
+<details >
+  <summary>目录</summary>
+
+  [愿景](#愿景)<br/>
+  [特性](#特性)<br/>
+  [Live Demo](#live-demo)<br/>
+  [原理](#原理)<br/>
+  [用法](#用法)<br/>
+  &emsp;&emsp;[1. 安装](#1-安装)<br/>
+  &emsp;&emsp;[2. ​创建JSX文件](#2-​创建jsx文件)<br/>
+  &emsp;&emsp;[3. 初始化命令行配置文件](#3-初始化命令行配置文件)<br/>
+  &emsp;&emsp;[4. 调整 `jsx-to-md.config.js` 配置](#4-调整-jsx-to-mdconfigjs-配置)<br/>
+  &emsp;&emsp;[5. 执行生成命令](#5-执行生成命令)<br/>
+  [命令行](#命令行)<br/>
+  &emsp;&emsp;[1.  `jsx-to-md.config.js` 配置](#1-jsx-to-mdconfigjs-配置)<br/>
+  &emsp;&emsp;&emsp;&emsp;[基础配置](#基础配置)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
+  &emsp;&emsp;[2. 命令](#2-命令)<br/>
+  &emsp;&emsp;&emsp;&emsp;[命令列表](#命令列表)<br/>
+  &emsp;&emsp;&emsp;&emsp;[命令参数](#命令参数)<br/>
+
+</details>
+
 # 愿景
 为了让通过 `JSX` 来编写 `Markdown` 成为件轻松且愉快的事😄💪🏻
 
@@ -21,6 +44,7 @@
 * 实时渲染生成
 * 支持原生 HTML
 * 支持多个文档同时渲染
+* 支持生成目录
 
 
 # Live Demo

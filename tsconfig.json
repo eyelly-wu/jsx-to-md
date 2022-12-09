@@ -13,10 +13,10 @@
     "esModuleInterop": true,
     "paths": {
       "@lib": [
-        "./src/lib/index.ts"
+        "./dist/src/lib/index.js"
       ],
       "@bin/*": [
-        "./src/bin/*"
+        "./dist/src/bin/*"
       ]
     }
   },

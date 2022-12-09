@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     A tool that supports writing Markdown through JSX
 
-English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.5.0/README_zh-CN.md)
+English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.6.0/README_zh-CN.md)
 
 
   </p>
@@ -13,6 +13,29 @@ English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.5.0/READ
 [![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")
 </div>
 
+<details >
+  <summary>Table of Contents</summary>
+
+  [vision](#vision)<br/>
+  [characteristic](#characteristic)<br/>
+  [Live Demo](#live-demo)<br/>
+  [principle](#principle)<br/>
+  [usage](#usage)<br/>
+  &emsp;&emsp;[1. install](#1-install)<br/>
+  &emsp;&emsp;[2. Create JSX file](#2-create-jsx-file)<br/>
+  &emsp;&emsp;[3. Initialize command line configuration file](#3-initialize-command-line-configuration-file)<br/>
+  &emsp;&emsp;[4. Adjust  `jsx-to-md.config.js`  configuration](#4-adjust-jsx-to-mdconfigjs-configuration)<br/>
+  &emsp;&emsp;[5. Execute build command](#5-execute-build-command)<br/>
+  [command line](#command-line)<br/>
+  &emsp;&emsp;[1.  `jsx-to-md.config.js`  configuration](#1-jsx-to-mdconfigjs-configuration)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Basic configuration](#basic-configuration)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
+  &emsp;&emsp;[2. command](#2-command)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Command List](#command-list)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Command parameters](#command-parameters)<br/>
+
+</details>
+
 # vision
 To make it easy and pleasant to write  `Markdown`  through  `JSX`  😄💪🏻
 
@@ -21,6 +44,7 @@ To make it easy and pleasant to write  `Markdown`  through  `JSX`  😄💪🏻
 * Real time rendering generation
 * Native HTML support
 * Support simultaneous rendering of multiple documents
+* Support generate table of contents
 
 
 # Live Demo

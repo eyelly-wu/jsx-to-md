@@ -1,7 +1,13 @@
 export type Element = {
-  type: ((props: any) => JSX.Element) | string
-  props: null | Record<string, any>
-  children?: Array<JSX.Element>
+  type: ((props?: unknown) => JSX.Element) | string
+  props: { [key: string]: unknown; children?: JSX.Element[] }
+  children?: JSX.Element[]
+}
+
+export type HTMLElement = {
+  type: string
+  props: Record<string, unknown>
+  children?: JSX.Element[]
 }
 
 type Source = {
@@ -12,4 +18,22 @@ type Source = {
 
 export type Config = {
   source: Source[]
+}
+
+export type HeadingNodeType = {
+  type: unknown
+  content: string
+}
+
+export type RenderTOCProps = {
+  text?: string
+  indent?: string | undefined
+  open?: boolean
+}
+
+export type InnerRenderProps = {
+  skipRenderChildren?: boolean[]
+  htmlLevel?: number
+  headingNodes: HeadingNodeType[]
+  renderTOCState: [boolean, RenderTOCProps]
 }

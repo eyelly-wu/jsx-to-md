@@ -23,6 +23,7 @@ import React, {
   TaskList,
   render,
   List,
+  TableOfContents,
 } from '../../src/lib'
 
 describe('test component render', () => {
@@ -640,6 +641,122 @@ const b = 'b'
 
     it.each(tests)('%s', (desc, Func, expectRes) => {
       const res = render(<Func />)
+      expect(res).toBe(expectRes)
+    })
+  })
+
+  describe('TableOfContents', () => {
+    it('simple', () => {
+      const res = render(
+        <>
+          <TableOfContents />
+          <H1>A</H1>
+          <h2>B</h2>
+        </>,
+      )
+      const expectRes = `
+<details open>
+  <summary>Table of Contents</summary>
+
+  [A](#a)<br/>
+  &emsp;&emsp;[B](#b)<br/>
+
+</details>
+
+# A
+<h2>B</h2>`
+      expect(res).toBe(expectRes)
+    })
+
+    it('simple with props', () => {
+      const res = render(
+        <>
+          <TableOfContents
+            text="custom text"
+            open={false}
+            indent={['&emsp;', '&ensp;']}
+          />
+          <H1>A</H1>
+          <h2>B</h2>
+        </>,
+      )
+      const expectRes = `
+<details >
+  <summary>custom text</summary>
+
+  [A](#a)<br/>
+  &emsp;&ensp;[B](#b)<br/>
+
+</details>
+
+# A
+<h2>B</h2>`
+      expect(res).toBe(expectRes)
+    })
+
+    it('simple with multiple', () => {
+      const res = render(
+        <>
+          <TableOfContents
+            text="custom text"
+            open={false}
+            indent={['&emsp;', '&ensp;']}
+          />
+          <H1>A</H1>
+          <h2>B</h2>
+          <TableOfContents />
+          <TableOfContents />
+          <TableOfContents />
+          <TableOfContents />
+          <TableOfContents />
+          <TableOfContents />
+        </>,
+      )
+      const expectRes = `
+<details >
+  <summary>custom text</summary>
+
+  [A](#a)<br/>
+  &emsp;&ensp;[B](#b)<br/>
+
+</details>
+
+# A
+<h2>B</h2>`
+      expect(res).toBe(expectRes)
+    })
+
+    it('complex', () => {
+      const res = render(
+        <>
+          <TableOfContents />
+          <H1>A</H1>
+          <h2>a</h2>
+          <H1>B</H1>
+          <h2>b</h2>
+          <H1>C</H1>
+          <h2>c</h2>
+        </>,
+      )
+      const expectRes = `
+<details open>
+  <summary>Table of Contents</summary>
+
+  [A](#a)<br/>
+  &emsp;&emsp;[a](#a)<br/>
+  [B](#b)<br/>
+  &emsp;&emsp;[b](#b)<br/>
+  [C](#c)<br/>
+  &emsp;&emsp;[c](#c)<br/>
+
+</details>
+
+# A
+<h2>a</h2>
+# B
+<h2>b</h2>
+# C
+<h2>c</h2>`
       expect(res).toBe(expectRes)
     })
   })
