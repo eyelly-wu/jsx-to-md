@@ -1,6 +1,6 @@
 {
   "name": "jsx-to-md",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": false,
   "description": "A tool that supports writing Markdown through JSX（一款支持通过 JSX 来编写 Markdown 的工具）",
   "main": "./dist/src/lib/index.js",
@@ -9,10 +9,10 @@
     "lint-code": "npx lint-staged",
     "lint-msg": "npx commitlint --edit",
     "test": "vitest --ui",
-    "publish": "rimraf dist && tsc && node ./dist/src/bin/index.js run --watch false && npm publish --access=public --registry https://registry.npmjs.org",
+    "publish": "rimraf dist && tsc && ts-node-dev ./src/bin/index.tsx run --watch false && npm publish --access=public --registry https://registry.npmjs.org",
     "dev": "tsc --watch",
     "coverage": "vitest --coverage",
-    "docs": "node ./dist/src/bin/index.js run",
+    "docs": "ts-node-dev ./src/bin/index.tsx run",
     "translate": "i18n t"
   },
   "bin": {

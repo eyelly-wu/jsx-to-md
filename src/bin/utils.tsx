@@ -1,4 +1,4 @@
-import { writeFileSync } from 'node:fs'
+import { writeFileSync, mkdirSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 import { CONFIG_NAME, INIT_CONFIG_CONTENT } from './constant'
 import { Config } from '../types'
@@ -38,4 +38,14 @@ export function getArgs(args: string[]) {
   }, {} as any)
 
   return argObject
+}
+
+export function writeFile(path: string, filename: string, content: string) {
+  const isExist = existsSync(path)
+  if (!isExist) {
+    mkdirSync(path, { recursive: true })
+  }
+  writeFileSync(join(path, filename), content, {
+    encoding: 'utf-8',
+  })
 }

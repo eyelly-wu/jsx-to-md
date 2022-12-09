@@ -2,9 +2,11 @@
 import { writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { exec } from 'shelljs'
-import { initConfig, getConfig, getArgs } from './utils'
+import { TEMP_DIR } from './constant'
+import { initConfig, getConfig, getArgs, writeFile } from './utils'
 
 const params = process.argv.slice(2)
+const targetPath = join(__dirname, TEMP_DIR)
 
 switch (true) {
   case params.includes('init'):
@@ -53,11 +55,10 @@ switch (true) {
         const paramsStr = JSON.stringify(params)
         const originFilename = `render${index}`
         const filename = `${originFilename}.tsx`
-        const runScriptPath = join(__dirname, filename)
         const runScript = `
 import { writeFileSync, existsSync } from 'node:fs'
 import Doc from '${entry}'
-import React, { render } from '../lib/'
+import React, { render } from '../../lib/'
 
 const res = render(<Doc {...(${paramsStr}) as any}/>)
 
@@ -72,9 +73,7 @@ try {
 }
 `
         // Generate temp script file
-        writeFileSync(runScriptPath, runScript, {
-          encoding: 'utf8',
-        })
+        writeFile(targetPath, filename, runScript)
 
         res.push(originFilename)
         return res
@@ -87,13 +86,12 @@ ${filenames
   })
   .join('')}
       `
-      writeFileSync(join(__dirname, 'run.tsx'), runScript, {
-        encoding: 'utf8',
-      })
+      const filename = 'run.tsx'
+      writeFile(targetPath, filename, runScript)
       exec(
         `npx ts-node-dev -r tsconfig-paths/register --files --respawn ${watch} ${join(
-          __dirname,
-          'run.tsx',
+          targetPath,
+          filename,
         )}`,
       )
     }

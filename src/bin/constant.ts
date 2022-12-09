@@ -15,3 +15,5 @@ module.exports = {
     },
   ],
 }`
+
+export const TEMP_DIR = '.temp'

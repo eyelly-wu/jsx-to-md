@@ -4,3 +4,5 @@ run*
 src/.DS_Store
 coverage/
 .log/
+src/bin/tsconfig.json
+**/.temp/
