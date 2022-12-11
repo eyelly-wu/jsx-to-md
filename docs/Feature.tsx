@@ -12,6 +12,7 @@ export default function Vision() {
           i18n('支持原生 HTML'),
           i18n('支持多个文档同时渲染'),
           i18n('支持生成目录'),
+          i18n('支持异步渲染'),
         ]}
       />
     </>

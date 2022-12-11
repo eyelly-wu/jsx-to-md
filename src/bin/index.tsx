@@ -58,20 +58,22 @@ switch (true) {
         const runScript = `
 import { writeFileSync, existsSync } from 'node:fs'
 import Doc from '${entry}'
-import React, { render } from '../../lib/'
+import React, { renderAsync } from '../../lib/'
 
-const res = render(<Doc {...(${paramsStr}) as any}/>)
+(async()=>{
+  const res = await renderAsync(<Doc {...(${paramsStr}) as any}/>)
 
-try {
-  const isExist = existsSync('${output}')
-  writeFileSync('${output}', res, {
-    encoding: 'utf8',
-  })
-  console.log(\`${new Date().toLocaleTimeString()} ${output} has been ${'${ isExist?"updated":"created" }'} \`)
-} catch (err) {
-  console.error(err)
-}
-`
+  try {
+    const isExist = existsSync('${output}')
+    writeFileSync('${output}', res, {
+      encoding: 'utf8',
+    })
+    console.log(\`${new Date().toLocaleTimeString()} ${output} has been ${'${ isExist?"updated":"created" }'} \`)
+  } catch (err) {
+    console.error(err)
+  }
+
+})()`
         // Generate temp script file
         writeFile(targetPath, filename, runScript)
 

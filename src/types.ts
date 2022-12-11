@@ -31,9 +31,20 @@ export type RenderTOCProps = {
   open?: boolean
 }
 
+export type AsyncNode = {
+  tag: string
+  data: Promise<Record<string, unknown>>
+  renderer: (props: Record<string, unknown>) => JSX.Element
+}
+
 export type InnerRenderProps = {
   skipRenderChildren?: boolean[]
   htmlLevel?: number
   headingNodes: HeadingNodeType[]
   renderTOCState: [boolean, RenderTOCProps]
+  asyncNodes: AsyncNode[]
+}
+
+export type RenderProps = {
+  asyncNodes: AsyncNode[]
 }

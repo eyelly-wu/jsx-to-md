@@ -1,4 +1,4 @@
-import { Element, HTMLElement, InnerRenderProps } from 'src/types'
+import { AsyncNode, Element, HTMLElement, InnerRenderProps } from 'src/types'
 import { H1 } from '../components/Header'
 import TableOfContents from '../components/TableOfContents'
 import {
@@ -7,6 +7,7 @@ import {
   TABLE_OF_CONTENTS_PLACEHOLDER,
 } from '../constant'
 import renderHTMLElement from './renderHTMLElement'
+import AsyncWrapper from '../components/AsyncWrapper'
 
 function getChildren(children: JSX.Element[]) {
   const res = children?.reduce?.((res, child) => {
@@ -26,7 +27,12 @@ export default function renderElement(
   params: InnerRenderProps,
 ): string {
   // console.log({ currentElement: element, children: element?.children })
-  const { skipRenderChildren = [], headingNodes, renderTOCState } = params || {}
+  const {
+    skipRenderChildren = [],
+    headingNodes,
+    renderTOCState,
+    asyncNodes,
+  } = params || {}
 
   if (!element) return ''
   if (['string', 'number'].includes(typeof element)) return element + ''
@@ -75,6 +81,15 @@ export default function renderElement(
         indent: (props?.indent as string[])?.join('') || undefined,
       }
       currentRes = TABLE_OF_CONTENTS_PLACEHOLDER
+    } else if (type === AsyncWrapper) {
+      const tag = '\nAsyncWapper:' + Math.random().toString(32).slice(2) + '\n'
+      asyncNodes.push({
+        tag,
+        data: props?.data as AsyncNode['data'],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        renderer: children?.[0] as any,
+      })
+      currentRes += tag
     }
 
     res += currentRes
@@ -92,6 +107,7 @@ export default function renderElement(
       res += renderElement(child, {
         headingNodes,
         renderTOCState,
+        asyncNodes,
       })
     })
   }
