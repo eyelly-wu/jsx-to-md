@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     A tool that supports writing Markdown through JSX
 
-English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.7.0/README_zh-CN.md)
+English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.7.1/README_zh-CN.md)
 
 
   </p>

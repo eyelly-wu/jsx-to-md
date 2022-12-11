@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     一款支持通过 JSX 来编写 Markdown 的工具
 
-[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.7.0#readme) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.7.1#readme) | 简体中文
 
 
   </p>

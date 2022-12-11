@@ -17,10 +17,9 @@ function Header({ level, children }: HeaderProps) {
   )
 }
 
-const hn = (
-  level: HeaderProps['level'],
-  props: Pick<HeaderProps, 'children'>,
-) => <Header level={level} {...props} />
+const hn = (level: HeaderProps['level'], props: Omit<HeaderProps, 'level'>) => (
+  <Header level={level} {...props} />
+)
 
 export const H1 = hn.bind(null, 1)
 
