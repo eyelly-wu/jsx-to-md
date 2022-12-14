@@ -9,7 +9,10 @@ import {
 import renderHTMLElement from './renderHTMLElement'
 import AsyncWrapper from '../components/AsyncWrapper'
 
-function getChildren(children: JSX.Element[]) {
+function getChildren(children: JSX.Element[] | JSX.Element) {
+  if (!Array.isArray(children) && typeof children != 'undefined') {
+    return [children]
+  }
   const res = children?.reduce?.((res, child) => {
     if (Array.isArray(child)) {
       res.push(...child)
@@ -65,7 +68,8 @@ export default function renderElement(
   if (typeof type === 'function') {
     const renderRes = type({
       ...(props || {}),
-      children: currentChildren,
+      children:
+        currentChildren?.length === 1 ? currentChildren[0] : currentChildren,
     })
     let currentRes = renderElement(renderRes, currentParams)
     if (FUNC_HEADINGS.includes(type) && !props?.skip) {
