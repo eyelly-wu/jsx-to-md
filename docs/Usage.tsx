@@ -47,7 +47,9 @@ function CreateJsx() {
       {i18n('假如{0}的内容如下：', ' `index.tsx` ')}
       <BlockQuote>
         {i18n(
-          '这里JSX语法采用的是 React.createElement 的形式，所以这里需要默认导入 React',
+          '这里JSX语法采用的是{0}的形式，所以这里需要默认导入{1}',
+          ' `React.createElement` ',
+          ' `React` ',
         )}
       </BlockQuote>
       <CodeBlock langType="tsx" code={demoDocCode} />
@@ -106,7 +108,7 @@ function ExecuteRunCommand() {
       {i18n('执行如下命令')}
       <CodeBlock langType="bash" code="npx jtm run" />
       {i18n(
-        '假如未调整上面的默认配置，命令执行成功的话，会在根目录下生成对应的Markdown文件，最后生成的Markdown文本内容如下',
+        '假如未调整上面的默认配置，命令执行成功的话，会在根目录下生成对应的 Markdown 文件，最后生成的 Markdown 文本内容如下',
       )}
       <CodeBlock langType="md" code={render(<Demo />)} />
       {i18n('显示效果如下')}
@@ -115,7 +117,7 @@ function ExecuteRunCommand() {
       <Break />
       <Break />
       {i18n(
-        '并且{0}内容发生调整，保存后，对应的Markdown文件也会实时同步变化',
+        '并且{0}内容发生调整，保存后，对应的 Markdown 文件也会实时同步变化',
         ' `docs/index.tsx` ',
       )}
     </>

@@ -16,33 +16,33 @@ English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.0/READ
 <details >
   <summary>Table of Contents</summary>
 
-  [vision](#vision)<br/>
-  [characteristic](#characteristic)<br/>
+  [Vision](#vision)<br/>
+  [Features](#features)<br/>
   [Live Demo](#live-demo)<br/>
-  [principle](#principle)<br/>
-  [usage](#usage)<br/>
-  &emsp;&emsp;[1. install](#1-install)<br/>
+  [Principle](#principle)<br/>
+  [Usage](#usage)<br/>
+  &emsp;&emsp;[1. Install](#1-install)<br/>
   &emsp;&emsp;[2. Create JSX file](#2-create-jsx-file)<br/>
   &emsp;&emsp;[3. Initialize command line configuration file](#3-initialize-command-line-configuration-file)<br/>
   &emsp;&emsp;[4. Adjust  `jsx-to-md.config.js`  configuration](#4-adjust-jsx-to-mdconfigjs-configuration)<br/>
-  &emsp;&emsp;[5. Execute build command](#5-execute-build-command)<br/>
-  [command line](#command-line)<br/>
+  &emsp;&emsp;[5. Execute run command](#5-execute-run-command)<br/>
+  [Command Line](#command-line)<br/>
   &emsp;&emsp;[1.  `jsx-to-md.config.js`  configuration](#1-jsx-to-mdconfigjs-configuration)<br/>
   &emsp;&emsp;&emsp;&emsp;[Basic configuration](#basic-configuration)<br/>
   &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
-  &emsp;&emsp;[2. command](#2-command)<br/>
+  &emsp;&emsp;[2. Command](#2-command)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command List](#command-list)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command parameters](#command-parameters)<br/>
 
 </details>
 
-# vision
+# Vision
 To make it easy and pleasant to write  `Markdown`  through  `JSX`  😄💪🏻
 
-# characteristic
+# Features
 
 * Real time rendering generation
-* Native HTML support
+* Support Native HTML
 * Support simultaneous rendering of multiple documents
 * Support generate table of contents
 * Support asynchronous rendering
@@ -55,7 +55,7 @@ To make it easy and pleasant to write  `Markdown`  through  `JSX`  😄💪🏻
 
 
 
-# principle
+# Principle
 The library is mainly composed of two parts
 
 * Command Line Tools
@@ -72,23 +72,23 @@ The library is mainly composed of two parts
 
 So  `Command Line Tools`  and  `Function API`  are better used together
 
-# usage
+# Usage
 
-## 1. install
+## 1. Install
 
 ```bash
 npm i -D jsx-to-md
-# perhaps
+# or
 yarn add jsx-to-md --dev
-# perhaps
+# or
 pnpm i -D jsx-to-md
 ```
 
 ## 2. Create JSX file
-Create a directory named  `docs`  under the root directory, and create  `index.tsx`  files under this directory
+Create a directory named  `docs`  under the root directory, and create  `index.tsx`  file under this directory
 ```text
 .
-├── ...Other relevant documents
+├── ...Other relevant files
 ├── docs
 │   └── index.tsx
 ├── node_modules
@@ -96,7 +96,7 @@ Create a directory named  `docs`  under the root directory, and create  `index.t
         
 ```
 Suppose the content of  `index.tsx`  is as follows:
->Here, the JSX syntax is React The form of createElement, so we need to import React by default
+>Here JSX syntax is in the form of  `React.createElement` , so  `React`  needs to be imported by default
 ```tsx
 import React, { Link } from 'jsx-to-md'
 
@@ -113,7 +113,7 @@ export default function () {
 
 
 ## 3. Initialize command line configuration file
-Enter the following command at the command line terminal,[More Commands](#command-list)
+Enter the following command at the command line terminal, [More Commands](#command-list)
 ```bash
 npm jtm init
 ```
@@ -122,7 +122,7 @@ Then a  `jsx-to-md.config.js`  file will be generated in the current directory
 Then your file directory is like this
 ```text
 .
-├── ...Other relevant documents
+├── ...Other relevant files
 ├── docs
 │   └── index.tsx
 ├── jsx-to-md.config.js
@@ -154,7 +154,7 @@ module.exports = {
 }
 ```
 
-## 5. Execute build command
+## 5. Execute run command
 Execute the following command
 ```bash
 npx jtm run
@@ -167,35 +167,35 @@ The display effect is as follows<br />
 >Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!
 
 And  `docs/index.tsx`  content is adjusted. After saving, the corresponding Markdown file will also change synchronously in real time
-# command line
+# Command Line
 
 ## 1.  `jsx-to-md.config.js`  configuration
 
 ### Basic configuration
 
-|name|type|Required|Default|explain|
+|Name|Type|Required|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|source|[Source](#source)[]|yes|-|Data source related configuration|
+|source|[Source](#source)[]|Yes|-|Datasource related configuration|
 
 ### Source
-Data source related configuration
-|name|type|Required|Default|explain|
+Datasource related configuration
+|Name|Type|Required|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|entry|string|yes|-|Document entry file (absolute path)|
-|output|string|no|-|Path to generate Markdown file (absolute path)|
-|params|Record<string,unknow>|no|{}|Props attribute received by the entry file|
+|entry|string|Yes|-|Document entry file (absolute path)|
+|output|string|No|-|Path to generate Markdown file (absolute path)|
+|params|Record<string,unknow>|No|{}|Props attribute received by the entry file|
 
-## 2. command
+## 2. Command
 
 ### Command List
 
-|command|Abbreviation|usage|explain|
+|Command|Abbreviation|Usage|description|
 |:-:|:-:|:-|:-|
 |init|-|`npx jtm init`|Initialize Profile|
 |run|-|`npx jtm run`|Read configuration to generate Markdown file|
 
 ### Command parameters
 
-|Parameter name|Parameter value|Applicable order|usage|explain|
+|Parameter name|Parameter value|Applicable command|Usage|description|
 |:-:|:-:|:-:|:-|:-|
 |--watch| `true` \| `false` | `run` |`npx jtm run`<br />`npx jtm run --watch true`<br />`npx jtm run --watch false`|Specifies whether to enable file monitoring. This configuration is enabled by default. After enabling, the relevant file changes will regenerate the Markdown file|

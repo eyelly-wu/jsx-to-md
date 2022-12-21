@@ -96,7 +96,7 @@ pnpm i -D jsx-to-md
         
 ```
 假如 `index.tsx` 的内容如下：
->这里JSX语法采用的是 React.createElement 的形式，所以这里需要默认导入 React
+>这里JSX语法采用的是 `React.createElement` 的形式，所以这里需要默认导入 `React` 
 ```tsx
 import React, { Link } from 'jsx-to-md'
 
@@ -159,14 +159,14 @@ module.exports = {
 ```bash
 npx jtm run
 ```
-假如未调整上面的默认配置，命令执行成功的话，会在根目录下生成对应的Markdown文件，最后生成的Markdown文本内容如下
+假如未调整上面的默认配置，命令执行成功的话，会在根目录下生成对应的 Markdown 文件，最后生成的 Markdown 文本内容如下
 ```md
 Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!
 ```
 显示效果如下<br />
 >Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!
 
-并且 `docs/index.tsx` 内容发生调整，保存后，对应的Markdown文件也会实时同步变化
+并且 `docs/index.tsx` 内容发生调整，保存后，对应的 Markdown 文件也会实时同步变化
 # 命令行
 
 ## 1.  `jsx-to-md.config.js` 配置
