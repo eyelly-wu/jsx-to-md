@@ -68,7 +68,7 @@ describe('test component render', () => {
     expect(res).toBe(expectRes)
   })
 
-  it('Front', () => {
+  it('Font', () => {
     const res = render(
       <>
         <Italic>italic</Italic>
@@ -152,10 +152,15 @@ describe('test component render', () => {
       const res = render(
         <>
           <CodeBlock
-            code={`function Foo(){
+            code={`
+
+function Foo(){
 }
 
-foo()`}
+foo()
+
+
+`}
           />
         </>,
       )

@@ -21,6 +21,8 @@ export const CodeBlock = ({
   code,
   langType = 'js',
 }: Omit<CodeBlockProps, 'isInline' | 'children'> & { code: string }) => {
+  code = code?.replace(/^\n*/, '')?.replace(/\n*$/, '')
+
   return (
     <>
       {`\n\`\`\`${langType}\n`}
