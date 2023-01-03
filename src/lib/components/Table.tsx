@@ -35,7 +35,7 @@ function Header({ columns }: Pick<TableProps, 'columns'>) {
 function Body({ columns, data }: TableProps) {
   const content = data.reduce((res: unknown[], dataItem) => {
     columns.forEach(({ fieldName }, index) => {
-      const preffix = '|'
+      const prefix = '|'
       let suffix = ''
       if (index == columns.length - 1) {
         suffix = '|\n'
@@ -43,7 +43,7 @@ function Body({ columns, data }: TableProps) {
 
       res.push(
         <>
-          {preffix}
+          {prefix}
           <>{dataItem[fieldName]}</>
           {suffix}
         </>,

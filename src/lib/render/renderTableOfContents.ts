@@ -104,7 +104,7 @@ export default function renderTableOfContents(
 
   const tableOfContents = generateStrTableByIndent(headings, renderProps)
 
-  const newContens = replaceTOCPlaceholder(contents, tableOfContents)
+  const newContents = replaceTOCPlaceholder(contents, tableOfContents)
 
-  return newContens
+  return newContents
 }

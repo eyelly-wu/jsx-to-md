@@ -86,7 +86,7 @@ export default function renderElement(
       }
       currentRes = TABLE_OF_CONTENTS_PLACEHOLDER
     } else if (type === AsyncWrapper) {
-      const tag = '\nAsyncWapper:' + Math.random().toString(32).slice(2) + '\n'
+      const tag = '\nAsyncWrapper:' + Math.random().toString(32).slice(2) + '\n'
       asyncNodes.push({
         tag,
         data: props?.data as AsyncNode['data'],

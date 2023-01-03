@@ -5,7 +5,7 @@ type BlockQuoteProps = {
   children: string | unknown
 }
 
-export default function BlockQuete(props: BlockQuoteProps) {
+export default function BlockQuote(props: BlockQuoteProps) {
   const { level = 1 } = props
   return (
     <>{`

@@ -7,7 +7,7 @@ type ListProps = {
   mark?: string
 }
 
-function getPreffix(level: number): string {
+function getPrefix(level: number): string {
   return '   '.repeat(level - 1)
 }
 
@@ -17,7 +17,7 @@ export function ListImpl({
   isOrdered,
   mark: markProp = '*',
 }: ListProps) {
-  const preffix = getPreffix(level)
+  const prefix = getPrefix(level)
 
   return (
     <>
@@ -32,7 +32,7 @@ export function ListImpl({
 
         return (
           <>
-            {`${preffix}${mark} `}
+            {`${prefix}${mark} `}
             <>{item}</>
             <>{suffix}</>
           </>
@@ -114,7 +114,7 @@ type Items =
 
 function getListContent(items: Items, mark: string, level = 1): unknown[] {
   const [type, ...restItems] = items
-  const preffix = getPreffix(level)
+  const prefix = getPrefix(level)
 
   const content = (restItems as any[]).reduce((res, item, index) => {
     let currentContent: string | JSX.Element = ''
@@ -129,7 +129,7 @@ function getListContent(items: Items, mark: string, level = 1): unknown[] {
 
     currentContent = (
       <>
-        {`${preffix}${['O', 'o'].includes(type) ? `${index + 1}.` : mark} `}
+        {`${prefix}${['O', 'o'].includes(type) ? `${index + 1}.` : mark} `}
         {currentContent}
         {'\n'}
       </>

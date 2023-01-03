@@ -13,9 +13,9 @@ export default async function renderAsyncElement(
 
     const data = await promiseData
 
-    const contens = await renderAsync(<Component {...data} />)
+    const contents = await renderAsync(<Component {...data} />)
 
-    resContents = resContents.replace(tag, contens)
+    resContents = resContents.replace(tag, contents)
   }
 
   return resContents

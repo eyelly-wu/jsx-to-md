@@ -53,10 +53,10 @@ export default function renderHTMLElement(
     '',
   )
 
-  const preffix = `<${type}${propsStr}>`
+  const prefix = `<${type}${propsStr}>`
   const suffix = `</${type}>`
-  const preffixSpace = ' '.repeat(htmlLevel * 2)
-  const suffixsSpace = ' '.repeat((htmlLevel - 1) * 2)
+  const prefixSpace = ' '.repeat(htmlLevel * 2)
+  const suffixSpace = ' '.repeat((htmlLevel - 1) * 2)
   const childrenStr = children.reduce((res, item, index) => {
     let extra = ''
     if (
@@ -64,7 +64,7 @@ export default function renderHTMLElement(
       BLOCK_NODES.includes(item?.type) &&
       index > 0
     ) {
-      extra = '\n' + preffixSpace
+      extra = '\n' + prefixSpace
     }
     res +=
       extra +
@@ -76,11 +76,11 @@ export default function renderHTMLElement(
   }, '')
 
   if (NO_END_NODES.includes(type)) {
-    return preffix.replace('>', ' />')
+    return prefix.replace('>', ' />')
   }
 
   if (childrenStr === '') {
-    return `${preffix}${suffix}`
+    return `${prefix}${suffix}`
   }
 
   if (
@@ -88,9 +88,9 @@ export default function renderHTMLElement(
     childrenStr?.includes?.('\\n') ||
     childrenStr?.includes?.('\n')
   ) {
-    const currentPreffixSpace = type === 'pre' ? '' : preffixSpace
-    return `${preffix}\n${currentPreffixSpace}${childrenStr}\n${suffixsSpace}${suffix}`
+    const currentPrefixSpace = type === 'pre' ? '' : prefixSpace
+    return `${prefix}\n${currentPrefixSpace}${childrenStr}\n${suffixSpace}${suffix}`
   }
 
-  return `${preffix}${childrenStr}${suffix}`
+  return `${prefix}${childrenStr}${suffix}`
 }
