@@ -8,6 +8,7 @@ import Principle from './Principle'
 import Usage from './Usage'
 import en from '../i18n/en.json'
 import CommandLine from './CommandLine'
+import API from './api'
 
 export default function Doc({ locale }) {
   setI18N({
@@ -29,6 +30,7 @@ export default function Doc({ locale }) {
       <Principle />
       <Usage />
       <CommandLine />
+      <API />
     </>
   )
 }

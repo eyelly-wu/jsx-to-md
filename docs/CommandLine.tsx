@@ -74,7 +74,7 @@ function Source() {
     },
     {
       name: 'params',
-      type: 'Record<string,unknow>',
+      type: 'Record<string,unknown>',
       required: i18n('否'),
       default: `{}`,
       description: i18n('入口文件接收到的 props 属性'),
