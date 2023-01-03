@@ -60,8 +60,8 @@ export default function renderHTMLElement(
   const childrenStr = children.reduce((res, item, index) => {
     let extra = ''
     if (
-      typeof item.type === 'string' &&
-      BLOCK_NODES.includes(item.type) &&
+      typeof item?.type === 'string' &&
+      BLOCK_NODES.includes(item?.type) &&
       index > 0
     ) {
       extra = '\n' + preffixSpace
