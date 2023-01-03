@@ -17,7 +17,7 @@ import React, {
   Link,
   OderList,
   ListItem,
-  UnorderList,
+  UnorderedList,
   Table,
   Column,
   TaskList,
@@ -294,11 +294,11 @@ foo()
 
       const res = render(
         <>
-          <UnorderList>
+          <UnorderedList>
             {list.map((item) => (
               <ListItem>{item}</ListItem>
             ))}
-          </UnorderList>
+          </UnorderedList>
         </>,
       )
 
@@ -310,17 +310,17 @@ foo()
     it('Nested List', () => {
       const res = render(
         <>
-          <UnorderList>
+          <UnorderedList>
             <ListItem>
               Unorder List 1
               <OderList level={2}>
                 <ListItem>
                   Nested Order List 1
-                  <UnorderList level={3}>
+                  <UnorderedList level={3}>
                     <ListItem>Nested Unorder List 1</ListItem>
                     <ListItem>Nested Unorder List 2</ListItem>
                     <ListItem>Nested Unorder List 3</ListItem>
-                  </UnorderList>
+                  </UnorderedList>
                 </ListItem>
                 <ListItem>Nested Order List 2</ListItem>
                 <ListItem>Nested Order List 3</ListItem>
@@ -328,7 +328,7 @@ foo()
             </ListItem>
             <ListItem>Unorder List 2</ListItem>
             <ListItem>Unorder List 3</ListItem>
-          </UnorderList>
+          </UnorderedList>
         </>,
       )
 

@@ -26,7 +26,7 @@ export function ListImpl({
         const mark = isOrdered ? `${index + 1}.` : markProp
 
         const isExistNested = (item as any)?.children?.some?.((childItem) =>
-          [OderList, UnorderList].includes(childItem.type),
+          [OderList, UnorderedList].includes(childItem.type),
         )
         const suffix = isExistNested ? '' : '\n'
 
@@ -47,7 +47,7 @@ export function OderList(props: Omit<ListProps, 'isOrdered' | 'mark'>) {
   return <ListImpl {...props} isOrdered />
 }
 
-export function UnorderList(props: Omit<ListProps, 'isOrdered'>) {
+export function UnorderedList(props: Omit<ListProps, 'isOrdered'>) {
   return <ListImpl {...props} isOrdered={false} />
 }
 
