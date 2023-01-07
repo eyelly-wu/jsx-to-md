@@ -19,10 +19,14 @@ export function ListImpl({
 }: ListProps) {
   const prefix = getPrefix(level)
 
+  const currentChildren = Array.isArray(childrenProp)
+    ? childrenProp
+    : [childrenProp]
+
   return (
     <>
       {'\n'}
-      {(childrenProp as JSX.Element[]).map((item, index) => {
+      {(currentChildren as JSX.Element[]).map((item, index) => {
         const mark = isOrdered ? `${index + 1}.` : markProp
 
         const isExistNested = (item as any)?.children?.some?.((childItem) =>

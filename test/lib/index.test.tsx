@@ -266,7 +266,21 @@ foo()
   })
 
   describe('List', () => {
-    it('Order List', () => {
+    it('Order List single', () => {
+      const res = render(
+        <>
+          <OderList>
+            <ListItem>item1</ListItem>
+          </OderList>
+        </>,
+      )
+
+      const expectRes = '\n' + '1. item1\n' + '\n'
+
+      expect(res).toBe(expectRes)
+    })
+
+    it('Order List multiple', () => {
       const list = Array(3)
         .fill(0)
         .map((item, i) => `Item ${i + 1}`)
@@ -287,7 +301,7 @@ foo()
       expect(res).toBe(expectRes)
     })
 
-    it('Unorder List', () => {
+    it('Unordered List', () => {
       const list = Array(3)
         .fill(0)
         .map((item, i) => `Item ${i + 1}`)
@@ -307,41 +321,61 @@ foo()
       expect(res).toBe(expectRes)
     })
 
+    it('Unordered List single', () => {
+      const res = render(
+        <>
+          <UnorderedList>
+            <ListItem>item1</ListItem>
+          </UnorderedList>
+        </>,
+      )
+
+      const expectRes = '\n' + '* item1\n' + '\n'
+
+      expect(res).toBe(expectRes)
+    })
+
     it('Nested List', () => {
       const res = render(
         <>
           <UnorderedList>
             <ListItem>
-              Unorder List 1
+              Unordered List 1
               <OderList level={2}>
                 <ListItem>
                   Nested Order List 1
                   <UnorderedList level={3}>
-                    <ListItem>Nested Unorder List 1</ListItem>
-                    <ListItem>Nested Unorder List 2</ListItem>
-                    <ListItem>Nested Unorder List 3</ListItem>
+                    <ListItem>
+                      Nested Unordered List 1
+                      <OderList level={4}>
+                        <ListItem>Nested Order List 1</ListItem>
+                      </OderList>
+                    </ListItem>
+                    <ListItem>Nested Unordered List 2</ListItem>
+                    <ListItem>Nested Unordered List 3</ListItem>
                   </UnorderedList>
                 </ListItem>
                 <ListItem>Nested Order List 2</ListItem>
                 <ListItem>Nested Order List 3</ListItem>
               </OderList>
             </ListItem>
-            <ListItem>Unorder List 2</ListItem>
-            <ListItem>Unorder List 3</ListItem>
+            <ListItem>Unordered List 2</ListItem>
+            <ListItem>Unordered List 3</ListItem>
           </UnorderedList>
         </>,
       )
 
       const expectRes = `
-* Unorder List 1
+* Unordered List 1
    1. Nested Order List 1
-      * Nested Unorder List 1
-      * Nested Unorder List 2
-      * Nested Unorder List 3
+      * Nested Unordered List 1
+         1. Nested Order List 1
+      * Nested Unordered List 2
+      * Nested Unordered List 3
    2. Nested Order List 2
    3. Nested Order List 3
-* Unorder List 2
-* Unorder List 3
+* Unordered List 2
+* Unordered List 3
 
 `
       expect(res).toBe(expectRes)
@@ -366,7 +400,7 @@ foo()
       expect(res).toBe(expectRes)
     })
 
-    it('Unorder List', () => {
+    it('Unordered List', () => {
       const list = Array(3)
         .fill(0)
         .map((item, i) => `Item ${i + 1}`)
@@ -389,39 +423,39 @@ foo()
             items={[
               'U',
               [
-                'Unorder List 1',
+                'Unordered List 1',
                 [
                   'O',
                   [
                     'Nested Order List 1',
                     [
                       'U',
-                      'Nested Unorder List 1',
-                      'Nested Unorder List 2',
-                      'Nested Unorder List 3',
+                      'Nested Unordered List 1',
+                      'Nested Unordered List 2',
+                      'Nested Unordered List 3',
                     ],
                   ],
                   'Nested Order List 2',
                   'Nested Order List 3',
                 ],
               ],
-              'Unorder List 2',
-              'Unorder List 3',
+              'Unordered List 2',
+              'Unordered List 3',
             ]}
           />
         </>,
       )
 
       const expectRes = `
-* Unorder List 1
+* Unordered List 1
    1. Nested Order List 1
-      * Nested Unorder List 1
-      * Nested Unorder List 2
-      * Nested Unorder List 3
+      * Nested Unordered List 1
+      * Nested Unordered List 2
+      * Nested Unordered List 3
    2. Nested Order List 2
    3. Nested Order List 3
-* Unorder List 2
-* Unorder List 3
+* Unordered List 2
+* Unordered List 3
 
 `
       expect(res).toBe(expectRes)
