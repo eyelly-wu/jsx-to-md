@@ -170,5 +170,7 @@
   "异步渲染 JSX 元素，返回生成的 Markdown 字符内容": "Asynchronous rendering of JSX elements, returning the generated Markdown character content",
   "当前函数只能用于渲染根节点，需要异步渲染的内容需要搭配 AsyncWrapper 来使用": "The current function can only be used to render the root node. The content to be rendered asynchronously needs to be used with AsyncWrapper",
   "输出：{0}": "Output: {0}",
-  "API": "API"
+  "API": "API",
+  "帮助文档": "Help Documents",
+  "快速上手": "Quick start"
 }

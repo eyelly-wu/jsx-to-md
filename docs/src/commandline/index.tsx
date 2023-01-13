@@ -1,5 +1,6 @@
-import React, { H1, H2, H3, Table, Column } from '@lib'
+import React, { H1, H2, H3, Table, Column, TableOfContents } from '@lib'
 import { CONFIG_NAME } from '@bin/constant'
+import { initI18N } from '../utils'
 
 function getCommonTableColumns() {
   const commonTableColumns: Column[] = [
@@ -224,10 +225,13 @@ function Command() {
   )
 }
 
-export default function CommandLine() {
+export default function CommandLine(props) {
+  initI18N(props)
+
   return (
     <>
-      <H1>{i18n('命令行')}</H1>
+      <H1 skip>{i18n('命令行')}</H1>
+      <TableOfContents text={i18n('目录')} open={false} />
       <Config />
       <Command />
     </>

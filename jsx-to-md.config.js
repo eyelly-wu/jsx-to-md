@@ -1,21 +1,61 @@
 const path = require('path')
 const join = path.join
+const package = require('./package.json')
+
+const codeNameMap = package.codeNameMap
+
+const readme = {
+  entry: 'docs/src/readme',
+  out: '',
+  name: 'README',
+}
+
+const usage = {
+  entry: 'docs/src/usage',
+  out: 'docs/dist/',
+  name: 'USAGE',
+}
+
+const commandline = {
+  entry: 'docs/src/commandline',
+  out: 'docs/dist/',
+  name: 'COMMAND_LINE',
+}
+
+const api = {
+  entry: 'docs/src/api',
+  out: 'docs/dist/',
+  name: 'API',
+}
+
+function getSource({ entry, out, name }) {
+  const source = Object.entries(codeNameMap).reduce(
+    (res, [locale, langName]) => {
+      res.push({
+        entry: join(__dirname, entry),
+        output: join(
+          __dirname,
+          out,
+          `${name}${langName ? `_${langName}` : ''}.md`,
+        ),
+        params: {
+          locale,
+        },
+      })
+
+      return res
+    },
+    [],
+  )
+
+  return source
+}
 
 module.exports = {
   source: [
-    {
-      entry: join(__dirname, 'docs/src/index'),
-      output: join(__dirname, 'README.md'),
-      params: {
-        locale: 'en',
-      },
-    },
-    {
-      entry: join(__dirname, 'docs/src/index'),
-      output: join(__dirname, 'README_zh-CN.md'),
-      params: {
-        locale: 'zh',
-      },
-    },
+    ...getSource(readme),
+    ...getSource(usage),
+    ...getSource(commandline),
+    ...getSource(api),
   ],
 }

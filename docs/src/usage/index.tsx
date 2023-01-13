@@ -1,9 +1,18 @@
-import React, { Break, H1, H2, CodeBlock, BlockQuote, Link, render } from '@lib'
-import { linkObj } from './constants'
+import React, {
+  Break,
+  H1,
+  H2,
+  CodeBlock,
+  BlockQuote,
+  Link,
+  render,
+  TableOfContents,
+} from '@lib'
 import { CONFIG_NAME, INIT_CONFIG_CONTENT } from '@bin/constant'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import Demo from './Demo'
+import { initI18N } from '../utils'
 
 const demoDocCode = readFileSync(path.join(__dirname, './Demo.tsx'), {
   encoding: 'utf-8',
@@ -124,11 +133,14 @@ function ExecuteRunCommand() {
   )
 }
 
-export default function Usage() {
+export default function Usage(props) {
+  initI18N(props)
+
   return (
     <>
       <Break />
-      <H1>{i18n('用法')}</H1>
+      <H1 skip>{i18n('快速上手')}</H1>
+      <TableOfContents text={i18n('目录')} open={false} />
       <Install />
       <CreateJsx />
       <InitConfig />

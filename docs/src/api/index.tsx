@@ -1,11 +1,15 @@
-import React, { H1 } from '@lib'
+import React, { H1, TableOfContents } from '@lib'
 import FunctionList from './function'
 import ComponentList from './component'
+import { initI18N } from '../utils'
 
-export default function API() {
+export default function API(props) {
+  initI18N(props)
+
   return (
     <>
-      <H1>{i18n('API')}</H1>
+      <H1 skip>{i18n('API')}</H1>
+      <TableOfContents text={i18n('目录')} open={false} />
       <FunctionList />
       <ComponentList />
     </>
