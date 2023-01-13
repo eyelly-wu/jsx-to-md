@@ -56,12 +56,12 @@ switch (true) {
         const originFilename = `render${index}`
         const filename = `${originFilename}.tsx`
         const runScript = `
-import { writeFileSync, existsSync } from 'node:fs'
+import { existsSync } from 'node:fs'
 import Doc from '${entry}'
 import React, { renderAsync } from '../../lib/'
 import { writeFileWithPath } from '../utils'
 
-(async()=>{
+export default async function(){
   const res = await renderAsync(<Doc {...(${paramsStr}) as any}/>)
 
   try {
@@ -71,8 +71,7 @@ import { writeFileWithPath } from '../utils'
   } catch (err) {
     console.error(err)
   }
-
-})()`
+}`
         // Generate temp script file
         writeFile(targetPath, filename, runScript)
 
@@ -82,11 +81,19 @@ import { writeFileWithPath } from '../utils'
 
       const runScript = `
 ${filenames
-  .map((item) => {
-    return `import './${item}'\n`
+  .map((item, index) => {
+    return `import f${index} from './${item}'\n`
   })
   .join('')}
-      `
+
+const funcs = [${filenames.map((item, index) => `f${index}`).join(', ')}]
+
+;(async ()=>{
+  for(let i=0; i<${filenames.length}; i++) {
+    await funcs[i]()
+  }
+})()
+`
       const filename = 'run.tsx'
       writeFile(targetPath, filename, runScript)
       exec(
