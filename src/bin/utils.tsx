@@ -49,3 +49,11 @@ export function writeFile(path: string, filename: string, content: string) {
     encoding: 'utf-8',
   })
 }
+
+export function writeFileWithPath(path: string, content: string) {
+  const dirpath = path.slice(
+    0,
+    path.lastIndexOf(process.platform === 'win32' ? '\\' : '/'),
+  )
+  writeFile(dirpath, path.replace(dirpath, ''), content)
+}

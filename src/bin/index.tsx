@@ -59,15 +59,14 @@ switch (true) {
 import { writeFileSync, existsSync } from 'node:fs'
 import Doc from '${entry}'
 import React, { renderAsync } from '../../lib/'
+import { writeFileWithPath } from '../utils'
 
 (async()=>{
   const res = await renderAsync(<Doc {...(${paramsStr}) as any}/>)
 
   try {
     const isExist = existsSync('${output}')
-    writeFileSync('${output}', res, {
-      encoding: 'utf8',
-    })
+    writeFileWithPath('${output}', res)
     console.log(\`${new Date().toLocaleTimeString()} ${output} has been ${'${ isExist?"updated":"created" }'} \`)
   } catch (err) {
     console.error(err)
