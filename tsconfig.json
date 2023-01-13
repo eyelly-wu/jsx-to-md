@@ -22,7 +22,7 @@
   },
   "include": [
     "src",
-    "docs",
+    "docs/src",
     "global.d.ts"
   ]
 }

@@ -1,6 +1,6 @@
 import React, { Image, Link, Break } from '@lib'
 import { linkObj, imageObj, langs } from './constants'
-import { version } from '../package.json'
+import { version } from '../../package.json'
 
 const sperator = ' | '
 

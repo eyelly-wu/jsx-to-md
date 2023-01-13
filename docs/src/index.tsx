@@ -6,7 +6,7 @@ import Feature from './Feature'
 import LiveDemo from './LiveDemo'
 import Principle from './Principle'
 import Usage from './Usage'
-import en from '../i18n/en.json'
+import en from '../../i18n/en.json'
 import CommandLine from './CommandLine'
 import API from './api'
 
