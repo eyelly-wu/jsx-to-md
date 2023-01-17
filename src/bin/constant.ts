@@ -17,3 +17,5 @@ module.exports = {
 }`
 
 export const TEMP_DIR = '.temp'
+
+export const ROOT_EXECUTE_FILE_NAME = 'execute.ts'
