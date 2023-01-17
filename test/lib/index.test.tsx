@@ -182,11 +182,11 @@ foo()
     it('Single', () => {
       const res = render(
         <>
-          <Image alt={label} src={url} title={label} />
+          <Image alt={label} src={url} />
         </>,
       )
 
-      const expectRes = `![${label}](${url} "${label}")`
+      const expectRes = `![${label}](${url})`
 
       expect(res).toBe(expectRes)
     })

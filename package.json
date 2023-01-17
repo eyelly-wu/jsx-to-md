@@ -11,7 +11,7 @@
     "test": "vitest --ui",
     "publish": "rimraf dist && tsc && ts-node-dev ./src/bin/index.tsx run --watch false && npm publish --access=public --registry https://registry.npmjs.org",
     "dev": "tsc --watch",
-    "coverage": "vitest --coverage",
+    "coverage": "vitest --coverage --watch false",
     "docs": "ts-node-dev ./src/bin/index.tsx run",
     "translate": "i18n t"
   },
