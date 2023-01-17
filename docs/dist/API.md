@@ -1066,15 +1066,15 @@ export default function () {
     <>
       <Table
         columns={[
-          { fieldName: 'field1', title: 'Left Heading' },
+          { fieldName: 'field1', title: 'Left Title' },
           { fieldName: 'field2', title: 'Centered Title', align: 'center' },
-          { fieldName: 'field3', title: 'Right Heading', align: 'right' },
+          { fieldName: 'field3', title: 'Right Title', align: 'right' },
         ]}
         data={Array(10)
           .fill(0)
           .map((item) => {
             return ['field1', 'field2', 'field3'].reduce((res, item) => {
-              res[item] = 'Random number:' + Math.random().toString(10).slice(2)
+              res[item] = 'Text content'
               return res
             }, {})
           })}
@@ -1088,18 +1088,18 @@ export default function () {
 
 
 ```markdown
-|Left Heading|Centered Title|Right Heading|
+|Left Title|Centered Title|Right Title|
 |:-|:-:|-:|
-|Random number:08871000601962442|Random number:45778824626839687|Random number:8460734761835769|
-|Random number:5367478303410391|Random number:20625357573802572|Random number:7950022770680554|
-|Random number:7437668150227181|Random number:9838073915892924|Random number:6622148660163036|
-|Random number:6509603210603825|Random number:9243839846600841|Random number:5165269143072246|
-|Random number:07357388469062265|Random number:07939368614058462|Random number:07997346809087391|
-|Random number:06042278528524858|Random number:029262675181978892|Random number:2481538316007621|
-|Random number:2794663307463938|Random number:12017028350850212|Random number:9084987276493446|
-|Random number:025357715868333797|Random number:6104757127593321|Random number:5821327041833095|
-|Random number:9140745267764723|Random number:20738640896359284|Random number:9700299684264067|
-|Random number:15143178939065338|Random number:967933435629295|Random number:9224527167024466|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
 ```
 
 
@@ -1108,18 +1108,18 @@ export default function () {
     <summary>Render Content</summary>
 
 
-|Left Heading|Centered Title|Right Heading|
+|Left Title|Centered Title|Right Title|
 |:-|:-:|-:|
-|Random number:08871000601962442|Random number:45778824626839687|Random number:8460734761835769|
-|Random number:5367478303410391|Random number:20625357573802572|Random number:7950022770680554|
-|Random number:7437668150227181|Random number:9838073915892924|Random number:6622148660163036|
-|Random number:6509603210603825|Random number:9243839846600841|Random number:5165269143072246|
-|Random number:07357388469062265|Random number:07939368614058462|Random number:07997346809087391|
-|Random number:06042278528524858|Random number:029262675181978892|Random number:2481538316007621|
-|Random number:2794663307463938|Random number:12017028350850212|Random number:9084987276493446|
-|Random number:025357715868333797|Random number:6104757127593321|Random number:5821327041833095|
-|Random number:9140745267764723|Random number:20738640896359284|Random number:9700299684264067|
-|Random number:15143178939065338|Random number:967933435629295|Random number:9224527167024466|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
+|Text content|Text content|Text content|
 
 
 

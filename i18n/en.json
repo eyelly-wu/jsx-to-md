@@ -136,10 +136,9 @@
   "{0}标识有序列表": "{0} identifies a sequence list",
   "{0}标识无序列表": "{0} identifies an unordered list",
   "列表项内容": "List item content",
-  "靠左标题": "Left Heading",
+  "靠左标题": "Left Title",
   "居中标题": "Centered Title",
-  "靠右标题": "Right Heading",
-  "随机数：": "Random number:",
+  "靠右标题": "Right Title",
   "表格": "Table",
   "列头配置": "Column Header Configuration",
   "表体数据内容": "Table Body Data Content",
@@ -172,5 +171,6 @@
   "输出：{0}": "Output: {0}",
   "API": "API",
   "帮助文档": "Help Documents",
-  "快速上手": "Quick start"
+  "快速上手": "Quick start",
+  "文本内容": "Text content"
 }

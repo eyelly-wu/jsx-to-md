@@ -13,7 +13,7 @@ export default function () {
           .fill(0)
           .map((item) => {
             return ['field1', 'field2', 'field3'].reduce((res, item) => {
-              res[item] = i18n('随机数：') + Math.random().toString(10).slice(2)
+              res[item] = i18n('文本内容')
               return res
             }, {})
           })}
