@@ -77,7 +77,7 @@ describe('command', () => {
 
   describe('run implementation', () => {
     describe('generateTSConfig', () => {
-      const targetPath = join(__dirname, '../../src/bin/.temp/tsconfig.json')
+      const targetPath = join(__dirname, '../../src/bin/tsconfig.json')
 
       it('tsconfig exist', () => {
         const isExist = existsSync(targetPath)

@@ -28,11 +28,7 @@ export function generateTSConfig(testWorkingDir?: string) {
     require: ['tsconfig-paths/register'],
   }
 
-  writeFile(
-    join(__dirname, '.temp'),
-    'tsconfig.json',
-    JSON.stringify(tsConfig, null, 2),
-  )
+  writeFile(__dirname, 'tsconfig.json', JSON.stringify(tsConfig, null, 2))
 }
 
 export function generateRenderFileAndGetFilenames(props: {
