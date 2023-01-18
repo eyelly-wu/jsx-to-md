@@ -14,12 +14,15 @@ export function initI18N({ locale }) {
   global.docLocale = locale
 }
 
-export function getDocHref(filename: string) {
+export function getDocHref(filename: string, anchorProp?: string) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { version, codeNameMap } = packageInfo as any
   let name = codeNameMap[global.docLocale]
   name = name ? `_${name}` : ''
-  const res = `https://github.com/eyelly-wu/jsx-to-md/blob/v${version}/docs/dist/${filename}${name}.md`
+  let anchor = anchorProp ? `#${anchorProp}` : ''
+  anchor = anchor.replace(/ /g, '-').replace('.', '').toLocaleLowerCase()
+
+  const res = `https://github.com/eyelly-wu/jsx-to-md/blob/v${version}/docs/dist/${filename}${name}.md${anchor}`
 
   return res
 }

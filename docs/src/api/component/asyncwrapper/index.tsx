@@ -17,7 +17,7 @@ export default function () {
         data={[
           {
             name: 'data',
-            type: 'Promise<T>',
+            type: 'Promise&lt;T&gt;',
             required: 'true',
             default: '-',
             description: <>{i18n('异步加载的数据')}</>,

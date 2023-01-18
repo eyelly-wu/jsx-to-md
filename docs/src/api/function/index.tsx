@@ -11,7 +11,7 @@ export default function FunctionList() {
   return (
     <>
       <H2>{i18n('函数API')}</H2>
-      <H3>{i18n('属性')}</H3>
+      <H3>{i18n('函数列表')}</H3>
       <table>
         <tr>
           <th>{i18n('函数名')}</th>

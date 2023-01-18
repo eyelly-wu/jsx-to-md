@@ -12,7 +12,7 @@ import { CONFIG_NAME, INIT_CONFIG_CONTENT } from '@bin/constant'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import Demo from './Demo'
-import { initI18N } from '../utils'
+import { getDocHref, initI18N } from '../utils'
 
 const demoDocCode = readFileSync(path.join(__dirname, './Demo.tsx'), {
   encoding: 'utf-8',
@@ -72,8 +72,10 @@ function InitConfig() {
       <Break />
       <H2>{`3. ${i18n('初始化命令行配置文件')}`}</H2>
       {i18n('在命令行终端输入如下命令，')}
-      <Link href={`#${i18n('命令列表')}`}>{i18n('更多命令')}</Link>
-      <CodeBlock langType="bash" code="npm jtm init" />
+      <Link href={getDocHref('COMMAND_LINE', '2. ' + i18n('命令'))}>
+        {i18n('更多命令')}
+      </Link>
+      <CodeBlock langType="bash" code="npx jtm init" />
       {i18n('然后会在当前目录下生成一个{0}的文件', ` \`${CONFIG_NAME}\` `)}
       <Break />
       <Break />
@@ -100,7 +102,7 @@ function ModifyConfig() {
       <H2>{`4. ${i18n('调整{0}配置', ` \`${CONFIG_NAME}\` `)}`}</H2>
       {i18n(
         '根据需求自行调整配置文件中的配置项，配置项的{0}',
-        render(<Link href={`#${i18n('命令行')}`}>{i18n('说明')}</Link>),
+        render(<Link href={getDocHref('COMMAND_LINE')}>{i18n('说明')}</Link>),
       )}
       <Break />
       <Break />

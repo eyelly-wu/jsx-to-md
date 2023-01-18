@@ -1,6 +1,6 @@
 
 
-# Quick start
+# Quick Start
 
 <details >
   <summary>Table of Contents</summary>
@@ -51,9 +51,9 @@ export default function () {
 
 
 ## 3. Initialize command line configuration file
-Enter the following command at the command line terminal, [More Commands](#command-list)
+Enter the following command at the command line terminal, [More Commands](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/COMMAND_LINE.md#2-command)
 ```bash
-npm jtm init
+npx jtm init
 ```
 Then a  `jsx-to-md.config.js`  file will be generated in the current directory
 
@@ -71,7 +71,7 @@ Then your file directory is like this
 
 
 ## 4. Adjust  `jsx-to-md.config.js`  configuration
-Adjust the configuration items in the configuration file according to the requirements
+Adjust the configuration items in the configuration file according to the requirements [description](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/COMMAND_LINE.md)
 
 The default configuration is as follows:
 ```js

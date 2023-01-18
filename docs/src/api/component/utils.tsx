@@ -36,6 +36,7 @@ export function getCodeString(path: string) {
   const nestedRegExp = />(\s*)\{i18n\((['"])(.+?)\2\)\}(\s*)</g
   const propRegExp = /=\{i18n\((['"])(.+?)\1\)\}/g
   const commentRegExp = /\*\*\$\{i18n\((['"])(.+?)\1\)\}\*/g
+  const bracketsRegExp = /\{i18n\((['"])(.+?)\1\)\}/g
   const normalRegExp = /i18n\((['"])(.+?)\1\)/g
 
   return code
@@ -51,6 +52,9 @@ export function getCodeString(path: string) {
     })
     .replace(propRegExp, (wholeText, quote, text) => {
       return `="${i18n(text)}"`
+    })
+    .replace(bracketsRegExp, (wholeText, quote, text) => {
+      return `${i18n(text)}`
     })
     .replace(normalRegExp, (wholeText, quote, text) => {
       return `'${i18n(text)}'`

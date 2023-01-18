@@ -62,7 +62,7 @@ The library is mainly composed of two parts
 So  `Command Line Tools`  and  `Function API`  are better used together
 # Help Documents
 
-* [Quick start](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/USAGE.md)
+* [Quick Start](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/USAGE.md)
 * [Command Line](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/COMMAND_LINE.md)
 * [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/API.md)
 

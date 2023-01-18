@@ -47,7 +47,11 @@ export default function AsyncDemo() {
                       Hi {name}
                       <AsyncWrapper data={asyncData2}>
                         {({ name }) => {
-                          return <>,{i18n('这是 `{0}`, 欢迎使用', name)}</>
+                          return (
+                            <>
+                              , this is {name}, {i18n('欢迎使用')}
+                            </>
+                          )
                         }}
                       </AsyncWrapper>
                     </>

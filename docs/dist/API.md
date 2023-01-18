@@ -5,69 +5,69 @@
   <summary>Table of Contents</summary>
 
   &emsp;&emsp;[Function API](#function-api)<br/>
-  &emsp;&emsp;&emsp;&emsp;[Attribute](#attribute)<br/>
-  &emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Function List](#function-list)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;[Component](#component)<br/>
   &emsp;&emsp;&emsp;&emsp;[Layout](#layout)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Heading](#heading)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Font](#font)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Block Quote](#block-quote)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Code](#code)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Image](#image)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Link](#link)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[List](#list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type description](#type-description)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type Description](#type-description)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Items](#items)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Table](#table)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type description](#type-description)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type Description](#type-description)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Column](#column)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Task list](#task-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type description](#type-description)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Type Description](#type-description)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[TaskItem](#taskitem)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Table of Contents](#table-of-contents)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
-  &emsp;&emsp;&emsp;&emsp;[Asynchronous rendering wrapper](#asynchronous-rendering-wrapper)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Asynchronous Rendering Wrapper](#asynchronous-rendering-wrapper)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#component-list)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#attribute-description)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample code](#sample-code)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#sample-code)<br/>
 
 </details>
 
 ## Function API
 
-### Attribute
+### Function List
 <table>
   <tr>
     <th>Function Name</th>
@@ -94,7 +94,7 @@
   </tr>
 </table>
 
-### Sample code
+### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -142,7 +142,7 @@ Layout related components are provided here
 |:-:|:-:|:-:|:-:|:-|
 |-|-|-|-|-|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -212,7 +212,7 @@ The corresponding h1-h6 tags in HTML are used in a similar way
 |:-:|:-:|:-:|:-:|:-|
 |skip|boolean|false|false|Controls whether the current title skips generate directories|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -323,7 +323,7 @@ export default function () {
 |:-:|:-:|:-:|:-:|:-|
 |mark|'*' \| '_'|false|'*'|Generate markers corresponding to Markdown syntax<br /><br />该属性针对 `StrikeThrough` 无效|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -385,7 +385,7 @@ export default function () {
 |:-:|:-:|:-:|:-:|:-|
 |level|number|false|1|Hierarchy, suitable for multi nested scenes|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -459,7 +459,7 @@ export default function () {
 |code|string|true|-|Code content<br /><br />该属性针对 `InlineCode` 无效|
 |langType|string|false|js|Code Type<br /><br />该属性针对 `InlineCode` 无效|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -543,7 +543,7 @@ foo()
 |alt|string|true|-|Image loading abnormally displayed text|
 |title|string|false|-|Prompt information displayed by mouse hovering|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -598,7 +598,7 @@ export default function () {
 |href|string|true|-|Link Address|
 |title|string|false|-|Prompt information displayed by mouse hovering|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -644,11 +644,11 @@ export default function () {
 
 #### Component List
 
-* Semantic type
+* Semantic Type
    * OderList
    * UnorderedList
    * ListItem
-* Simple
+* Simple Type
    * List
 
 
@@ -658,9 +658,9 @@ export default function () {
 |:-:|:-:|:-:|:-:|:-|
 |level|number|false|1|Nesting Level<br /><br />Applicable to `OderList` and `UnorderedList`|
 |mark|`_` \| `*`|false|*|Generate markers corresponding to Markdown syntax<br /><br />Applicable to `OderList` and `UnorderedList`|
-|items|[Items](#items)|false|*|List Item Configuration<br /><br />For `List`|
+|items|[Items](#items)|false|-|List Item Configuration<br /><br />For `List`|
 
-#### Type description
+#### Type Description
 
 ##### Items
 Because of the following complex nested types, `List` can piece together complex nested lists through simple syntax
@@ -671,10 +671,12 @@ Because of the following complex nested types, `List` can piece together complex
  * U | u identifies an unordered list
  */
 type ListType = 'O' | 'o' | 'U' | 'u'
+
 /**
  * List item content
  */
 type ListItem = string | JSX.Element | [string, Items]
+
 /**
  * List item content
  */
@@ -735,7 +737,7 @@ type Items =
       
 ```
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -755,7 +757,7 @@ export default function () {
   return (
     <>
       <H1>List</H1>
-      <H2>Semantic type</H2>
+      <H2>Semantic Type</H2>
       <H3>Unordered list</H3>
       <UnorderedList>
         <ListItem>List Item 1</ListItem>
@@ -815,7 +817,7 @@ export default function () {
         </ListItem>
         <ListItem>...</ListItem>
       </UnorderedList>
-      <H2>Simple</H2>
+      <H2>Simple Type</H2>
       <H3>Unordered list</H3>
       <List items={['U', 'List Item 1', 'List Item 2', 'List Item 3']} />
       <H3>Ordered list</H3>
@@ -854,7 +856,7 @@ export default function () {
 ```markdown
 # List
 
-## Semantic type
+## Semantic Type
 
 ### Unordered list
 
@@ -894,7 +896,7 @@ export default function () {
 * ...
 
 
-## Simple
+## Simple Type
 
 ### Unordered list
 
@@ -941,7 +943,7 @@ export default function () {
 
 # List
 
-## Semantic type
+## Semantic Type
 
 ### Unordered list
 
@@ -981,7 +983,7 @@ export default function () {
 * ...
 
 
-## Simple
+## Simple Type
 
 ### Unordered list
 
@@ -1041,7 +1043,7 @@ export default function () {
 |columns|[Column[]](#column)|true|-|Column Header Configuration|
 |data|any[]|true|-|Table Body Data Content|
 
-#### Type description
+#### Type Description
 
 ##### Column
 
@@ -1053,7 +1055,7 @@ type Column = {
 }
 ```
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -1074,7 +1076,7 @@ export default function () {
           .fill(0)
           .map((item) => {
             return ['field1', 'field2', 'field3'].reduce((res, item) => {
-              res[item] = 'Text content'
+              res[item] = 'text content'
               return res
             }, {})
           })}
@@ -1090,16 +1092,16 @@ export default function () {
 ```markdown
 |Left Title|Centered Title|Right Title|
 |:-|:-:|-:|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
 ```
 
 
@@ -1110,16 +1112,16 @@ export default function () {
 
 |Left Title|Centered Title|Right Title|
 |:-|:-:|-:|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
-|Text content|Text content|Text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
+|text content|text content|text content|
 
 
 
@@ -1141,7 +1143,7 @@ export default function () {
 |:-:|:-:|:-:|:-:|:-|
 |items|[TaskItem[]](#taskitem)|true|-|Task item configuration<br /><br />Support multi-level tasks. The status of the parent task will be calculated internally according to the status of the sub task|
 
-#### Type description
+#### Type Description
 
 ##### TaskItem
 
@@ -1152,7 +1154,7 @@ type TaskStatus = 0 | 1
 type TaskItem = string | [string, TaskStatus] | [string, TaskItem[]]
 ```
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -1264,7 +1266,7 @@ export default function TaskListDemo() {
 
 
 ### Table of Contents
-Corresponds to the  `[TOC]` in Markdown syntax`
+Corresponds to the  `[TOC]` in Markdown syntax
 #### Component List
 
 * TableOfContents
@@ -1278,7 +1280,7 @@ Corresponds to the  `[TOC]` in Markdown syntax`
 |open|boolean|false|true|Expand directory by default|
 |indent|`Array<'&nbsp; \| '&ensp; \| '&emsp; \| '&thinsp; \| '&zwnj; \| '&zwj;'>`|false|`['&emsp;', '&emsp;']`|Table of Contents Indent<br /><br />The directory hierarchy is implemented based on indentation|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -1400,7 +1402,7 @@ export default function () {
 </details>
 
 
-### Asynchronous rendering wrapper
+### Asynchronous Rendering Wrapper
 Used to support asynchronous rendering
 #### Component List
 
@@ -1411,9 +1413,9 @@ Used to support asynchronous rendering
 
 |Attribute Name|Type|Whether it is necessary|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|data|Promise<T>|true|-|Data loaded asynchronously|
+|data|Promise&lt;T&gt;|true|-|Data loaded asynchronously|
 
-#### Sample code
+#### Sample Code
 
 <details open="true">
   <summary>Code</summary>
@@ -1468,7 +1470,11 @@ export default function AsyncDemo() {
                       Hi {name}
                       <AsyncWrapper data={asyncData2}>
                         {({ name }) => {
-                          return <>,{i18n('这是 `{0}`, 欢迎使用', name)}</>
+                          return (
+                            <>
+                              , this is {name}, welcome to use
+                            </>
+                          )
                         }}
                       </AsyncWrapper>
                     </>
@@ -1490,7 +1496,7 @@ export default function AsyncDemo() {
 * Basic
    * Hi friend
 * Nested
-   * Hi friend,This is `jsx-to-md`, welcome to use
+   * Hi friend, this is jsx-to-md, welcome to use
 
 
 

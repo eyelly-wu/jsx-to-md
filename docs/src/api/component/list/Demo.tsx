@@ -12,7 +12,7 @@ export default function () {
   return (
     <>
       <H1>{i18n('列表')}</H1>
-      <H2>{i18n('语义类型')}</H2>
+      <H2>{i18n('语义型')}</H2>
       <H3>{i18n('无序列表')}</H3>
       <UnorderedList>
         <ListItem>{i18n('列表项1')}</ListItem>

@@ -51,9 +51,9 @@ export default function () {
 
 
 ## 3. 初始化命令行配置文件
-在命令行终端输入如下命令，[更多命令](#命令列表)
+在命令行终端输入如下命令，[更多命令](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/COMMAND_LINE_zh-CN.md#2-命令)
 ```bash
-npm jtm init
+npx jtm init
 ```
 然后会在当前目录下生成一个 `jsx-to-md.config.js` 的文件
 
@@ -71,7 +71,7 @@ npm jtm init
 
 
 ## 4. 调整 `jsx-to-md.config.js` 配置
-根据需求自行调整配置文件中的配置项，配置项的[说明](#命令行)
+根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.3/docs/dist/COMMAND_LINE_zh-CN.md)
 
 默认的配置如下：
 ```js

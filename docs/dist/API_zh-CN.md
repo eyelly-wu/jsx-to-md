@@ -5,7 +5,7 @@
   <summary>目录</summary>
 
   &emsp;&emsp;[函数API](#函数api)<br/>
-  &emsp;&emsp;&emsp;&emsp;[属性](#属性)<br/>
+  &emsp;&emsp;&emsp;&emsp;[函数列表](#函数列表)<br/>
   &emsp;&emsp;&emsp;&emsp;[示例代码](#示例代码)<br/>
   &emsp;&emsp;[组件](#组件)<br/>
   &emsp;&emsp;&emsp;&emsp;[布局](#布局)<br/>
@@ -67,7 +67,7 @@
 
 ## 函数API
 
-### 属性
+### 函数列表
 <table>
   <tr>
     <th>函数名</th>
@@ -658,7 +658,7 @@ export default function () {
 |:-:|:-:|:-:|:-:|:-|
 |level|number|false|1|嵌套层级<br /><br />适用于 `OderList`、`UnorderedList`|
 |mark|`_` \| `*`|false|*|生成对应 Markdown 语法的标记符<br /><br />适用于 `OderList`、`UnorderedList`|
-|items|[Items](#items)|false|*|列表项配置<br /><br />适用于 `List`|
+|items|[Items](#items)|false|-|列表项配置<br /><br />适用于 `List`|
 
 #### 类型说明
 
@@ -671,10 +671,12 @@ export default function () {
  * U | u标识无序列表
  */
 type ListType = 'O' | 'o' | 'U' | 'u'
+
 /**
  * 列表项内容
  */
 type ListItem = string | JSX.Element | [string, Items]
+
 /**
  * 列表项内容
  */
@@ -755,7 +757,7 @@ export default function () {
   return (
     <>
       <H1>列表</H1>
-      <H2>语义类型</H2>
+      <H2>语义型</H2>
       <H3>无序列表</H3>
       <UnorderedList>
         <ListItem>列表项1</ListItem>
@@ -854,7 +856,7 @@ export default function () {
 ```markdown
 # 列表
 
-## 语义类型
+## 语义型
 
 ### 无序列表
 
@@ -941,7 +943,7 @@ export default function () {
 
 # 列表
 
-## 语义类型
+## 语义型
 
 ### 无序列表
 
@@ -1411,7 +1413,7 @@ export default function () {
 
 |属性名|类型|是否必须|默认值|说明|
 |:-:|:-:|:-:|:-:|:-|
-|data|Promise<T>|true|-|异步加载的数据|
+|data|Promise&lt;T&gt;|true|-|异步加载的数据|
 
 #### 示例代码
 
@@ -1468,7 +1470,11 @@ export default function AsyncDemo() {
                       Hi {name}
                       <AsyncWrapper data={asyncData2}>
                         {({ name }) => {
-                          return <>,{i18n('这是 `{0}`, 欢迎使用', name)}</>
+                          return (
+                            <>
+                              , this is {name}, 欢迎使用
+                            </>
+                          )
                         }}
                       </AsyncWrapper>
                     </>
@@ -1490,7 +1496,7 @@ export default function AsyncDemo() {
 * 基础的
    * Hi 朋友
 * 嵌套的
-   * Hi 朋友,这是 `jsx-to-md`, 欢迎使用
+   * Hi 朋友, this is jsx-to-md, 欢迎使用
 
 
 

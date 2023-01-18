@@ -5,17 +5,17 @@
   <summary>Table of Contents</summary>
 
   &emsp;&emsp;[1.  `jsx-to-md.config.js`  configuration](#1-jsx-to-mdconfigjs-configuration)<br/>
-  &emsp;&emsp;&emsp;&emsp;[Basic configuration](#basic-configuration)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Basic Configuration](#basic-configuration)<br/>
   &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
   &emsp;&emsp;[2. Command](#2-command)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command List](#command-list)<br/>
-  &emsp;&emsp;&emsp;&emsp;[Command parameters](#command-parameters)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Command Parameters](#command-parameters)<br/>
 
 </details>
 
 ## 1.  `jsx-to-md.config.js`  configuration
 
-### Basic configuration
+### Basic Configuration
 
 |Name|Type|Required|Default|description|
 |:-:|:-:|:-:|:-:|:-|
@@ -38,7 +38,7 @@ Datasource related configuration
 |init|-|`npx jtm init`|Initialize Profile|
 |run|-|`npx jtm run`|Read configuration to generate Markdown file|
 
-### Command parameters
+### Command Parameters
 
 |Parameter name|Parameter value|Applicable command|Usage|description|
 |:-:|:-:|:-:|:-|:-|

@@ -52,7 +52,7 @@ export default function () {
             name: 'items',
             type: '[Items](#items)',
             required: 'false',
-            default: '*',
+            default: '-',
             description: (
               <>
                 {i18n('列表项配置')}
@@ -78,10 +78,12 @@ export default function () {
  * ${i18n('{0}标识无序列表', 'U | u')}
  */
 type ListType = 'O' | 'o' | 'U' | 'u'
+
 /**
  * ${i18n('列表项内容')}
  */
 type ListItem = string | JSX.Element | [string, Items]
+
 /**
  * ${i18n('列表项内容')}
  */
