@@ -174,5 +174,6 @@
   "欢迎使用": "welcome to use",
   "更新日志": "Changelog",
   "实现基础命令行工具": "Implement basic command line tools",
-  "实现基础函数API和基础组件": "Implement the basic function API and basic components"
+  "实现基础函数API和基础组件": "Implement the basic function API and basic components",
+  "该属性针对{0}无效": "This property is not valid for {0}"
 }

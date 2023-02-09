@@ -10,17 +10,24 @@ export default function Layout() {
       <H3>{i18n('布局')}</H3>
       {i18n('这里提供布局相关的组件')}
       <H4>{i18n('组件列表')}</H4>
-      <List items={['U', 'Break']} />
+      <List items={['U', 'Break', 'HorizontalRule']} />
       <H4>{i18n('属性说明')}</H4>
       <Table
         columns={getComponentColumns()}
         data={[
           {
-            name: '-',
-            type: '-',
-            required: '-',
-            default: '-',
-            description: '-',
+            name: 'mark',
+            type: "`'_'` \\| `'-'` \\| `'*'`",
+            required: i18n('否'),
+            default: "`'_'`",
+            description: (
+              <>
+                {i18n('生成对应 Markdown 语法的标记符')}
+                <br />
+                <br />
+                {i18n('该属性针对{0}无效', ' `Break` ')}
+              </>
+            ),
           },
         ]}
       />

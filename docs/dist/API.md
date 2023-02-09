@@ -134,13 +134,14 @@ Layout related components are provided here
 #### Component List
 
 * Break
+* HorizontalRule
 
 
 #### Attribute Description
 
 |Attribute Name|Type|Whether it is necessary|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|-|-|-|-|-|
+|mark|`'_'` \| `'-'` \| `'*'`|No|`'_'`|Generate markers corresponding to Markdown syntax<br /><br />This property is not valid for  `Break` |
 
 #### Sample Code
 
@@ -148,7 +149,7 @@ Layout related components are provided here
   <summary>Code</summary>
 
 ```tsx
-import React, { Break } from 'jsx-to-md'
+import React, { Break, HorizontalRule } from 'jsx-to-md'
 
 export default function () {
   return (
@@ -161,6 +162,10 @@ export default function () {
       <Break />
       <Break />
       klm
+      <HorizontalRule />
+      <HorizontalRule mark="*" />
+      <HorizontalRule mark="-" />
+      new line
     </>
   )
 }
@@ -175,6 +180,12 @@ efg
 hij
 
 klm
+___
+
+***
+
+---
+new line
 ```
 
 
@@ -187,6 +198,12 @@ efg
 hij
 
 klm
+___
+
+***
+
+---
+new line
 
 
   </details>
@@ -321,7 +338,7 @@ export default function () {
 
 |Attribute Name|Type|Whether it is necessary|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|mark|'*' \| '_'|false|'*'|Generate markers corresponding to Markdown syntax<br /><br />该属性针对 `StrikeThrough` 无效|
+|mark|'*' \| '_'|false|'*'|Generate markers corresponding to Markdown syntax<br /><br />This property is not valid for  `StrikeThrough` |
 
 #### Sample Code
 

@@ -26,6 +26,7 @@ import React, {
   TableOfContents,
   renderAsync,
   AsyncWrapper,
+  HorizontalRule,
 } from '../../src/lib'
 
 describe('test component render', () => {
@@ -40,6 +41,18 @@ describe('test component render', () => {
       )
 
       expect(res).toBe('text1\ntext2')
+    })
+
+    it('Horizontal Rule', () => {
+      const res = render(
+        <>
+          text1
+          <HorizontalRule />
+          text2
+        </>,
+      )
+
+      expect(res).toBe('text1\n___\ntext2')
     })
   })
 

@@ -1,4 +1,4 @@
-import React, { Break } from '@lib'
+import React, { Break, HorizontalRule } from '@lib'
 
 export default function () {
   return (
@@ -11,6 +11,10 @@ export default function () {
       <Break />
       <Break />
       klm
+      <HorizontalRule />
+      <HorizontalRule mark="*" />
+      <HorizontalRule mark="-" />
+      new line
     </>
   )
 }

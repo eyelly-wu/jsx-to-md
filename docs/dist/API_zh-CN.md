@@ -134,13 +134,14 @@ Test()
 #### 组件列表
 
 * Break
+* HorizontalRule
 
 
 #### 属性说明
 
 |属性名|类型|是否必须|默认值|说明|
 |:-:|:-:|:-:|:-:|:-|
-|-|-|-|-|-|
+|mark|`'_'` \| `'-'` \| `'*'`|否|`'_'`|生成对应 Markdown 语法的标记符<br /><br />该属性针对 `Break` 无效|
 
 #### 示例代码
 
@@ -148,7 +149,7 @@ Test()
   <summary>代码</summary>
 
 ```tsx
-import React, { Break } from 'jsx-to-md'
+import React, { Break, HorizontalRule } from 'jsx-to-md'
 
 export default function () {
   return (
@@ -161,6 +162,10 @@ export default function () {
       <Break />
       <Break />
       klm
+      <HorizontalRule />
+      <HorizontalRule mark="*" />
+      <HorizontalRule mark="-" />
+      new line
     </>
   )
 }
@@ -175,6 +180,12 @@ efg
 hij
 
 klm
+___
+
+***
+
+---
+new line
 ```
 
 
@@ -187,6 +198,12 @@ efg
 hij
 
 klm
+___
+
+***
+
+---
+new line
 
 
   </details>

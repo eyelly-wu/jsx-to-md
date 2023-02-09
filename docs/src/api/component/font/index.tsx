@@ -24,7 +24,7 @@ export default function Font() {
                 {i18n('生成对应 Markdown 语法的标记符')}
                 <br />
                 <br />
-                该属性针对 `StrikeThrough` 无效
+                {i18n('该属性针对{0}无效', ' `StrikeThrough` ')}
               </>
             ),
           },
