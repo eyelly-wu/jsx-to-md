@@ -2,7 +2,7 @@ import React, { Image, Link, Break } from '@lib'
 import { linkObj, imageObj, langs } from './constants'
 import { version } from '../../../package.json'
 
-const sperator = ' | '
+const separator = ' | '
 
 function renderLanguage() {
   const res = langs.reduce((res, item, index) => {
@@ -18,7 +18,7 @@ function renderLanguage() {
     }
 
     if (index != langs.length - 1) {
-      res.push(sperator)
+      res.push(separator)
     }
 
     return res
@@ -62,8 +62,8 @@ export default function Top() {
         <Link {...linkObj['github-stars']}>
           <Image {...imageObj['github-stars']} />
         </Link>
+        <Image {...imageObj['demo']} />
       </div>
-      <Break />
     </>
   )
 }

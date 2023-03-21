@@ -1,7 +1,7 @@
 {
   "特性": "Features",
-  "实时渲染生成": "Real time rendering generation",
-  "支持多个文档同时渲染": "Support simultaneous rendering of multiple documents",
+  "实时渲染生成": "Real-time rendering and generation",
+  "支持多个文档同时渲染": "Support rendering multiple documents simultaneously",
   "原理": "Principle",
   "该库主要由两部分构成": "The library is mainly composed of two parts",
   "命令行工具": "Command Line Tools",
@@ -175,5 +175,6 @@
   "更新日志": "Changelog",
   "实现基础命令行工具": "Implement basic command line tools",
   "实现基础函数API和基础组件": "Implement the basic function API and basic components",
-  "该属性针对{0}无效": "This property is not valid for {0}"
+  "该属性针对{0}无效": "This property is not valid for {0}",
+  "提供渲染生成 Markdown 语法内容的基础组件": "Provides the basic component for rendering and generating Markdown syntax content"
 }

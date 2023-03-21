@@ -8,6 +8,7 @@ export default function Vision() {
       <List
         items={[
           'U',
+          i18n('提供渲染生成 Markdown 语法内容的基础组件'),
           i18n('实时渲染生成'),
           i18n('支持原生 HTML'),
           i18n('支持多个文档同时渲染'),

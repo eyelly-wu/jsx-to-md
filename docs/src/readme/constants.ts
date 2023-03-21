@@ -74,6 +74,11 @@ const images = [
     alt: 'codecov',
     src: 'https://codecov.io/gh/eyelly-wu/jsx-to-md/branch/main/graph/badge.svg?token=tocki8cvYM',
   },
+  {
+    title: 'demo',
+    alt: 'demo',
+    src: 'https://s3.bmp.ovh/imgs/2023/03/21/1080b9ca3917b578.gif',
+  },
 ] as const
 
 type ImageTitleType = ArrayObject<typeof images, 'title'>

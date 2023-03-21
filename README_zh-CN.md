@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     一款支持通过 JSX 来编写 Markdown 的工具
 
-[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.8.5#readme) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.8.6#readme) | 简体中文
 
 
   </p>
@@ -10,9 +10,8 @@
 [![npm-version](https://img.shields.io/npm/v/jsx-to-md.svg?style=flat-square "npm-version")](https://www.npmjs.com/package/jsx-to-md "npm")
 [![npm-download](https://img.shields.io/npm/dm/jsx-to-md "npm-download")](https://www.npmjs.com/package/jsx-to-md "npm")
 [![codecov](https://codecov.io/gh/eyelly-wu/jsx-to-md/branch/main/graph/badge.svg?token=tocki8cvYM "codecov")](https://codecov.io/gh/eyelly-wu/jsx-to-md "codecov")
-[![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")
+[![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")![demo](https://s3.bmp.ovh/imgs/2023/03/21/1080b9ca3917b578.gif "demo")
 </div>
-
 <details >
   <summary>目录</summary>
 
@@ -30,6 +29,7 @@
 
 # 特性
 
+* 提供渲染生成 Markdown 语法内容的基础组件
 * 实时渲染生成
 * 支持原生 HTML
 * 支持多个文档同时渲染
@@ -62,10 +62,10 @@
 所以 `命令行工具` 和 `函数API` 这两者搭配使用效果更佳
 # 帮助文档
 
-* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.5/docs/dist/USAGE_zh-CN.md)
-* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.5/docs/dist/COMMAND_LINE_zh-CN.md)
-* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.5/docs/dist/API_zh-CN.md)
-* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.5/docs/dist/CHANGELOG_zh-CN.md)
+* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/USAGE_zh-CN.md)
+* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/COMMAND_LINE_zh-CN.md)
+* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/API_zh-CN.md)
+* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/CHANGELOG_zh-CN.md)
 
 
 # License
