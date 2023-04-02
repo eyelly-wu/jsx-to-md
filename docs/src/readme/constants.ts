@@ -77,7 +77,7 @@ const images = [
   {
     title: 'demo',
     alt: 'demo',
-    src: 'https://s3.bmp.ovh/imgs/2023/03/21/1080b9ca3917b578.gif',
+    src: 'https://s3.bmp.ovh/imgs/2023/04/02/ea796b84837c91dd.gif',
   },
 ] as const
 

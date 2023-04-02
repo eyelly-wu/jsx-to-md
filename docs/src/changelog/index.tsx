@@ -60,6 +60,16 @@ function V_0_9_0() {
   )
 }
 
+function V_0_9_1() {
+  return (
+    <>
+      <VersionTitle version="0.9.1" date="2023-04-02" />
+      <Added />
+      <List items={['U', i18n('更新{0}中示例效果图', ' `README` ')]} />
+    </>
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -67,6 +77,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{i18n('更新日志')}</H1>
       <TableOfContents text={i18n('目录')} open={false} />
+      <V_0_9_1 />
       <V_0_9_0 />
       <V_0_8_6 />
     </>

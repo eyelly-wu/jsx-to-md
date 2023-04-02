@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     一款支持通过 JSX 来编写 Markdown 的工具
 
-[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.9.0#readme) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.9.1#readme) | 简体中文
 
 
   </p>
@@ -10,7 +10,7 @@
 [![npm-version](https://img.shields.io/npm/v/jsx-to-md.svg?style=flat-square "npm-version")](https://www.npmjs.com/package/jsx-to-md "npm")
 [![npm-download](https://img.shields.io/npm/dm/jsx-to-md "npm-download")](https://www.npmjs.com/package/jsx-to-md "npm")
 [![codecov](https://codecov.io/gh/eyelly-wu/jsx-to-md/branch/main/graph/badge.svg?token=tocki8cvYM "codecov")](https://codecov.io/gh/eyelly-wu/jsx-to-md "codecov")
-[![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")![demo](https://s3.bmp.ovh/imgs/2023/03/21/1080b9ca3917b578.gif "demo")
+[![github-stars](https://img.shields.io/github/stars/eyelly-wu/jsx-to-md?style=social "github-stars")](https://github.com/eyelly-wu/jsx-to-md/stargazers "github-stars")![demo](https://s3.bmp.ovh/imgs/2023/04/02/ea796b84837c91dd.gif "demo")
 </div>
 <details >
   <summary>目录</summary>
@@ -62,10 +62,10 @@
 所以 `命令行工具` 和 `函数API` 这两者搭配使用效果更佳
 # 帮助文档
 
-* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/USAGE_zh-CN.md)
-* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/COMMAND_LINE_zh-CN.md)
-* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/API_zh-CN.md)
-* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/CHANGELOG_zh-CN.md)
+* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/USAGE_zh-CN.md)
+* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/COMMAND_LINE_zh-CN.md)
+* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/API_zh-CN.md)
+* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/CHANGELOG_zh-CN.md)
 
 
 # License

@@ -179,5 +179,6 @@
   "新增命令参数{0},可用于指定{1}的编译方式，从而决定是否需要手动引入{2}": "New command parameter {0} has been added for specifying the compilation method of {1}, thus determining whether {2} needs to be manually imported",
   "可用于指定{0}的编译方式，从而决定是否需要手动引入{1}": "Can be used to specify the compilation method for {0} to determine whether it is necessary to manually import {1}",
   "{0}会编译为{1}需要引入{2}": "{0} will compile to {1}, requiring the introduction of {2}",
-  "内部默认会从{0}中引入{1}和{2}，不需要引入{3}": "Internal default will import {1} and {2} from {0}, and there is no need to import {3}"
+  "内部默认会从{0}中引入{1}和{2}，不需要引入{3}": "Internal default will import {1} and {2} from {0}, and there is no need to import {3}",
+  "更新{0}中示例效果图": "Update the example effect screenshots in {0}"
 }
