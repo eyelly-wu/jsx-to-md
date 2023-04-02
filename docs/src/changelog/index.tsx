@@ -24,16 +24,36 @@ export const Removed = () => <ChangeTypeImpl type={ChangeType.Removed} />
 export const Fixed = () => <ChangeTypeImpl type={ChangeType.Fixed} />
 export const Security = () => <ChangeTypeImpl type={ChangeType.Security} />
 
-function V_1_0_0() {
+function V_0_8_6() {
   return (
     <>
-      <VersionTitle version="1.0.0" date="2023-0x-xx" />
+      <VersionTitle version="0.8.6" date="2023-03-21" />
       <Added />
       <List
         items={[
           'U',
           i18n('实现基础命令行工具'),
           i18n('实现基础函数API和基础组件'),
+        ]}
+      />
+    </>
+  )
+}
+
+function V_0_9_0() {
+  return (
+    <>
+      <VersionTitle version="0.9.0" date="2023-04-02" />
+      <Added />
+      <List
+        items={[
+          'U',
+          i18n(
+            '新增命令参数{0},可用于指定{1}的编译方式，从而决定是否需要手动引入{2}',
+            ' `--jsx` ',
+            ' `JSX` ',
+            ' `React` ',
+          ),
         ]}
       />
     </>
@@ -47,7 +67,8 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{i18n('更新日志')}</H1>
       <TableOfContents text={i18n('目录')} open={false} />
-      <V_1_0_0 />
+      <V_0_9_0 />
+      <V_0_8_6 />
     </>
   )
 }

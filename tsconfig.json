@@ -12,17 +12,9 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "paths": {
-      "@lib": [
-        "./src/lib/index.ts"
-      ],
-      "@bin/*": [
-        "./src/bin/*"
-      ]
+      "@lib": ["./src/lib/index.ts"],
+      "@bin/*": ["./src/bin/*"]
     }
   },
-  "include": [
-    "src",
-    "docs/src",
-    "global.d.ts"
-  ]
+  "include": ["src", "docs/src", "global.d.ts"]
 }

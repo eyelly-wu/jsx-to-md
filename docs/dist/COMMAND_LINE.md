@@ -43,3 +43,4 @@ Datasource related configuration
 |Parameter name|Parameter value|Applicable command|Usage|description|
 |:-:|:-:|:-:|:-|:-|
 |--watch| `true` \| `false` | `run` |`npx jtm run`<br />`npx jtm run --watch true`<br />`npx jtm run --watch false`|Specifies whether to enable file monitoring. This configuration is enabled by default. After enabling, the relevant file changes will regenerate the Markdown file|
+|--jsx| `classic` \| `automatic` | `run` |`npx jtm run`<br />`npx jtm run --jsx classic`<br />`npx jtm run --jsx automatic`|Can be used to specify the compilation method for  `JSX`  to determine whether it is necessary to manually import  `React` <br /><br /><b>classic</b>:  `JSX`  will compile to  `React.createElement` , requiring the introduction of  `React` <b>automatic</b>: Internal default will import  `jsx`  and  `jsxs`  from  `jsx-to-md/jsx-runtime` , and there is no need to import  `React` |

@@ -35,9 +35,8 @@ Create a directory named  `docs`  under the root directory, and create  `index.t
         
 ```
 Suppose the content of  `index.tsx`  is as follows:
->Here JSX syntax is in the form of  `React.createElement` , so  `React`  needs to be imported by default
 ```tsx
-import React, { Link } from 'jsx-to-md'
+import { Link } from 'jsx-to-md'
 
 export default function () {
   return (
@@ -51,7 +50,7 @@ export default function () {
 
 
 ## 3. Initialize command line configuration file
-Enter the following command at the command line terminal, [More Commands](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/COMMAND_LINE.md#2-command)
+Enter the following command at the command line terminal, [More Commands](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/COMMAND_LINE.md#2-command)
 ```bash
 npx jtm init
 ```
@@ -71,7 +70,7 @@ Then your file directory is like this
 
 
 ## 4. Adjust  `jsx-to-md.config.js`  configuration
-Adjust the configuration items in the configuration file according to the requirements [description](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/COMMAND_LINE.md)
+Adjust the configuration items in the configuration file according to the requirements [description](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/COMMAND_LINE.md)
 
 The default configuration is as follows:
 ```js

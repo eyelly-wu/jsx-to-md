@@ -62,7 +62,6 @@
   "目录": "Table of Contents",
   "支持生成目录": "Support generate table of contents",
   "支持异步渲染": "Support asynchronous rendering",
-  "这里JSX语法采用的是{0}的形式，所以这里需要默认导入{1}": "Here JSX syntax is in the form of {0}, so {1} needs to be imported by default",
   "根据需求自行调整配置文件中的配置项，配置项的{0}": "Adjust the configuration items in the configuration file according to the requirements {0}",
   "假如未调整上面的默认配置，命令执行成功的话，会在根目录下生成对应的 Markdown 文件，最后生成的 Markdown 文本内容如下": "If the above default configuration is not adjusted and the command is executed successfully, the corresponding Markdown file will be generated in the root directory. The final generated Markdown text is as follows",
   "并且{0}内容发生调整，保存后，对应的 Markdown 文件也会实时同步变化": "And {0} content is adjusted. After saving, the corresponding Markdown file will also change synchronously in real time",
@@ -176,5 +175,9 @@
   "实现基础命令行工具": "Implement basic command line tools",
   "实现基础函数API和基础组件": "Implement the basic function API and basic components",
   "该属性针对{0}无效": "This property is not valid for {0}",
-  "提供渲染生成 Markdown 语法内容的基础组件": "Provides the basic component for rendering and generating Markdown syntax content"
+  "提供渲染生成 Markdown 语法内容的基础组件": "Provides the basic component for rendering and generating Markdown syntax content",
+  "新增命令参数{0},可用于指定{1}的编译方式，从而决定是否需要手动引入{2}": "New command parameter {0} has been added for specifying the compilation method of {1}, thus determining whether {2} needs to be manually imported",
+  "可用于指定{0}的编译方式，从而决定是否需要手动引入{1}": "Can be used to specify the compilation method for {0} to determine whether it is necessary to manually import {1}",
+  "{0}会编译为{1}需要引入{2}": "{0} will compile to {1}, requiring the introduction of {2}",
+  "内部默认会从{0}中引入{1}和{2}，不需要引入{3}": "Internal default will import {1} and {2} from {0}, and there is no need to import {3}"
 }

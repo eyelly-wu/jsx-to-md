@@ -43,3 +43,4 @@
 |参数名|参数值|适用命令|用法|说明|
 |:-:|:-:|:-:|:-|:-|
 |--watch| `true` \| `false` | `run` |`npx jtm run`<br />`npx jtm run --watch true`<br />`npx jtm run --watch false`|指定是否启用文件监听，该配置默认开启，启用后相关文件变化会重新生成 Markdown 文件|
+|--jsx| `classic` \| `automatic` | `run` |`npx jtm run`<br />`npx jtm run --jsx classic`<br />`npx jtm run --jsx automatic`|可用于指定 `JSX` 的编译方式，从而决定是否需要手动引入 `React` <br /><br /><b>classic</b>:  `JSX` 会编译为 `React.createElement` 需要引入 `React` <b>automatic</b>: 内部默认会从 `jsx-to-md/jsx-runtime` 中引入 `jsx` 和 `jsxs` ，不需要引入 `React` |

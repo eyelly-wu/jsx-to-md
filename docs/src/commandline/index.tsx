@@ -205,6 +205,46 @@ function CommandProp() {
         </>
       ),
     },
+    {
+      name: '--jsx',
+      value: ' `classic` \\| `automatic` ',
+      command: ' `run` ',
+      usage: (
+        <>
+          `npx jtm run`
+          <br />
+          `npx jtm run --jsx classic`
+          <br />
+          `npx jtm run --jsx automatic`
+        </>
+      ),
+      description: (
+        <>
+          {i18n(
+            '可用于指定{0}的编译方式，从而决定是否需要手动引入{1}',
+            ' `JSX` ',
+            ' `React` ',
+          )}
+          <br />
+          <br />
+          <b>classic</b>:{' '}
+          {i18n(
+            '{0}会编译为{1}需要引入{2}',
+            ' `JSX` ',
+            ' `React.createElement` ',
+            ' `React` ',
+          )}
+          <b>automatic</b>:{' '}
+          {i18n(
+            '内部默认会从{0}中引入{1}和{2}，不需要引入{3}',
+            ' `jsx-to-md/jsx-runtime` ',
+            ' `jsx` ',
+            ' `jsxs` ',
+            ' `React` ',
+          )}
+        </>
+      ),
+    },
   ]
 
   return (

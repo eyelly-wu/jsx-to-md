@@ -16,7 +16,9 @@ import { getDocHref, initI18N } from '../utils'
 
 const demoDocCode = readFileSync(path.join(__dirname, './Demo.tsx'), {
   encoding: 'utf-8',
-}).replace("'@lib'", "'jsx-to-md'")
+})
+  .replace("'@lib'", "'jsx-to-md'")
+  .replace('React, ', '')
 
 function Install() {
   return (
@@ -54,13 +56,6 @@ function CreateJsx() {
         `}
       />
       {i18n('假如{0}的内容如下：', ' `index.tsx` ')}
-      <BlockQuote>
-        {i18n(
-          '这里JSX语法采用的是{0}的形式，所以这里需要默认导入{1}',
-          ' `React.createElement` ',
-          ' `React` ',
-        )}
-      </BlockQuote>
       <CodeBlock langType="tsx" code={demoDocCode} />
     </>
   )

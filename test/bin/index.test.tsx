@@ -96,7 +96,7 @@ describe('command', () => {
           unlinkSync(targetPath)
         }
         expect(existsSync(targetPath)).toBe(false)
-        generateTSConfig('./temp.sj')
+        generateTSConfig('classic', './temp.sj')
         expect(existsSync(targetPath)).toBe(false)
       })
     })

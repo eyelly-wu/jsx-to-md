@@ -35,9 +35,8 @@ pnpm i -D jsx-to-md
         
 ```
 假如 `index.tsx` 的内容如下：
->这里JSX语法采用的是 `React.createElement` 的形式，所以这里需要默认导入 `React` 
 ```tsx
-import React, { Link } from 'jsx-to-md'
+import { Link } from 'jsx-to-md'
 
 export default function () {
   return (
@@ -51,7 +50,7 @@ export default function () {
 
 
 ## 3. 初始化命令行配置文件
-在命令行终端输入如下命令，[更多命令](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/COMMAND_LINE_zh-CN.md#2-命令)
+在命令行终端输入如下命令，[更多命令](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/COMMAND_LINE_zh-CN.md#2-命令)
 ```bash
 npx jtm init
 ```
@@ -71,7 +70,7 @@ npx jtm init
 
 
 ## 4. 调整 `jsx-to-md.config.js` 配置
-根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/eyelly-wu/jsx-to-md/blob/v0.8.6/docs/dist/COMMAND_LINE_zh-CN.md)
+根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.0/docs/dist/COMMAND_LINE_zh-CN.md)
 
 默认的配置如下：
 ```js

@@ -4,12 +4,21 @@
 <details >
   <summary>Table of Contents</summary>
 
-  &emsp;&emsp;[[1.0.0] - 2023-0x-xx](#[100]---2023-0x-xx)<br/>
+  &emsp;&emsp;[[0.9.0] - 2023-04-02](#[090]---2023-04-02)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
+  &emsp;&emsp;[[0.8.6] - 2023-03-21](#[086]---2023-03-21)<br/>
   &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
 
 </details>
 
-## [1.0.0] - 2023-0x-xx
+## [0.9.0] - 2023-04-02
+
+### Added
+
+* New command parameter  `--jsx`  has been added for specifying the compilation method of  `JSX` , thus determining whether  `React`  needs to be manually imported
+
+
+## [0.8.6] - 2023-03-21
 
 ### Added
 

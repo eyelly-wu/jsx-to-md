@@ -7,7 +7,9 @@ import { getConfig } from './config'
 import { TEMP_DIR, ROOT_EXECUTE_FILE_NAME } from './constant'
 import { getFilePathInfo, writeFile } from './utils'
 
-export function generateTSConfig(testWorkingDir?: string) {
+type JSXType = 'classic' | 'automatic'
+
+export function generateTSConfig(jsx: JSXType, testWorkingDir?: string) {
   const workingDir = testWorkingDir || process.cwd()
   const sourceTsConfigPath = join(workingDir, 'tsconfig.json')
 
@@ -24,6 +26,16 @@ export function generateTSConfig(testWorkingDir?: string) {
     })
   }
 
+  if (jsx === 'automatic') {
+    tsConfig.compilerOptions.jsx = 'react-jsx'
+    tsConfig.compilerOptions.jsxImportSource = 'jsx-to-md'
+  } else {
+    if (tsConfig?.compilerOptions?.jsxImportSource) {
+      delete tsConfig.compilerOptions.jsxImportSource
+    }
+    tsConfig.compilerOptions.jsx = 'react'
+  }
+
   tsConfig['ts-node'] = {
     require: ['tsconfig-paths/register'],
   }
@@ -34,8 +46,9 @@ export function generateTSConfig(testWorkingDir?: string) {
 export function generateRenderFileAndGetFilenames(props: {
   config: Config
   targetPath: string
+  jsx: JSXType
 }) {
-  const { config, targetPath } = props
+  const { config, targetPath, jsx } = props
 
   const filenames = config?.source?.reduce((res, configItem) => {
     const { entry, output, params = {} } = configItem
@@ -44,17 +57,23 @@ export function generateRenderFileAndGetFilenames(props: {
     const originFilename = `render${filenameWithoutExtension}`
     const filename = `${originFilename}.tsx`
     const IS_TEST = (global as any).IS_TEST
-    const relativeLibPath = IS_TEST ? '../../../../src/lib' : '../../lib/'
+    const relativeLibPath = IS_TEST ? '../../../../src/lib' : '../../lib'
     const relativeBinPath = IS_TEST ? '../../../../src/bin/utils' : '../utils'
+
+    const jsxAuto = jsx === 'automatic'
 
     const runScript = `
 import { existsSync } from 'node:fs'
 import Doc from '${entry}'
-import React, { renderAsync } from '${relativeLibPath}'
+import ${jsxAuto ? '' : 'React, '}{ renderAsync } from '${relativeLibPath}'
 import { writeFileWithPath } from '${relativeBinPath}'
-
+${jsxAuto ? `import { jsx } from '${relativeLibPath}/jsx-runtime'\n` : ''}
 export default async function(){
-  const res = await renderAsync(<Doc {...(${paramsStr}) as any}/>)
+  const res = await renderAsync(${
+    jsxAuto
+      ? `jsx(Doc, {...(${paramsStr}) as any})`
+      : `<Doc {...(${paramsStr}) as any}/>`
+  })
 
   try {
     const isExist = existsSync('${output}')
@@ -103,8 +122,16 @@ const funcs = [\n  ${filenames
   writeFile(targetPath, ROOT_EXECUTE_FILE_NAME, runScript)
 }
 
-export function run(params: { '--watch'?: boolean; testTargetPath?: string }) {
-  const { ['--watch']: watch = true, testTargetPath } = params
+export function run(params: {
+  '--watch'?: boolean
+  testTargetPath?: string
+  '--jsx'?: 'classic' | 'automatic'
+}) {
+  const {
+    ['--watch']: watch = true,
+    testTargetPath,
+    ['--jsx']: jsx = 'automatic',
+  } = params
   const targetPath = testTargetPath || join(__dirname, TEMP_DIR)
   const config = getConfig()
 
@@ -113,7 +140,7 @@ export function run(params: { '--watch'?: boolean; testTargetPath?: string }) {
     return
   }
 
-  generateTSConfig()
+  generateTSConfig(jsx)
 
   // HACK https://github.com/vitest-dev/vitest/issues/1436
   // vitest can't use process.chdir in test
@@ -122,6 +149,7 @@ export function run(params: { '--watch'?: boolean; testTargetPath?: string }) {
   const renderFilenames = generateRenderFileAndGetFilenames({
     config,
     targetPath,
+    jsx,
   })
 
   generateRootExecuteFile({
