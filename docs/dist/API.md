@@ -92,6 +92,13 @@
       Asynchronous rendering of JSX elements, returning the generated Markdown character content<br /><br />The current function can only be used to render the root node. The content to be rendered asynchronously needs to be used with AsyncWrapper<br />📢📢📢：If used in conjunction with the command line tools of the current library, the root node does not need to use this function for rendering, but only needs to export the root node by default
     </td>
   </tr>
+  <tr>
+    <td>getAnchor</td>
+    <td>
+      <pre>(text: string) => string</pre>
+    </td>
+    <td>基于标题内容获取生成的锚点</td>
+  </tr>
 </table>
 
 ### Sample Code
@@ -100,7 +107,7 @@
   <summary>Code</summary>
 
 ```tsx
-import React, { renderAsync, AsyncWrapper, render } from 'jsx-to-md'
+import React, { renderAsync, AsyncWrapper, render, getAnchor } from 'jsx-to-md'
 
 async function Test() {
   type Data = {
@@ -118,6 +125,9 @@ async function Test() {
 
   console.log(res)
   // Output: Hello World!
+
+  console.log(getAnchor('Hello World'))
+  // Output: #hello-world
 }
 
 Test()

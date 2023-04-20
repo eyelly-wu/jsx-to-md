@@ -4,7 +4,7 @@
 <details >
   <summary>目录</summary>
 
-  &emsp;&emsp;[1.  `jsx-to-md.config.js` 配置](#1-jsx-to-mdconfigjs-配置)<br/>
+  &emsp;&emsp;[1.  `jsx-to-md.config.js` 配置](#1--jsx-to-mdconfigjs-配置)<br/>
   &emsp;&emsp;&emsp;&emsp;[基础配置](#基础配置)<br/>
   &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
   &emsp;&emsp;[2. 命令](#2-命令)<br/>

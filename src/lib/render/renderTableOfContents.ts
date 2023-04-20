@@ -1,5 +1,6 @@
 import { HeadingNodeType, RenderTOCProps } from 'src/types'
 import { STRING_HEADINGS, TABLE_OF_CONTENTS_PLACEHOLDER } from '../constant'
+import { getAnchor } from '../utils'
 
 function extraMarkdownHeading(content: string) {
   const regExp = /\n(#{1,6}) (.+)\n/
@@ -25,15 +26,6 @@ function extraHTMLHeading(content: string) {
   }
 }
 
-function getHeadingHref(text: string) {
-  return text
-    ?.trim?.()
-    .toLocaleLowerCase()
-    .replace(/ +/g, '-')
-    .replaceAll('.', '')
-    .replaceAll('`', '')
-}
-
 function extraHeading(headingNodes: HeadingNodeType[]) {
   const res = headingNodes.map((headingNode) => {
     let content: string | null | { title: string; level: number } = ''
@@ -47,7 +39,7 @@ function extraHeading(headingNodes: HeadingNodeType[]) {
     }
 
     level = content.level
-    href = getHeadingHref(content.title)
+    href = getAnchor(content.title)
     content = content.title
 
     return {
@@ -75,7 +67,7 @@ function generateStrTableByIndent(
   const res = headings.reduce((res, item, index) => {
     const { title, level, href } = item
     const indent = indentProp.repeat(level - 1)
-    const content = `[${title}](#${href})`
+    const content = `[${title}](${href})`
     res += `${index == 0 ? '\n' : ''}  ${indent}${content}<br/>\n`
     return res
   }, ``)

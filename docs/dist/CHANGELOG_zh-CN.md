@@ -4,14 +4,31 @@
 <details >
   <summary>目录</summary>
 
-  &emsp;&emsp;[[0.9.1] - 2023-04-02](#[091]---2023-04-02)<br/>
+  &emsp;&emsp;[[0.10.0] - 2023-04-20](#0100---2023-04-20)<br/>
   &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
-  &emsp;&emsp;[[0.9.0] - 2023-04-02](#[090]---2023-04-02)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Fixed](#fixed)<br/>
+  &emsp;&emsp;[[0.9.1] - 2023-04-02](#091---2023-04-02)<br/>
   &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
-  &emsp;&emsp;[[0.8.6] - 2023-03-21](#[086]---2023-03-21)<br/>
+  &emsp;&emsp;[[0.9.0] - 2023-04-02](#090---2023-04-02)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
+  &emsp;&emsp;[[0.8.6] - 2023-03-21](#086---2023-03-21)<br/>
   &emsp;&emsp;&emsp;&emsp;[Added](#added)<br/>
 
 </details>
+
+## [0.10.0] - 2023-04-20
+
+### Added
+
+* 添加用于生成锚点的工具方法： `getAnchor` 
+
+
+### Fixed
+
+* 修复以下场景生成目录在 `Github` 中导航不正确
+   * 存在 `[]` 包裹的内容
+   * 存在<code> `` </code>包裹的内容
+
 
 ## [0.9.1] - 2023-04-02
 

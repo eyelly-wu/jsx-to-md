@@ -1,6 +1,7 @@
 import { setI18N, i18n } from 'i18n-pro'
 import en from '../../i18n/en.json'
 import packageInfo from '../../package.json'
+import { getAnchor } from '@lib'
 
 export function initI18N({ locale }) {
   setI18N({
@@ -19,8 +20,7 @@ export function getDocHref(filename: string, anchorProp?: string) {
   const { version, codeNameMap } = packageInfo as any
   let name = codeNameMap[global.docLocale]
   name = name ? `_${name}` : ''
-  let anchor = anchorProp ? `#${anchorProp}` : ''
-  anchor = anchor.replace(/ /g, '-').replace('.', '').toLocaleLowerCase()
+  const anchor = anchorProp ? getAnchor(anchorProp) : ''
 
   const res = `https://github.com/eyelly-wu/jsx-to-md/blob/v${version}/docs/dist/${filename}${name}.md${anchor}`
 

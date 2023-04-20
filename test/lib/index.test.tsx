@@ -27,6 +27,7 @@ import React, {
   renderAsync,
   AsyncWrapper,
   HorizontalRule,
+  getAnchor,
 } from '../../src/lib'
 
 describe('test component render', () => {
@@ -897,6 +898,23 @@ const b = 'b'
 <h2>this is jsx-to-md</h2>`
 
       expect(res).toBe(expectRes)
+    })
+  })
+
+  describe('utils', () => {
+    it('getAnchor', () => {
+      const textExpectResMap = {
+        ' ': '#',
+        ' a': '#a',
+        '  a  ': '#a',
+        '  [a]  ': '#a',
+        'a  `a`  a': '#a--a--a',
+        'a `a` a': '#a-a-a',
+        'a.a': '#aa',
+      }
+      Object.entries(textExpectResMap).forEach(([t, r]) => {
+        expect(getAnchor(t)).toBe(r)
+      })
     })
   })
 })

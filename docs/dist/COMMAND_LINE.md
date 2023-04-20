@@ -4,7 +4,7 @@
 <details >
   <summary>Table of Contents</summary>
 
-  &emsp;&emsp;[1.  `jsx-to-md.config.js`  configuration](#1-jsx-to-mdconfigjs-configuration)<br/>
+  &emsp;&emsp;[1.  `jsx-to-md.config.js`  configuration](#1--jsx-to-mdconfigjs--configuration)<br/>
   &emsp;&emsp;&emsp;&emsp;[Basic Configuration](#basic-configuration)<br/>
   &emsp;&emsp;&emsp;&emsp;[Source](#source)<br/>
   &emsp;&emsp;[2. Command](#2-command)<br/>

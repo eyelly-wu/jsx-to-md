@@ -8,5 +8,6 @@
     "tableofcontents",
     "taskitem",
     "unittests"
-  ]
+  ],
+  "prettier.configPath": ".prettierrc.js"
 }

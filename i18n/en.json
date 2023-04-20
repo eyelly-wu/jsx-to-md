@@ -180,5 +180,8 @@
   "可用于指定{0}的编译方式，从而决定是否需要手动引入{1}": "Can be used to specify the compilation method for {0} to determine whether it is necessary to manually import {1}",
   "{0}会编译为{1}需要引入{2}": "{0} will compile to {1}, requiring the introduction of {2}",
   "内部默认会从{0}中引入{1}和{2}，不需要引入{3}": "Internal default will import {1} and {2} from {0}, and there is no need to import {3}",
-  "更新{0}中示例效果图": "Update the example effect screenshots in {0}"
+  "更新{0}中示例效果图": "Update the example effect screenshots in {0}",
+  "修复以下场景生成目录在{0}中导航不正确": "Fix incorrect navigation of the generated directory in {0} for the following scenarios",
+  "存在{0}包裹的内容": "The content of {0} package exists",
+  "添加用于生成锚点的工具方法：{0}": "Add a tool method for generating anchors: {0}"
 }

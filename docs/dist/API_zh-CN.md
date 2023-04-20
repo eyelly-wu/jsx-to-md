@@ -92,6 +92,13 @@
       异步渲染 JSX 元素，返回生成的 Markdown 字符内容<br /><br />当前函数只能用于渲染根节点，需要异步渲染的内容需要搭配 AsyncWrapper 来使用<br />📢📢📢：如果配合当前的库的命令行工具使用，根节点的渲染无需使用该函数，只需要将根节点默认导出就可以
     </td>
   </tr>
+  <tr>
+    <td>getAnchor</td>
+    <td>
+      <pre>(text: string) => string</pre>
+    </td>
+    <td>基于标题内容获取生成的锚点</td>
+  </tr>
 </table>
 
 ### 示例代码
@@ -100,7 +107,7 @@
   <summary>代码</summary>
 
 ```tsx
-import React, { renderAsync, AsyncWrapper, render } from 'jsx-to-md'
+import React, { renderAsync, AsyncWrapper, render, getAnchor } from 'jsx-to-md'
 
 async function Test() {
   type Data = {
@@ -118,6 +125,9 @@ async function Test() {
 
   console.log(res)
   // 输出：Hello World!
+
+  console.log(getAnchor('Hello World'))
+  // 输出：#hello-world
 }
 
 Test()

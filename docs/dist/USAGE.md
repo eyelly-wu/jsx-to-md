@@ -8,7 +8,7 @@
   &emsp;&emsp;[1. Install](#1-install)<br/>
   &emsp;&emsp;[2. Create JSX file](#2-create-jsx-file)<br/>
   &emsp;&emsp;[3. Initialize command line configuration file](#3-initialize-command-line-configuration-file)<br/>
-  &emsp;&emsp;[4. Adjust  `jsx-to-md.config.js`  configuration](#4-adjust-jsx-to-mdconfigjs-configuration)<br/>
+  &emsp;&emsp;[4. Adjust  `jsx-to-md.config.js`  configuration](#4-adjust--jsx-to-mdconfigjs--configuration)<br/>
   &emsp;&emsp;[5. Execute run command](#5-execute-run-command)<br/>
 
 </details>
@@ -50,7 +50,7 @@ export default function () {
 
 
 ## 3. Initialize command line configuration file
-Enter the following command at the command line terminal, [More Commands](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/COMMAND_LINE.md#2-command)
+Enter the following command at the command line terminal, [More Commands](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.0/docs/dist/COMMAND_LINE.md#2-command)
 ```bash
 npx jtm init
 ```
@@ -70,7 +70,7 @@ Then your file directory is like this
 
 
 ## 4. Adjust  `jsx-to-md.config.js`  configuration
-Adjust the configuration items in the configuration file according to the requirements [description](https://github.com/eyelly-wu/jsx-to-md/blob/v0.9.1/docs/dist/COMMAND_LINE.md)
+Adjust the configuration items in the configuration file according to the requirements [description](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.0/docs/dist/COMMAND_LINE.md)
 
 The default configuration is as follows:
 ```js

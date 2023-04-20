@@ -1,4 +1,4 @@
-import React, { H1, H2, H3, List, TableOfContents } from '@lib'
+import React, { H1, H2, H3, List, render, TableOfContents } from '@lib'
 import { initI18N } from '../utils'
 
 function VersionTitle({ version, date }: { version: string; date: string }) {
@@ -70,6 +70,32 @@ function V_0_9_1() {
   )
 }
 
+function V_0_10_0() {
+  return (
+    <>
+      <VersionTitle version="0.10.0" date="2023-04-20" />
+      <Added />
+      <List
+        items={['U', i18n('添加用于生成锚点的工具方法：{0}', ' `getAnchor` ')]}
+      />
+      <Fixed />
+      <List
+        items={[
+          'U',
+          [
+            i18n('修复以下场景生成目录在{0}中导航不正确', ' `Github` '),
+            [
+              'U',
+              i18n('存在{0}包裹的内容', ' `[]` '),
+              i18n('存在{0}包裹的内容', render(<code> `` </code>)),
+            ],
+          ],
+        ]}
+      />
+    </>
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -77,6 +103,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{i18n('更新日志')}</H1>
       <TableOfContents text={i18n('目录')} open={false} />
+      <V_0_10_0 />
       <V_0_9_1 />
       <V_0_9_0 />
       <V_0_8_6 />

@@ -1,4 +1,4 @@
-import React, { H2, H3, Break } from '@lib'
+import React, { H2, H3, Break, getAnchor } from '@lib'
 import CodeDemo from '../CodeDemo'
 
 export default function FunctionList() {
@@ -46,12 +46,19 @@ export default function FunctionList() {
             {commonTips}
           </td>
         </tr>
+        <tr>
+          <td>getAnchor</td>
+          <td>
+            <pre>{`(text: string) => string`}</pre>
+          </td>
+          <td>{i18n('基于标题内容获取生成的锚点')}</td>
+        </tr>
       </table>
       <Break />
       <H3>{i18n('示例代码')}</H3>
       <CodeDemo
         code={`
-import React, { renderAsync, AsyncWrapper, render } from 'jsx-to-md'
+import React, { renderAsync, AsyncWrapper, render, getAnchor } from 'jsx-to-md'
 
 async function Test() {
   type Data = {
@@ -69,6 +76,9 @@ async function Test() {
 
   console.log(res)
   // ${i18n('输出：{0}', 'Hello World!')}
+
+  console.log(getAnchor('Hello World'))
+  // ${i18n('输出：{0}', getAnchor('Hello World'))}
 }
 
 Test()
