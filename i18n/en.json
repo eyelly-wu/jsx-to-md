@@ -183,5 +183,7 @@
   "更新{0}中示例效果图": "Update the example effect screenshots in {0}",
   "修复以下场景生成目录在{0}中导航不正确": "Fix incorrect navigation of the generated directory in {0} for the following scenarios",
   "存在{0}包裹的内容": "The content of {0} package exists",
-  "添加用于生成锚点的工具方法：{0}": "Add a tool method for generating anchors: {0}"
+  "添加用于生成锚点的工具方法：{0}": "Add a tool method for generating anchors: {0}",
+  "基于标题内容获取生成的锚点": "Retrieve generated anchor points based on title content",
+  "存在{0}的内容": "Content with {0} exists"
 }

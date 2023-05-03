@@ -96,6 +96,31 @@ function V_0_10_0() {
   )
 }
 
+function V_0_10_1() {
+  return (
+    <>
+      <VersionTitle version="0.10.1" date="2023-05-03" />
+      <Fixed />
+      <List
+        items={[
+          'U',
+          [
+            i18n('修复以下场景生成目录在{0}中导航不正确', ' `Github` '),
+            [
+              'U',
+              i18n('存在{0}包裹的内容', ' `()` '),
+              i18n('存在{0}包裹的内容', ' `（）` '),
+              i18n('存在{0}包裹的内容', ' `**` '),
+              i18n('存在{0}的内容', ' `?` '),
+              i18n('存在{0}的内容', ' `？` '),
+            ],
+          ],
+        ]}
+      />
+    </>
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -103,6 +128,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{i18n('更新日志')}</H1>
       <TableOfContents text={i18n('目录')} open={false} />
+      <V_0_10_1 />
       <V_0_10_0 />
       <V_0_9_1 />
       <V_0_9_0 />

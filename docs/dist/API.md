@@ -97,7 +97,7 @@
     <td>
       <pre>(text: string) => string</pre>
     </td>
-    <td>基于标题内容获取生成的锚点</td>
+    <td>Retrieve generated anchor points based on title content</td>
   </tr>
 </table>
 

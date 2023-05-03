@@ -6,7 +6,6 @@ export function getAnchor(text: string): string {
       .toLocaleLowerCase()
       .replaceAll(/( ?`\b)|(\b` ?)/g, '-')
       .replace(/ +/g, '-')
-      .replaceAll('.', '')
-      .replaceAll(/(\[)|(\])/g, '')
+      .replace(/(\[)|(\])|[.()（）?？]|(\*\*)/g, '')
   )
 }

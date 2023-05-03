@@ -911,6 +911,11 @@ const b = 'b'
         'a  `a`  a': '#a--a--a',
         'a `a` a': '#a-a-a',
         'a.a': '#aa',
+        '**a**': '#a',
+        '(a)': '#a',
+        '（a）': '#a',
+        'a?': '#a',
+        'a？': '#a',
       }
       Object.entries(textExpectResMap).forEach(([t, r]) => {
         expect(getAnchor(t)).toBe(r)
