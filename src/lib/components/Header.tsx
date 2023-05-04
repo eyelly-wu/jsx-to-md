@@ -1,12 +1,18 @@
-import React from '../index'
+import React, { getAnchor } from '../index'
 
 type HeaderProps = {
   level: 1 | 2 | 3 | 4 | 5 | 6
   children: string | string[]
   skip?: boolean
+  id?: string
 }
 
-function Header({ level, children }: HeaderProps) {
+function Header({ level, children, id }: HeaderProps) {
+  if (typeof id !== 'undefined') {
+    const newId = getAnchor(id).slice(1)
+    return <>{`\n<h${level} id="${newId}">${children}</h${level}>\n`}</>
+  }
+
   return (
     <>
       {'\n'}

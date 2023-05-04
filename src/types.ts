@@ -23,6 +23,7 @@ export type Config = {
 export type HeadingNodeType = {
   type: unknown
   content: string
+  id?: string
 }
 
 export type RenderTOCProps = {
