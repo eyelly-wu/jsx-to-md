@@ -15,7 +15,7 @@ function extraMarkdownHeading(content: string) {
 }
 
 function extraHTMLHeading(content: string) {
-  const regExp = /<h([1-6])>(.+)<\/h\1>/
+  const regExp = /<h([1-6]).*?>(.+)<\/h\1>/
   const matchResult = content.match(regExp)
 
   const [, level, title] = matchResult || []
@@ -32,14 +32,17 @@ function extraHeading(headingNodes: HeadingNodeType[]) {
     let level = 1
     let href = ''
 
-    if (STRING_HEADINGS.includes(headingNode.type as string)) {
+    if (
+      STRING_HEADINGS.includes(headingNode.type as string) ||
+      headingNode.id
+    ) {
       content = extraHTMLHeading(headingNode.content)
     } else {
       content = extraMarkdownHeading(headingNode.content)
     }
 
     level = content.level
-    href = getAnchor(content.title)
+    href = getAnchor(headingNode.id || content.title)
     content = content.title
 
     return {

@@ -53,6 +53,7 @@ export default function renderElement(
       headingNodes.push({
         type,
         content: currentRes,
+        id: props?.id as string,
       })
     }
     return currentRes
@@ -76,6 +77,7 @@ export default function renderElement(
       headingNodes.push({
         type: H1,
         content: currentRes,
+        id: props?.id as string,
       })
     } else if (type === TableOfContents && !renderTOCState[0]) {
       renderTOCState[0] = true
