@@ -12,6 +12,7 @@ export default function () {
       <H6>Heading 6</H6>
       {/**${i18n('跳过生成目录')}*/}
       <H1 skip>Skip Heading 1</H1>
+      <H1 id="id">Custom ID</H1>
     </>
   )
 }
