@@ -4,7 +4,7 @@
 <details >
   <summary>Table of Contents</summary>
 
-  &emsp;&emsp;[[0.11.0] - 2023-05-xx](#0110---2023-05-xx)<br/>
+  &emsp;&emsp;[[0.11.0] - 2023-05-07](#0110---2023-05-07)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command Line Tools](#0110-command-line-tools)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0110-command-line-tools-added)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0110-api)<br/>
@@ -34,7 +34,7 @@
 
 </details>
 
-## [0.11.0] - 2023-05-xx
+## [0.11.0] - 2023-05-07
 
 <h3 id="0110-command-line-tools">Command Line Tools</h3>
 
@@ -47,7 +47,7 @@
 
 <h4 id="0110-api-added">Added</h4>
 
-*  `Header`  related component (H1-H6) added  `id`  attribute
+*  `Header`  related component  `H1-H6`  added  `id`  attribute
 
 
 <h3 id="0110-docs">Docs</h3>

@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     A tool that supports writing Markdown through JSX
 
-English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.1/README_zh-CN.md)
+English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/README_zh-CN.md)
 
 
   </p>
@@ -62,10 +62,10 @@ The library is mainly composed of two parts
 So  `Command Line Tools`  and  `Function API`  are better used together
 # Help Document
 
-* [Quick Start](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.1/docs/dist/USAGE.md)
-* [Command Line](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.1/docs/dist/COMMAND_LINE.md)
-* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.1/docs/dist/API.md)
-* [Changelog](https://github.com/eyelly-wu/jsx-to-md/blob/v0.10.1/docs/dist/CHANGELOG.md)
+* [Quick Start](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/USAGE.md)
+* [Command Line](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/COMMAND_LINE.md)
+* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/API.md)
+* [Changelog](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/CHANGELOG.md)
 
 
 # License

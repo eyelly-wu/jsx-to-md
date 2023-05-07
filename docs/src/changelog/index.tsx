@@ -1,4 +1,4 @@
-import React, { H1, H3, render, TableOfContents } from '@lib'
+import React, { H1, render, TableOfContents } from '@lib'
 import { i18n } from 'i18n-pro'
 import { initI18N } from '../utils'
 import BaseChangeLog from './ChangeLog'
@@ -104,7 +104,7 @@ function V_0_11_0() {
   return (
     <BaseChangeLog
       version="0.11.0"
-      date="2023-05-xx"
+      date="2023-05-07"
       commandLine={{
         added: [
           'U',
@@ -119,7 +119,12 @@ function V_0_11_0() {
       api={{
         added: [
           'U',
-          i18n('{0}相关组件{1}添加{2}属性', ' `Header` ', '(H1-H6)', ' `id` '),
+          i18n(
+            '{0}相关组件{1}添加{2}属性',
+            ' `Header` ',
+            ' `H1-H6` ',
+            ' `id` ',
+          ),
         ],
       }}
       docs={{

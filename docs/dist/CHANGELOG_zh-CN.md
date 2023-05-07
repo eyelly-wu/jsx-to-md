@@ -4,7 +4,7 @@
 <details >
   <summary>目录</summary>
 
-  &emsp;&emsp;[[0.11.0] - 2023-05-xx](#0110---2023-05-xx)<br/>
+  &emsp;&emsp;[[0.11.0] - 2023-05-07](#0110---2023-05-07)<br/>
   &emsp;&emsp;&emsp;&emsp;[命令行工具](#0110-命令行工具)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0110-命令行工具-added)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0110-api)<br/>
@@ -34,7 +34,7 @@
 
 </details>
 
-## [0.11.0] - 2023-05-xx
+## [0.11.0] - 2023-05-07
 
 <h3 id="0110-命令行工具">命令行工具</h3>
 
@@ -47,7 +47,7 @@
 
 <h4 id="0110-api-added">Added</h4>
 
-*  `Header` 相关组件(H1-H6)添加 `id` 属性
+*  `Header` 相关组件 `H1-H6` 添加 `id` 属性
 
 
 <h3 id="0110-文档">文档</h3>

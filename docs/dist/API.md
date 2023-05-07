@@ -1385,7 +1385,7 @@ export default function () {
 ##### Heading 5
 
 <h6 id="heading-6">Heading 6</h6>
-<h1>HTML Heading 1</h1><h2>HTML Heading 2</h2><h3>HTML Heading 3</h3><h4>HTML Heading 4</h4><h5>HTML Heading 5</h5><h6 id="HTML Heading 6">HTML Heading 6</h6>
+<h1>HTML Heading 1</h1><h2>HTML Heading 2</h2><h3>HTML Heading 3</h3><h4>HTML Heading 4</h4><h5>HTML Heading 5</h5><h6 id="html-heading-6">HTML Heading 6</h6>
 
 # Skip Heading 1
 <h1>Skip HTML Heading 1</h1>
@@ -1426,7 +1426,7 @@ export default function () {
 ##### Heading 5
 
 <h6 id="heading-6">Heading 6</h6>
-<h1>HTML Heading 1</h1><h2>HTML Heading 2</h2><h3>HTML Heading 3</h3><h4>HTML Heading 4</h4><h5>HTML Heading 5</h5><h6 id="HTML Heading 6">HTML Heading 6</h6>
+<h1>HTML Heading 1</h1><h2>HTML Heading 2</h2><h3>HTML Heading 3</h3><h4>HTML Heading 4</h4><h5>HTML Heading 5</h5><h6 id="html-heading-6">HTML Heading 6</h6>
 
 # Skip Heading 1
 <h1>Skip HTML Heading 1</h1>
