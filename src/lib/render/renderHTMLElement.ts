@@ -1,5 +1,6 @@
 import { HTMLElement, InnerRenderProps } from 'src/types'
 import { BLOCK_NODES, NO_END_NODES, STRING_HEADINGS } from '../constant'
+import { getAnchor } from '../utils'
 import renderElement from './renderElement'
 
 export default function renderHTMLElement(
@@ -44,6 +45,11 @@ export default function renderHTMLElement(
             '',
           )
           value = styleStr
+          break
+        case 'id':
+          if (STRING_HEADINGS.includes(type)) {
+            value = getAnchor(value as string).slice(1)
+          }
           break
       }
 
