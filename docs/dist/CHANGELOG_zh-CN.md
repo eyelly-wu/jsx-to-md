@@ -4,6 +4,9 @@
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.11.1] - 2023-05-22](#0111---2023-05-22)<br/>
+  &emsp;&emsp;&emsp;&emsp;[命令行工具](#0111-命令行工具)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0111-命令行工具-fixed)<br/>
   &emsp;&emsp;[[0.11.0] - 2023-05-07](#0110---2023-05-07)<br/>
   &emsp;&emsp;&emsp;&emsp;[命令行工具](#0110-命令行工具)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0110-命令行工具-added)<br/>
@@ -33,6 +36,16 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.1] - 2023-05-22
+
+<h3 id="0111-命令行工具">命令行工具</h3>
+
+<h4 id="0111-命令行工具-fixed">Fixed</h4>
+
+* 修复以下场景生成目录在 `Github` 中导航不正确
+   * 存在<code>``</code>包裹非英文内容
+
 
 ## [0.11.0] - 2023-05-07
 

@@ -2,7 +2,7 @@
   <p style="font-size: 18px;">
     一款支持通过 JSX 来编写 Markdown 的工具
 
-[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.11.0#readme) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/tree/v0.11.1#readme) | 简体中文
 
 
   </p>
@@ -62,10 +62,10 @@
 所以 `命令行工具` 和 `函数API` 这两者搭配使用效果更佳
 # 帮助文档
 
-* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/USAGE_zh-CN.md)
-* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/COMMAND_LINE_zh-CN.md)
-* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/API_zh-CN.md)
-* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.0/docs/dist/CHANGELOG_zh-CN.md)
+* [快速上手](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.1/docs/dist/USAGE_zh-CN.md)
+* [命令行](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.1/docs/dist/COMMAND_LINE_zh-CN.md)
+* [API](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.1/docs/dist/API_zh-CN.md)
+* [更新日志](https://github.com/eyelly-wu/jsx-to-md/blob/v0.11.1/docs/dist/CHANGELOG_zh-CN.md)
 
 
 # License

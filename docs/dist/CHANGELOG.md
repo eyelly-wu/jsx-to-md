@@ -4,6 +4,9 @@
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.11.1] - 2023-05-22](#0111---2023-05-22)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Command Line Tools](#0111-command-line-tools)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0111-command-line-tools-fixed)<br/>
   &emsp;&emsp;[[0.11.0] - 2023-05-07](#0110---2023-05-07)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command Line Tools](#0110-command-line-tools)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0110-command-line-tools-added)<br/>
@@ -33,6 +36,16 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.1] - 2023-05-22
+
+<h3 id="0111-command-line-tools">Command Line Tools</h3>
+
+<h4 id="0111-command-line-tools-fixed">Fixed</h4>
+
+* Fix incorrect navigation of the generated directory in  `Github`  for the following scenarios
+   * There are <code>``</code> packages with non English content
+
 
 ## [0.11.0] - 2023-05-07
 
