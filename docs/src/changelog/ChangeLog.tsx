@@ -43,9 +43,9 @@ function Business(props: {
   changeTypeItemsType?: ChangeTypeItemsType
 }) {
   const typeTextMap: Record<BusinessType, string> = {
-    commandLine: i18n('命令行工具'),
+    commandLine: t('命令行工具'),
     api: 'API',
-    docs: i18n('文档'),
+    docs: t('文档'),
   }
   const { type, version, changeTypeItemsType } = props
   const title = typeTextMap[type]

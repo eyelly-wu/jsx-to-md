@@ -15,7 +15,7 @@ import AsyncWrapper from './asyncwrapper'
 export default function ComponentList() {
   return (
     <>
-      <H2>{i18n('组件')}</H2>
+      <H2>{t('组件')}</H2>
       <Layout />
       <Header />
       <Font />

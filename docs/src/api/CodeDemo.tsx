@@ -14,12 +14,12 @@ export default function CodeDemo(props: {
     <>
       <Break />
       <details open>
-        <summary>{i18n('代码')}</summary>
+        <summary>{t('代码')}</summary>
         <Break />
         <CodeBlock langType="tsx" code={code} />
         {showResult && !isAsync && (
           <details open>
-            <summary>{i18n('生成 Markdown 字符内容')}</summary>
+            <summary>{t('生成 Markdown 字符内容')}</summary>
             <Break />
             <Break />
             <CodeBlock
@@ -27,7 +27,7 @@ export default function CodeDemo(props: {
               code={renderRes?.replace(
                 /```[^A-z]/g,
                 '``` // ' +
-                  i18n('这里为了避免与 Markdown 语法冲突，多添加了此描述'),
+                  t('这里为了避免与 Markdown 语法冲突，多添加了此描述'),
               )}
             />
             <Break />
@@ -36,7 +36,7 @@ export default function CodeDemo(props: {
         )}
         {showResult && (
           <details open>
-            <summary>{i18n('渲染内容')}</summary>
+            <summary>{t('渲染内容')}</summary>
             <Break />
             <Break />
             {isAsync ? <Component /> : renderRes}

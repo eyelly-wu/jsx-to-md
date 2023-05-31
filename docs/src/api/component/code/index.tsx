@@ -6,7 +6,7 @@ import Template from '../Template'
 export default function Code() {
   return (
     <Template
-      title={i18n('代码')}
+      title={t('代码')}
       intro={null}
       componentList={['U', 'InlineCode', 'CodeBlock']}
       propertyDescription={[
@@ -17,7 +17,7 @@ export default function Code() {
           default: '-',
           description: (
             <>
-              {i18n('代码内容')}
+              {t('代码内容')}
               <br />
               <br />
               该属性针对 `InlineCode` 无效
@@ -31,7 +31,7 @@ export default function Code() {
           default: 'js',
           description: (
             <>
-              {i18n('代码类型')}
+              {t('代码类型')}
               <br />
               <br />
               该属性针对 `InlineCode` 无效

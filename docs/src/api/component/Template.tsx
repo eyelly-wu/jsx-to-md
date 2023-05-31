@@ -27,10 +27,10 @@ export default function Template(props: TemplateProps) {
     isAsyncDemo,
   } = props
 
-  const componentListTitle = i18n('组件列表')
-  const propertyDescriptionTitle = i18n('属性说明')
-  const typeDescriptionTitle = i18n('类型说明')
-  const exampleCodeTitle = i18n('示例代码')
+  const componentListTitle = t('组件列表')
+  const propertyDescriptionTitle = t('属性说明')
+  const typeDescriptionTitle = t('类型说明')
+  const exampleCodeTitle = t('示例代码')
 
   function getId(titleProp: string) {
     return `${title}-${titleProp}`

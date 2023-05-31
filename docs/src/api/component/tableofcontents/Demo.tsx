@@ -5,7 +5,7 @@ export default function () {
 
   return (
     <>
-      <TableOfContents text={i18n('目录')} indent={['&ensp;']} />
+      <TableOfContents text={t('目录')} indent={['&ensp;']} />
       <H1>Heading 1</H1>
       <H2>Heading 2</H2>
       <H3>Heading 3</H3>
@@ -20,7 +20,7 @@ export default function () {
       <h5>HTML Heading 5</h5>
       <h6 id="HTML Heading 6">HTML Heading 6</h6>
       <Break />
-      {/**${i18n('跳过生成目录')}*/}
+      {/**${t('跳过生成目录')}*/}
       <H1 skip>Skip Heading 1</H1>
 
       <h1 {...props}>Skip HTML Heading 1</h1>

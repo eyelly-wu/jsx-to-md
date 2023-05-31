@@ -6,7 +6,7 @@ import Template from '../Template'
 export default function BlockQuote() {
   return (
     <Template
-      title={i18n('引用块')}
+      title={t('引用块')}
       intro={null}
       componentList={['U', 'BlockQuote']}
       propertyDescription={[
@@ -15,7 +15,7 @@ export default function BlockQuote() {
           type: 'number',
           required: 'false',
           default: 1,
-          description: <>{i18n('层级，适用于多层嵌套的场景')}</>,
+          description: <>{t('层级，适用于多层嵌套的场景')}</>,
         },
       ]}
       demoCodePath={join(__dirname, 'Demo.tsx')}

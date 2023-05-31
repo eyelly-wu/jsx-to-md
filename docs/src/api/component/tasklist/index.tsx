@@ -6,7 +6,7 @@ import Template from '../Template'
 export default function () {
   return (
     <Template
-      title={i18n('任务清单')}
+      title={t('任务清单')}
       intro={null}
       componentList={['U', 'TaskList']}
       propertyDescription={[
@@ -17,10 +17,10 @@ export default function () {
           default: '-',
           description: (
             <>
-              {i18n('任务项配置')}
+              {t('任务项配置')}
               <br />
               <br />
-              {i18n('支持多层级任务，内部会根据子任务的状态计算出父任务的状态')}
+              {t('支持多层级任务，内部会根据子任务的状态计算出父任务的状态')}
             </>
           ),
         },
@@ -31,9 +31,9 @@ export default function () {
           <CodeBlock
             langType="ts"
             code={`
-// ${i18n('任务状态')} 0: ${i18n('未完成')}，1：${i18n('已完成')}
+// ${t('任务状态')} 0: ${t('未完成')}，1：${t('已完成')}
 type TaskStatus = 0 | 1
-// ${i18n('任务项，任务状态默认为已完成')}
+// ${t('任务项，任务状态默认为已完成')}
 type TaskItem = string | [string, TaskStatus] | [string, TaskItem[]]
 `}
           />

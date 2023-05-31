@@ -5,27 +5,27 @@ import { initI18N } from '../utils'
 function getCommonTableColumns() {
   const commonTableColumns: Column[] = [
     {
-      title: i18n('名称'),
+      title: t('名称'),
       fieldName: 'name',
       align: 'center',
     },
     {
-      title: i18n('类型'),
+      title: t('类型'),
       fieldName: 'type',
       align: 'center',
     },
     {
-      title: i18n('是否必设'),
+      title: t('是否必设'),
       fieldName: 'required',
       align: 'center',
     },
     {
-      title: i18n('默认值'),
+      title: t('默认值'),
       fieldName: 'default',
       align: 'center',
     },
     {
-      title: i18n('说明'),
+      title: t('说明'),
       fieldName: 'description',
     },
   ]
@@ -43,15 +43,15 @@ function BasicConfig() {
     {
       name: 'source',
       type: '[Source](#source)[]',
-      required: i18n('是'),
+      required: t('是'),
       default: '-',
-      description: i18n('数据源相关配置'),
+      description: t('数据源相关配置'),
     },
   ]
 
   return (
     <>
-      <H3>{i18n('基础配置')}</H3>
+      <H3>{t('基础配置')}</H3>
       <Table columns={getCommonTableColumns()} data={data} />
     </>
   )
@@ -62,30 +62,30 @@ function Source() {
     {
       name: 'entry',
       type: 'string',
-      required: i18n('是'),
+      required: t('是'),
       default: '-',
-      description: i18n('文档入口文件（绝对路径）'),
+      description: t('文档入口文件（绝对路径）'),
     },
     {
       name: 'output',
       type: 'string',
-      required: i18n('否'),
+      required: t('否'),
       default: '-',
-      description: i18n('生成 Markdown 文件的路径（绝对路径）'),
+      description: t('生成 Markdown 文件的路径（绝对路径）'),
     },
     {
       name: 'params',
       type: 'Record<string,unknown>',
-      required: i18n('否'),
+      required: t('否'),
       default: `{}`,
-      description: i18n('入口文件接收到的 props 属性'),
+      description: t('入口文件接收到的 props 属性'),
     },
   ]
 
   return (
     <>
-      <H3>{i18n('Source')}</H3>
-      {i18n('数据源相关配置')}
+      <H3>{t('Source')}</H3>
+      {t('数据源相关配置')}
       <Table columns={getCommonTableColumns()} data={data} />
     </>
   )
@@ -94,7 +94,7 @@ function Source() {
 function Config() {
   return (
     <>
-      <H2>1. {i18n('{0}配置', ` \`${CONFIG_NAME}\` `)}</H2>
+      <H2>1. {t('{0}配置', ` \`${CONFIG_NAME}\` `)}</H2>
       <BasicConfig />
       <Source />
     </>
@@ -104,21 +104,21 @@ function Config() {
 function CommandList() {
   const columns: Column[] = [
     {
-      title: i18n('命令'),
+      title: t('命令'),
       fieldName: 'command',
       align: 'center',
     },
     {
-      title: i18n('简写'),
+      title: t('简写'),
       fieldName: 'shorthand',
       align: 'center',
     },
     {
-      title: i18n('用法'),
+      title: t('用法'),
       fieldName: 'usage',
     },
     {
-      title: i18n('说明'),
+      title: t('说明'),
       fieldName: 'description',
     },
   ]
@@ -133,19 +133,19 @@ function CommandList() {
       command: 'init',
       shorthand: '-',
       usage: '`npx jtm init`',
-      description: i18n('初始化配置文件'),
+      description: t('初始化配置文件'),
     },
     {
       command: 'run',
       shorthand: '-',
       usage: '`npx jtm run`',
-      description: i18n('读取配置生成 Markdown 文件'),
+      description: t('读取配置生成 Markdown 文件'),
     },
   ]
 
   return (
     <>
-      <H3>{i18n('命令列表')}</H3>
+      <H3>{t('命令列表')}</H3>
       <Table columns={columns} data={data} />
     </>
   )
@@ -154,26 +154,26 @@ function CommandList() {
 function CommandProp() {
   const columns: Column[] = [
     {
-      title: i18n('参数名'),
+      title: t('参数名'),
       fieldName: 'name',
       align: 'center',
     },
     {
-      title: i18n('参数值'),
+      title: t('参数值'),
       fieldName: 'value',
       align: 'center',
     },
     {
-      title: i18n('适用命令'),
+      title: t('适用命令'),
       fieldName: 'command',
       align: 'center',
     },
     {
-      title: i18n('用法'),
+      title: t('用法'),
       fieldName: 'usage',
     },
     {
-      title: i18n('说明'),
+      title: t('说明'),
       fieldName: 'description',
     },
   ]
@@ -199,7 +199,7 @@ function CommandProp() {
       ),
       description: (
         <>
-          {i18n(
+          {t(
             '指定是否启用文件监听，该配置默认开启，启用后相关文件变化会重新生成 Markdown 文件',
           )}
         </>
@@ -220,7 +220,7 @@ function CommandProp() {
       ),
       description: (
         <>
-          {i18n(
+          {t(
             '可用于指定{0}的编译方式，从而决定是否需要手动引入{1}',
             ' `JSX` ',
             ' `React` ',
@@ -228,14 +228,14 @@ function CommandProp() {
           <br />
           <br />
           <b>classic</b>:{' '}
-          {i18n(
+          {t(
             '{0}会编译为{1}需要引入{2}',
             ' `JSX` ',
             ' `React.createElement` ',
             ' `React` ',
           )}
           <b>automatic</b>:{' '}
-          {i18n(
+          {t(
             '内部默认会从{0}中引入{1}和{2}，不需要引入{3}',
             ' `jsx-to-md/jsx-runtime` ',
             ' `jsx` ',
@@ -249,7 +249,7 @@ function CommandProp() {
 
   return (
     <>
-      <H3>{i18n('命令参数')}</H3>
+      <H3>{t('命令参数')}</H3>
       <Table columns={columns} data={data} />
     </>
   )
@@ -258,7 +258,7 @@ function CommandProp() {
 function Command() {
   return (
     <>
-      <H2>2. {i18n('命令')}</H2>
+      <H2>2. {t('命令')}</H2>
       <CommandList />
       <CommandProp />
     </>
@@ -270,8 +270,8 @@ export default function CommandLine(props) {
 
   return (
     <>
-      <H1 skip>{i18n('命令行')}</H1>
-      <TableOfContents text={i18n('目录')} open={false} />
+      <H1 skip>{t('命令行')}</H1>
+      <TableOfContents text={t('目录')} open={false} />
       <Config />
       <Command />
     </>

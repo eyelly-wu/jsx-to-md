@@ -1,17 +1,18 @@
-import { setI18N, i18n } from 'i18n-pro'
+import { initI18n as originInitI18n } from 'i18n-pro'
 import en from '../../i18n/en.json'
 import packageInfo from '../../package.json'
 import { getAnchor } from '@lib'
 
 export function initI18N({ locale }) {
-  setI18N({
+  const { t } = originInitI18n({
+    namespace: 'doc',
     locale,
     langs: {
       en,
     },
   })
 
-  global.i18n = i18n
+  global.t = t
   global.docLocale = locale
 }
 

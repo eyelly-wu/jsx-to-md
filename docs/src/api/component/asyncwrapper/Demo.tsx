@@ -7,7 +7,7 @@ export default function AsyncDemo() {
   const asyncData1 = new Promise<Data>((resolve) => {
     setTimeout(() => {
       resolve({
-        name: i18n('朋友'),
+        name: t('朋友'),
       })
     }, 50)
   })
@@ -26,7 +26,7 @@ export default function AsyncDemo() {
         items={[
           'U',
           [
-            i18n('基础的'),
+            t('基础的'),
             [
               'U',
               <AsyncWrapper data={asyncData1}>
@@ -37,7 +37,7 @@ export default function AsyncDemo() {
             ],
           ],
           [
-            i18n('嵌套的'),
+            t('嵌套的'),
             [
               'U',
               <AsyncWrapper data={asyncData1}>
@@ -49,7 +49,7 @@ export default function AsyncDemo() {
                         {({ name }) => {
                           return (
                             <>
-                              , this is {name}, {i18n('欢迎使用')}
+                              , this is {name}, {t('欢迎使用')}
                             </>
                           )
                         }}

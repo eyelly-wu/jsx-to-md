@@ -42,7 +42,7 @@ export default function Top() {
     <>
       <div style={{ textAlign: 'center' }} {...props}>
         <p style={{ fontSize: 18 }}>
-          {i18n('一款支持通过 JSX 来编写 Markdown 的工具')}
+          {t('一款支持通过 JSX 来编写 Markdown 的工具')}
           {renderLanguage()}
         </p>
         <Break />

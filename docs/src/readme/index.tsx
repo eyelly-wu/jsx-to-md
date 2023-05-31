@@ -1,4 +1,3 @@
-import { i18n } from 'i18n-pro'
 import React, { TableOfContents } from '@lib'
 import Top from './Top'
 import Vision from './Vision'
@@ -15,7 +14,7 @@ export default function Doc(props) {
   return (
     <>
       <Top />
-      <TableOfContents text={i18n('目录')} open={false} />
+      <TableOfContents text={t('目录')} open={false} />
       <Vision />
       <Feature />
       <LiveDemo />

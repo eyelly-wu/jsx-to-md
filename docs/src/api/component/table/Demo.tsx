@@ -5,15 +5,15 @@ export default function () {
     <>
       <Table
         columns={[
-          { fieldName: 'field1', title: i18n('靠左标题') },
-          { fieldName: 'field2', title: i18n('居中标题'), align: 'center' },
-          { fieldName: 'field3', title: i18n('靠右标题'), align: 'right' },
+          { fieldName: 'field1', title: t('靠左标题') },
+          { fieldName: 'field2', title: t('居中标题'), align: 'center' },
+          { fieldName: 'field3', title: t('靠右标题'), align: 'right' },
         ]}
         data={Array(10)
           .fill(0)
           .map((item) => {
             return ['field1', 'field2', 'field3'].reduce((res, item) => {
-              res[item] = i18n('文本内容')
+              res[item] = t('文本内容')
               return res
             }, {})
           })}

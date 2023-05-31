@@ -4,8 +4,8 @@ export default function () {
   return (
     <>
       <Image
-        title={i18n('图片标题')}
-        alt={i18n('图片说明')}
+        title={t('图片标题')}
+        alt={t('图片说明')}
         src="https://commonmark.org/help/images/favicon.png"
       />
     </>

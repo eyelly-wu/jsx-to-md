@@ -644,10 +644,7 @@ import React, { Link } from 'jsx-to-md'
 export default function () {
   return (
     <>
-      <Link
-        title="Link Title"
-        href="https://github.com/eyelly-wu/jsx-to-md"
-      >
+      <Link title="Link Title" href="https://github.com/eyelly-wu/jsx-to-md">
         jsx-to-md
       </Link>
     </>

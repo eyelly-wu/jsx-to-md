@@ -8,8 +8,8 @@ export default function API(props) {
 
   return (
     <>
-      <H1 skip>{i18n('API')}</H1>
-      <TableOfContents text={i18n('目录')} open={false} />
+      <H1 skip>{t('API')}</H1>
+      <TableOfContents text={t('目录')} open={false} />
       <FunctionList />
       <ComponentList />
     </>
