@@ -4,10 +4,10 @@ export function getAnchor(text: string): string {
     text
       ?.trim?.()
       .toLocaleLowerCase()
-      .replaceAll(/( ?`\b)|(\b` ?)/g, '-')
+      .replaceAll(/( `)|(` )/g, '-')
       .replaceAll('`', ' ')
       .replace(/ +$/, '')
       .replace(/ +/g, '-')
-      .replace(/(\[)|(\])|[.()（）?？]|(\*\*)/g, '')
+      .replace(/(\[)|(\])|[.()（）?？']|(\*\*)/g, '')
   )
 }

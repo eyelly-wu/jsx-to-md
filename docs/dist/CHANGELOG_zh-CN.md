@@ -4,6 +4,9 @@
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.11.3] - 2023-06-02](#0113---2023-06-02)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0113-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0113-api-fixed)<br/>
   &emsp;&emsp;[[0.11.2] - 2023-05-23](#0112---2023-05-23)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0112-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0112-api-fixed)<br/>
@@ -39,6 +42,17 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.3] - 2023-06-02
+
+<h3 id="0113-api">API</h3>
+
+<h4 id="0113-api-fixed">Fixed</h4>
+
+* 修复以下场景生成目录在 `Github` 中导航不正确
+   * 标题中存在<code>'</code>
+   * 标题中存在x&nbsp;&nbsp;<code>`xxx`</code>类似文案
+
 
 ## [0.11.2] - 2023-05-23
 

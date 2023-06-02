@@ -1,6 +1,6 @@
 {
   "name": "jsx-to-md",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "private": false,
   "description": "A tool that supports writing Markdown through JSX（一款支持通过 JSX 来编写 Markdown 的工具）",
   "main": "./dist/src/lib/index.js",
@@ -30,7 +30,7 @@
   "author": "Eyelly Wu",
   "license": "MIT",
   "lint-staged": {
-    "*.{js,ts}": "eslint --fix -f table"
+    "*.{js,ts,jsx,tsx}": "eslint --fix -f table"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",

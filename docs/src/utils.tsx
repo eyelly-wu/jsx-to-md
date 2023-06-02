@@ -5,7 +5,7 @@ import { getAnchor } from '@lib'
 
 export function initI18N({ locale }) {
   const { t } = originInitI18n({
-    namespace: 'doc',
+    namespace: Math.random() + '',
     locale,
     langs: {
       en,
