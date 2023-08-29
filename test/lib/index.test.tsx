@@ -104,11 +104,6 @@ describe('test component render', () => {
           return res
         }, '')
 
-      console.log({
-        res,
-        expectRes,
-      })
-
       expect(res).toBe(expectRes)
     })
   })
@@ -952,6 +947,8 @@ const b = 'b'
         'a  `中文`    ': '#a--中文',
         'a  `abc`   ': '#a--abc',
         "a's": '#as',
+        'a,b': '#ab',
+        'a,，，，,b': '#ab',
       }
       Object.entries(textExpectResMap).forEach(([t, r]) => {
         expect(getAnchor(t)).toBe(r)

@@ -209,6 +209,28 @@ function V_0_11_3() {
   )
 }
 
+function V_0_11_4() {
+  return (
+    <BaseChangeLog
+      version="0.11.4"
+      date="2023-08-29"
+      api={{
+        fixed: [
+          'U',
+          [
+            t('修复以下场景生成目录在{0}中导航不正确', ' `Github` '),
+            [
+              'U',
+              t('标题中存在{0}', render(<code>,</code>)),
+              t('标题中存在{0}', render(<code>，</code>)),
+            ],
+          ],
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -216,6 +238,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{t('更新日志')}</H1>
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_11_4 />
       <V_0_11_3 />
       <V_0_11_2 />
       <V_0_11_1 />

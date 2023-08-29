@@ -4,6 +4,9 @@
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.11.4] - 2023-08-29](#0114---2023-08-29)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0114-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0114-api-fixed)<br/>
   &emsp;&emsp;[[0.11.3] - 2023-06-02](#0113---2023-06-02)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0113-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0113-api-fixed)<br/>
@@ -42,6 +45,17 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.4] - 2023-08-29
+
+<h3 id="0114-api">API</h3>
+
+<h4 id="0114-api-fixed">Fixed</h4>
+
+* Fix incorrect navigation of the generated directory in  `Github`  for the following scenarios
+   * <code>,</code> exists in the title
+   * <code>，</code> exists in the title
+
 
 ## [0.11.3] - 2023-06-02
 
