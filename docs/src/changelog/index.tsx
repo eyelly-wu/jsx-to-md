@@ -1,4 +1,4 @@
-import React, { H1, render, TableOfContents } from '@lib'
+import React, { CodeBlock, H1, render, TableOfContents } from '@lib'
 import { initI18N } from '../utils'
 import BaseChangeLog from './ChangeLog'
 
@@ -231,6 +231,41 @@ function V_0_11_4() {
   )
 }
 
+function V_0_11_5() {
+  return (
+    <BaseChangeLog
+      version="0.11.5"
+      date="2024-07-21"
+      api={{
+        fixed: [
+          'U',
+          t(
+            '修复当设置命令行参数{0}为{1}执行{2}命令时，会导致类似如下场景列表渲染为空{3}',
+            ' `--jsx` ',
+            ' `classical` ',
+            ' `run` ',
+            render(
+              <CodeBlock
+                code={`
+<div>
+  {['a', 'b', 'c'].map(item=> <span>{item}</span>)}
+</div>
+
+// ${t('上述节点渲染结果对比：')}
+// ${t('bug表现：{0}', '<div></div>')}
+// ${t(
+                  '正确的结果：{0}',
+                  `<div><span>a</span><span>b</span><span>c</span></div>`,
+                )}`}
+              />,
+            ),
+          ),
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -238,6 +273,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{t('更新日志')}</H1>
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_11_5 />
       <V_0_11_4 />
       <V_0_11_3 />
       <V_0_11_2 />

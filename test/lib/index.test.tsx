@@ -659,6 +659,17 @@ foo()
         '<div style="height: 10px;color: red;"></div>',
       ],
       [
+        'multiple map',
+        <div>
+          {['a', 'b', 'c'].map((item) => (
+            <span>{item}</span>
+          ))}
+        </div>,
+        `<div>
+  <span>a</span><span>b</span><span>c</span>
+</div>`,
+      ],
+      [
         'nest',
         <table>
           <tr>

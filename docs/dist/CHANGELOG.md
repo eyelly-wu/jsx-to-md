@@ -4,6 +4,9 @@
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.11.5] - 2024-07-21](#0115---2024-07-21)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0115-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0115-api-fixed)<br/>
   &emsp;&emsp;[[0.11.4] - 2023-08-29](#0114---2023-08-29)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0114-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0114-api-fixed)<br/>
@@ -45,6 +48,25 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.5] - 2024-07-21
+
+<h3 id="0115-api">API</h3>
+
+<h4 id="0115-api-fixed">Fixed</h4>
+
+* Fix: When setting the command line parameter  `--jsx`  to  `classical`  and executing the  `run`  command, it will cause a scene list similar to the following to render as empty 
+```js
+<div>
+  {['a', 'b', 'c'].map(item=> <span>{item}</span>)}
+</div>
+
+// Comparison of rendering results of the above nodes:
+// Bug manifestation: <div></div>
+// Correct result: <div><span>a</span><span>b</span><span>c</span></div>
+```
+
+
 
 ## [0.11.4] - 2023-08-29
 

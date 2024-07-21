@@ -48,7 +48,13 @@ export default function renderElement(
   )
 
   if (typeof type === 'string') {
-    const currentRes = renderHTMLElement(element as HTMLElement, params)
+    const currentRes = renderHTMLElement(
+      {
+        ...element,
+        children: currentChildren,
+      } as HTMLElement,
+      params,
+    )
     if (STRING_HEADINGS.includes(type) && !props?.skip) {
       headingNodes.push({
         type,

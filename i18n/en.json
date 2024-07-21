@@ -196,5 +196,9 @@
   "存在{0}包裹非英文内容": "There are {0} packages with non English content",
   "在标题结尾处存在{0}包裹非英文内容": "There is {0} package with non English content at the end of the title",
   "标题中存在{0}": "{0} exists in the title",
-  "标题中存在{0}类似文案": "There is {0} similar text in the title"
+  "标题中存在{0}类似文案": "There is {0} similar text in the title",
+  "正确的结果：{0}": "Correct result: {0}",
+  "修复当设置命令行参数{0}为{1}执行{2}命令时，会导致类似如下场景列表渲染为空{3}": "Fix: When setting the command line parameter {0} to {1} and executing the {2} command, it will cause a scene list similar to the following to render as empty {3}",
+  "bug表现：{0}": "Bug manifestation: {0}",
+  "上述节点渲染结果对比：": "Comparison of rendering results of the above nodes:"
 }

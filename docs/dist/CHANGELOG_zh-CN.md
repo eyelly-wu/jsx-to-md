@@ -4,6 +4,9 @@
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.11.5] - 2024-07-21](#0115---2024-07-21)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0115-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0115-api-fixed)<br/>
   &emsp;&emsp;[[0.11.4] - 2023-08-29](#0114---2023-08-29)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0114-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0114-api-fixed)<br/>
@@ -45,6 +48,25 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.5] - 2024-07-21
+
+<h3 id="0115-api">API</h3>
+
+<h4 id="0115-api-fixed">Fixed</h4>
+
+* 修复当设置命令行参数 `--jsx` 为 `classical` 执行 `run` 命令时，会导致类似如下场景列表渲染为空
+```js
+<div>
+  {['a', 'b', 'c'].map(item=> <span>{item}</span>)}
+</div>
+
+// 上述节点渲染结果对比：
+// bug表现：<div></div>
+// 正确的结果：<div><span>a</span><span>b</span><span>c</span></div>
+```
+
+
 
 ## [0.11.4] - 2023-08-29
 
