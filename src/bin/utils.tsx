@@ -27,10 +27,7 @@ export function writeFile(path: string, filename: string, content: string) {
 }
 
 export function getFilePathInfo(path: string) {
-  const dirpath = path.slice(
-    0,
-    path.lastIndexOf(process.platform === 'win32' ? '\\' : '/'),
-  )
+  const dirpath = path.slice(0, path.lastIndexOf('/'))
   const filename = path.replace(dirpath, '').replace(/(\\)|(\/)/, '')
   const filenameWithoutExtension = filename.slice(0, filename.lastIndexOf('.'))
 
@@ -44,4 +41,8 @@ export function getFilePathInfo(path: string) {
 export function writeFileWithPath(path: string, content: string) {
   const { dirpath, filename } = getFilePathInfo(path)
   writeFile(dirpath, filename, content)
+}
+
+export function getPosixPath(path: string) {
+  return path.replace(/\\/g, '/')
 }

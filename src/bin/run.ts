@@ -5,7 +5,7 @@ import { exec } from 'shelljs'
 import { Config } from 'src/types'
 import { getConfig } from './config'
 import { TEMP_DIR, ROOT_EXECUTE_FILE_NAME } from './constant'
-import { getFilePathInfo, writeFile } from './utils'
+import { getFilePathInfo, getPosixPath, writeFile } from './utils'
 
 type JSXType = 'classic' | 'automatic'
 
@@ -52,7 +52,10 @@ export function generateRenderFileAndGetFilenames(props: {
 
   const filenames = config?.source?.reduce((res, configItem) => {
     const { entry, output, params = {} } = configItem
-    const { filenameWithoutExtension } = getFilePathInfo(output)
+    const entryPath = getPosixPath(entry)
+    const outputPath = getPosixPath(output)
+
+    const { filenameWithoutExtension } = getFilePathInfo(outputPath)
     const paramsStr = JSON.stringify(params)
     const originFilename = `render${filenameWithoutExtension}`
     const filename = `${originFilename}.tsx`
@@ -64,7 +67,7 @@ export function generateRenderFileAndGetFilenames(props: {
 
     const runScript = `
 import { existsSync } from 'node:fs'
-import Doc from '${entry}'
+import Doc from '${entryPath}'
 import ${jsxAuto ? '' : 'React, '}{ renderAsync } from '${relativeLibPath}'
 import { writeFileWithPath } from '${relativeBinPath}'
 ${jsxAuto ? `import { jsx } from '${relativeLibPath}/jsx-runtime'\n` : ''}
@@ -76,9 +79,9 @@ export default async function(){
   })
 
   try {
-    const isExist = existsSync('${output}')
-    writeFileWithPath('${output}', res)
-    console.log(new Date().toLocaleTimeString() + \` ${output} has been ${'${ isExist?"updated":"created" }'} \`)
+    const isExist = existsSync('${outputPath}')
+    writeFileWithPath('${outputPath}', res)
+    console.log(new Date().toLocaleTimeString() + \` ${outputPath} has been ${'${ isExist?"updated":"created" }'} \`)
   } catch (err) {
     console.error(err)
   }

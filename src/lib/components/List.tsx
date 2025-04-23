@@ -61,60 +61,7 @@ export const ListItem = (props: {
 
 type ListType = 'O' | 'o' | 'U' | 'u'
 type ListItem = string | JSX.Element | [string, Items]
-type Items =
-  | [ListType, ...string[]]
-  | [ListType, ListItem]
-  | [ListType, ListItem, ListItem]
-  | [ListType, ListItem, ListItem, ListItem]
-  | [ListType, ListItem, ListItem, ListItem, ListItem]
-  | [ListType, ListItem, ListItem, ListItem, ListItem, ListItem]
-  | [ListType, ListItem, ListItem, ListItem, ListItem, ListItem, ListItem]
-  | [
-      ListType,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-    ]
-  | [
-      ListType,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-    ]
-  | [
-      ListType,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-    ]
-  | [
-      ListType,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-      ListItem,
-    ]
+type Items = [ListType, ...ListItem[]]
 
 function getListContent(items: Items, mark: string, level = 1): unknown[] {
   const [type, ...restItems] = items
