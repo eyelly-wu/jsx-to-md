@@ -8,6 +8,7 @@ import {
   binUtils,
   binConstant,
 } from './utils'
+import { getPosixPath } from '../../src/bin/utils'
 
 const { executeCommand } = binIndex
 const { CONFIG_NAME, INIT_CONFIG_CONTENT } = binConstant
@@ -217,11 +218,11 @@ describe('command', () => {
       it('mock windows', () => {
         const mockProcess = vi.spyOn(process, 'platform', 'get')
         mockProcess.mockReturnValue('win32')
-        const path = 'c:\\windows\\Program Files\\temp.text'
+        const path = getPosixPath('c:\\windows\\Program Files\\temp.text')
         const { dirpath, filename, filenameWithoutExtension } =
           getFilePathInfo(path)
 
-        expect(dirpath).toBe('c:\\windows\\Program Files')
+        expect(dirpath).toBe('c:/windows/Program Files')
         expect(filename).toBe('temp.text')
         expect(filenameWithoutExtension).toBe('temp')
       })
