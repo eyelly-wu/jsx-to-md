@@ -4,6 +4,11 @@
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.11.6] - 2025-04-23](#0116---2025-04-23)<br/>
+  &emsp;&emsp;&emsp;&emsp;[命令行工具](#0116-命令行工具)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0116-命令行工具-fixed)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0116-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#0116-api-changed)<br/>
   &emsp;&emsp;[[0.11.5] - 2024-07-21](#0115---2024-07-21)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0115-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0115-api-fixed)<br/>
@@ -48,6 +53,22 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.6] - 2025-04-23
+
+<h3 id="0116-命令行工具">命令行工具</h3>
+
+<h4 id="0116-命令行工具-fixed">Fixed</h4>
+
+* 优化在 `Windows` 上执行 `jtm run` 命令时解析路径错误
+
+
+<h3 id="0116-api">API</h3>
+
+<h4 id="0116-api-changed">Changed</h4>
+
+* 简化 `List` 组件的 `items` 属性 `TypeScript` 类型定义
+
 
 ## [0.11.5] - 2024-07-21
 

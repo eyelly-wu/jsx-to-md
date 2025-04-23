@@ -266,6 +266,36 @@ function V_0_11_5() {
   )
 }
 
+function V_0_11_6() {
+  return (
+    <BaseChangeLog
+      version="0.11.6"
+      date="2025-04-23"
+      api={{
+        changed: [
+          'U',
+          t(
+            '简化{0}组件的{1}属性{2}类型定义',
+            ' `List` ',
+            ' `items` ',
+            ' `TypeScript` ',
+          ),
+        ],
+      }}
+      commandLine={{
+        fixed: [
+          'U',
+          t(
+            '优化在{0}上执行{1}命令时解析路径错误',
+            ' `Windows` ',
+            ' `jtm run` ',
+          ),
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -273,6 +303,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{t('更新日志')}</H1>
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_11_6 />
       <V_0_11_5 />
       <V_0_11_4 />
       <V_0_11_3 />

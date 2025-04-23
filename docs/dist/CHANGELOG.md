@@ -4,6 +4,11 @@
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.11.6] - 2025-04-23](#0116---2025-04-23)<br/>
+  &emsp;&emsp;&emsp;&emsp;[Command Line Tools](#0116-command-line-tools)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0116-command-line-tools-fixed)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0116-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Changed](#0116-api-changed)<br/>
   &emsp;&emsp;[[0.11.5] - 2024-07-21](#0115---2024-07-21)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0115-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0115-api-fixed)<br/>
@@ -48,6 +53,22 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.11.6] - 2025-04-23
+
+<h3 id="0116-command-line-tools">Command Line Tools</h3>
+
+<h4 id="0116-command-line-tools-fixed">Fixed</h4>
+
+* Optimize parsing path error when executing  `jtm run`  command on  `Windows` 
+
+
+<h3 id="0116-api">API</h3>
+
+<h4 id="0116-api-changed">Changed</h4>
+
+* Simplify the  `items`  attribute  `TypeScript`  type definition of the  `List`  component
+
 
 ## [0.11.5] - 2024-07-21
 
