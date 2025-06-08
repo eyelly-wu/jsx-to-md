@@ -1,6 +1,6 @@
 {
   "name": "jsx-to-md",
-  "version": "0.11.6",
+  "version": "0.12.0",
   "private": false,
   "description": "A tool that supports writing Markdown through JSX（一款支持通过 JSX 来编写 Markdown 的工具）",
   "main": "./dist/src/lib/index.js",
@@ -13,7 +13,7 @@
     "dev": "tsc --watch",
     "coverage": "vitest --coverage --watch false",
     "docs": "ts-node-dev ./src/bin/index.tsx run --jsx classic",
-    "translate": "i18n t"
+    "docs-i18n": "i18n t"
   },
   "bin": {
     "jtm": "./dist/src/bin/index.js"

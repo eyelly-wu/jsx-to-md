@@ -1,6 +1,13 @@
 import { HTMLElement, InnerRenderProps } from 'src/types'
-import { BLOCK_NODES, NO_END_NODES, STRING_HEADINGS } from '../constant'
-import { getAnchor } from '../utils'
+import {
+  BLOCK_NODES,
+  NO_END_NODES,
+  STRING_HEADINGS,
+  camelAttrs,
+  propNameMap,
+  namespacePrefixes,
+} from '../constant'
+import { getAnchor, getHtmlAttributeName } from '../utils'
 import renderElement from './renderElement'
 
 export default function renderHTMLElement(
@@ -16,48 +23,64 @@ export default function renderHTMLElement(
     delete props?.skip
   }
 
-  const propsStr = Object.entries(props || {}).reduce(
-    (res, [name, value], index) => {
-      if (index == 0) {
-        res += ' '
+  const propsStr = Object.entries(props || {}).reduce((res, [name, value]) => {
+    res += ' '
+
+    name = propNameMap[name] || name
+
+    switch (name) {
+      case 'href':
+        if (type === 'a' && (value as string)?.startsWith?.('#')) {
+          value = (value as string)?.toLowerCase?.()?.replace(' ', '-')
+        }
+        break
+      case 'style':
+        // eslint-disable-next-line no-case-declarations
+        const styleStr = Object.entries(value).reduce(
+          (styleRes, [styleName, styleValue]) => {
+            styleName = getHtmlAttributeName(styleName)
+
+            styleValue =
+              typeof styleValue === 'number' ? styleValue + 'px' : styleValue
+
+            styleRes += `${styleName}: ${styleValue};`
+
+            return styleRes
+          },
+          '',
+        )
+        value = styleStr
+        break
+      case 'id':
+        if (STRING_HEADINGS.includes(type)) {
+          value = getAnchor(value as string).slice(1)
+        }
+        break
+    }
+
+    let currentNamespace = ''
+
+    namespacePrefixes.some((namespacePrefix) => {
+      if (name.startsWith(namespacePrefix)) {
+        currentNamespace = namespacePrefix
+        return true
       }
-      switch (name) {
-        case 'href':
-          if (type === 'a' && (value as string)?.startsWith?.('#')) {
-            value = (value as string)?.toLowerCase?.()?.replace(' ', '-')
-          }
-          break
-        case 'style':
-          // eslint-disable-next-line no-case-declarations
-          const styleStr = Object.entries(value).reduce(
-            (styleRes, [styleName, styleValue]) => {
-              styleName = styleName
-                .replace(/(?<=[a-z])(?=[A-Z])/g, '-')
-                .toLowerCase()
+    })
 
-              styleValue =
-                typeof styleValue === 'number' ? styleValue + 'px' : styleValue
-
-              styleRes += `${styleName}: ${styleValue};`
-
-              return styleRes
-            },
-            '',
-          )
-          value = styleStr
-          break
-        case 'id':
-          if (STRING_HEADINGS.includes(type)) {
-            value = getAnchor(value as string).slice(1)
-          }
-          break
+    if (currentNamespace) {
+      const tempName = name.slice(currentNamespace.length)
+      if (tempName.length === 0) {
+        name = currentNamespace
+      } else {
+        name = currentNamespace + ':' + getHtmlAttributeName(tempName).slice(1)
       }
+    } else if (!camelAttrs.includes(name)) {
+      name = getHtmlAttributeName(name)
+    }
 
-      res += `${name}="${value}"`
-      return res
-    },
-    '',
-  )
+    res += `${name}="${value}"`
+    return res
+  }, '')
 
   const prefix = `<${type}${propsStr}>`
   const suffix = `</${type}>`

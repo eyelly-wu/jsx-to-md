@@ -69,12 +69,35 @@ describe('html', () => {
       'nest:break line',
       <pre>
         {`const a = 'a'
-const b = 'b'`}
+    const b = 'b'`}
       </pre>,
       `<pre>
 const a = 'a'
-const b = 'b'
+    const b = 'b'
 </pre>`,
+    ],
+    [
+      'multiple prop',
+      <div id="id" contentEditable="true" style={{ height: 20 }}></div>,
+      `<div id="id" contentEditable="true" style="height: 20px;"></div>`,
+    ],
+    [
+      'svg props',
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width="800"
+        height="1267"
+        style={{ backgroundColor: '#fff' }}
+      >
+        <image
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          xlinkHref="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        />
+      </svg>,
+      `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="1267" style="background-color: #fff;">
+  <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></image>
+</svg>`,
     ],
   ]
 

@@ -296,6 +296,18 @@ function V_0_11_6() {
   )
 }
 
+function V_0_12_0() {
+  return (
+    <BaseChangeLog
+      version="0.12.0"
+      date="2025-06-08"
+      api={{
+        added: ['U', t('增强对{0}元素渲染的支持', ' `Svg` ')],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -303,6 +315,7 @@ export default function ChangeLog(props) {
     <>
       <H1 skip>{t('更新日志')}</H1>
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_12_0 />
       <V_0_11_6 />
       <V_0_11_5 />
       <V_0_11_4 />

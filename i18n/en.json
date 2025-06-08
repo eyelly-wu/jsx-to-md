@@ -202,5 +202,6 @@
   "bug表现：{0}": "Bug manifestation: {0}",
   "上述节点渲染结果对比：": "Comparison of rendering results of the above nodes:",
   "简化{0}组件的{1}属性{2}类型定义": "Simplify the {1} attribute {2} type definition of the {0} component",
-  "优化在{0}上执行{1}命令时解析路径错误": "Optimize parsing path error when executing {1} command on {0}"
+  "优化在{0}上执行{1}命令时解析路径错误": "Optimize parsing path error when executing {1} command on {0}",
+  "增强对{0}元素渲染的支持": "Enhance support for rendering {0} elements"
 }

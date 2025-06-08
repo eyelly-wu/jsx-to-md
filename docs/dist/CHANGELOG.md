@@ -4,6 +4,9 @@
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.12.0] - 2025-06-08](#0120---2025-06-08)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0120-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0120-api-added)<br/>
   &emsp;&emsp;[[0.11.6] - 2025-04-23](#0116---2025-04-23)<br/>
   &emsp;&emsp;&emsp;&emsp;[Command Line Tools](#0116-command-line-tools)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0116-command-line-tools-fixed)<br/>
@@ -53,6 +56,15 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.12.0] - 2025-06-08
+
+<h3 id="0120-api">API</h3>
+
+<h4 id="0120-api-added">Added</h4>
+
+* Enhance support for rendering  `Svg`  elements
+
 
 ## [0.11.6] - 2025-04-23
 
