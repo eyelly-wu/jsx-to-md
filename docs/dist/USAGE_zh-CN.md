@@ -50,7 +50,7 @@ export default function () {
 
 
 ## 3. 初始化命令行配置文件
-在命令行终端输入如下命令，[更多命令](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.0/docs/dist/COMMAND_LINE_zh-CN.md#2-命令)
+在命令行终端输入如下命令，[更多命令](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/docs/dist/COMMAND_LINE_zh-CN.md#2-命令)
 ```bash
 npx jtm init
 ```
@@ -70,7 +70,7 @@ npx jtm init
 
 
 ## 4. 调整 `jsx-to-md.config.js` 配置
-根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.0/docs/dist/COMMAND_LINE_zh-CN.md)
+根据需求自行调整配置文件中的配置项，配置项的[说明](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/docs/dist/COMMAND_LINE_zh-CN.md)
 
 默认的配置如下：
 ```js
@@ -101,6 +101,6 @@ npx jtm run
 Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!
 ```
 显示效果如下<br />
->Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!
+> Hello [jsx-to-md](https://github.com/eyelly-wu/jsx-to-md)!<br/>
 
 并且 `docs/index.tsx` 内容发生调整，保存后，对应的 Markdown 文件也会实时同步变化

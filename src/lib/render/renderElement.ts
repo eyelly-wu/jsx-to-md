@@ -8,6 +8,7 @@ import {
 } from '../constant'
 import renderHTMLElement from './renderHTMLElement'
 import AsyncWrapper from '../components/AsyncWrapper'
+import BlockQuote from '../components/BlockQuote'
 
 function getChildren(children: JSX.Element[] | JSX.Element) {
   if (!Array.isArray(children) && typeof children != 'undefined') {
@@ -115,12 +116,38 @@ export default function renderElement(
   // })
 
   if (!isRenderChildFromProp && !currentParams.skipRenderChildren[0]) {
-    currentChildren?.forEach?.((child) => {
-      res += renderElement(child, {
+    currentChildren?.forEach?.((child, index) => {
+      let renderStr = renderElement(child, {
         headingNodes,
         renderTOCState,
         asyncNodes,
       })
+
+      if (type === BlockQuote) {
+        renderStr =
+          (index === 0 ? '\n' : '') +
+          renderStr
+            .split('\n')
+            .map((item) => {
+              let prefix = '> '
+              let suffix = '<br/>'
+
+              if (item.startsWith('>')) {
+                prefix = '>'
+              } else if (item === '') {
+                prefix = ''
+              }
+
+              if (item.endsWith('<br/>') || item === '') {
+                suffix = ''
+              }
+
+              return prefix + item + suffix
+            })
+            .join('\n')
+      }
+
+      res += renderStr
     })
   }
 

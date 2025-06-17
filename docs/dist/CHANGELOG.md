@@ -1,9 +1,17 @@
 
 # Changelog
 
+
+English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/docs/dist/CHANGELOG_zh-CN.md)
+
+
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.12.1] - 2025-06-17](#0121---2025-06-17)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0121-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0121-api-added)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0121-api-fixed)<br/>
   &emsp;&emsp;[[0.12.0] - 2025-06-08](#0120---2025-06-08)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0120-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0120-api-added)<br/>
@@ -57,13 +65,42 @@
 
 </details>
 
+## [0.12.1] - 2025-06-17
+
+<h3 id="0121-api">API</h3>
+
+<h4 id="0121-api-added">Added</h4>
+
+* Add  `lines`  property to  `Break`  for flexible line breaks
+
+
+<h4 id="0121-api-fixed">Fixed</h4>
+
+* Fix the issue of  `BlockQuote`  rendering multi line text
+   * **Example**
+```jsx
+<BlockQuote>
+  {`First line of text
+Second line of text`}
+</BlockQuote>
+```
+<p>Content generated before fix:</p>
+
+>First line of text Second line of text
+
+<p>Content generated after fix:</p>
+
+> First line of text<br/>
+> Second line of text<br/>
+
+
 ## [0.12.0] - 2025-06-08
 
 <h3 id="0120-api">API</h3>
 
 <h4 id="0120-api-added">Added</h4>
 
-* Enhance support for rendering  `Svg`  elements
+* Enhance support for rendering  `SVG`  elements
 
 
 ## [0.11.6] - 2025-04-23

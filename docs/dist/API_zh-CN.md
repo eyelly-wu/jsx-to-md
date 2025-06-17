@@ -151,7 +151,8 @@ Test()
 
 |属性名|类型|是否必须|默认值|说明|
 |:-:|:-:|:-:|:-:|:-|
-|mark|`'_'` \| `'-'` \| `'*'`|否|`'_'`|生成对应 Markdown 语法的标记符<br /><br />该属性针对 `Break` 无效|
+|mark|`'_'` \| `'-'` \| `'*'`|否|`'_'`|生成对应 Markdown 语法的标记符<br /><br />该属性针对 `HorizontalRule` 有效|
+|lines|number|否|`1`|换行的行数<br /><br />该属性针对 `Break` 有效|
 
 <h4 id="布局-示例代码">示例代码</h4>
 
@@ -169,8 +170,7 @@ export default function () {
       efg
       <Break />
       hij
-      <Break />
-      <Break />
+      <Break lines={3} />
       klm
       <HorizontalRule />
       <HorizontalRule mark="*" />
@@ -189,6 +189,7 @@ abc
 efg
 hij
 
+
 klm
 ___
 
@@ -206,6 +207,7 @@ new line
 abc
 efg
 hij
+
 
 klm
 ___
@@ -452,12 +454,12 @@ export default function () {
 
 
 ```markdown
->普通引用
+> 普通引用<br/>
 
->嵌套引用
->>Nest Block Quote Text1
->>>Nest Block Quote Text2
->>>>Nest Block Quote Text3
+> 嵌套引用<br/>
+>> Nest Block Quote Text1<br/>
+>>> Nest Block Quote Text2<br/>
+>>>> Nest Block Quote Text3<br/>
 ```
 
 
@@ -466,12 +468,12 @@ export default function () {
     <summary>渲染内容</summary>
 
 
->普通引用
+> 普通引用<br/>
 
->嵌套引用
->>Nest Block Quote Text1
->>>Nest Block Quote Text2
->>>>Nest Block Quote Text3
+> 嵌套引用<br/>
+>> Nest Block Quote Text1<br/>
+>>> Nest Block Quote Text2<br/>
+>>>> Nest Block Quote Text3<br/>
 
 
   </details>

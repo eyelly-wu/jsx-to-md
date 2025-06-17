@@ -1,16 +1,17 @@
 import React, { BlockQuote, render } from '../../src/lib'
 
 describe('BlockQuote', () => {
-  it('basic', () => {
+  it('single line', () => {
     const res = render(
       <>
         <BlockQuote>Block Quote</BlockQuote>
       </>,
     )
     expect(res).toBe(`
->Block Quote`)
+> Block Quote<br/>`)
   })
-  it('nest', () => {
+
+  it('single line nest', () => {
     const res = render(
       <>
         Text
@@ -27,9 +28,51 @@ describe('BlockQuote', () => {
       </>,
     )
     expect(res).toBe(`Text
->Block Quote Text
->>Nest Block Quote Text1
->>>Nest Block Quote Text2
->>>>Nest Block Quote Text3`)
+> Block Quote Text<br/>
+>> Nest Block Quote Text1<br/>
+>>> Nest Block Quote Text2<br/>
+>>>> Nest Block Quote Text3<br/>`)
+  })
+
+  it('multiple line', () => {
+    const res = render(
+      <>
+        Text
+        <BlockQuote>
+          {`first line
+second line
+third line          `}
+        </BlockQuote>
+      </>,
+    )
+    expect(res).toBe(`Text
+> first line<br/>
+> second line<br/>
+> third line          <br/>`)
+  })
+
+  it('multiple line nest', () => {
+    const res = render(
+      <>
+        Text
+        <BlockQuote>
+          {`first line
+second line
+third line`}
+          <BlockQuote>
+            {`nested first line
+nested second line
+nested third line           `}
+          </BlockQuote>
+        </BlockQuote>
+      </>,
+    )
+    expect(res).toBe(`Text
+> first line<br/>
+> second line<br/>
+> third line<br/>
+>> nested first line<br/>
+>> nested second line<br/>
+>> nested third line           <br/>`)
   })
 })

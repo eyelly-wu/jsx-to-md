@@ -203,5 +203,15 @@
   "上述节点渲染结果对比：": "Comparison of rendering results of the above nodes:",
   "简化{0}组件的{1}属性{2}类型定义": "Simplify the {1} attribute {2} type definition of the {0} component",
   "优化在{0}上执行{1}命令时解析路径错误": "Optimize parsing path error when executing {1} command on {0}",
-  "增强对{0}元素渲染的支持": "Enhance support for rendering {0} elements"
+  "增强对{0}元素渲染的支持": "Enhance support for rendering {0} elements",
+  "该属性针对{0}有效": "This attribute is valid for {0}",
+  "换行的行数": "The number of line breaks",
+  "{0}添加{1}属性支持灵活设置换行": "Add {1} property to {0} for flexible line breaks",
+  "修复{0}对于多行文本渲染的问题": "Fix the issue of {0} rendering multi line text",
+  "示例": "Example",
+  "第一行文本": "First line of text",
+  "第二行文本": "Second line of text",
+  "{0}生成的内容：": "Content generated {0}:",
+  "修复前": "before fix",
+  "修复后": "after fix"
 }

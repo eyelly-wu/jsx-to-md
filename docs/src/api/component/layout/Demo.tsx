@@ -8,8 +8,7 @@ export default function () {
       efg
       <Break />
       hij
-      <Break />
-      <Break />
+      <Break lines={3} />
       klm
       <HorizontalRule />
       <HorizontalRule mark="*" />

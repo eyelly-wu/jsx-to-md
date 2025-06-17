@@ -151,7 +151,8 @@ Layout related components are provided here
 
 |Attribute Name|Type|Whether it is necessary|Default|description|
 |:-:|:-:|:-:|:-:|:-|
-|mark|`'_'` \| `'-'` \| `'*'`|No|`'_'`|Generate markers corresponding to Markdown syntax<br /><br />This property is not valid for  `Break` |
+|mark|`'_'` \| `'-'` \| `'*'`|No|`'_'`|Generate markers corresponding to Markdown syntax<br /><br />This attribute is valid for  `HorizontalRule` |
+|lines|number|No|`1`|The number of line breaks<br /><br />This attribute is valid for  `Break` |
 
 <h4 id="layout-sample-code">Sample Code</h4>
 
@@ -169,8 +170,7 @@ export default function () {
       efg
       <Break />
       hij
-      <Break />
-      <Break />
+      <Break lines={3} />
       klm
       <HorizontalRule />
       <HorizontalRule mark="*" />
@@ -189,6 +189,7 @@ abc
 efg
 hij
 
+
 klm
 ___
 
@@ -206,6 +207,7 @@ new line
 abc
 efg
 hij
+
 
 klm
 ___
@@ -452,12 +454,12 @@ export default function () {
 
 
 ```markdown
->General reference
+> General reference<br/>
 
->Nested Reference
->>Nest Block Quote Text1
->>>Nest Block Quote Text2
->>>>Nest Block Quote Text3
+> Nested Reference<br/>
+>> Nest Block Quote Text1<br/>
+>>> Nest Block Quote Text2<br/>
+>>>> Nest Block Quote Text3<br/>
 ```
 
 
@@ -466,12 +468,12 @@ export default function () {
     <summary>Render Content</summary>
 
 
->General reference
+> General reference<br/>
 
->Nested Reference
->>Nest Block Quote Text1
->>>Nest Block Quote Text2
->>>>Nest Block Quote Text3
+> Nested Reference<br/>
+>> Nest Block Quote Text1<br/>
+>>> Nest Block Quote Text2<br/>
+>>>> Nest Block Quote Text3<br/>
 
 
   </details>

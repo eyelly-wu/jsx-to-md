@@ -20,7 +20,21 @@ export default function Layout() {
               {t('生成对应 Markdown 语法的标记符')}
               <br />
               <br />
-              {t('该属性针对{0}无效', ' `Break` ')}
+              {t('该属性针对{0}有效', ' `HorizontalRule` ')}
+            </>
+          ),
+        },
+        {
+          name: 'lines',
+          type: 'number',
+          required: t('否'),
+          default: '`1`',
+          description: (
+            <>
+              {t('换行的行数')}
+              <br />
+              <br />
+              {t('该属性针对{0}有效', ' `Break` ')}
             </>
           ),
         },

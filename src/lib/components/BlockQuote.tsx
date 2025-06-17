@@ -6,9 +6,5 @@ type BlockQuoteProps = {
 }
 
 export default function BlockQuote(props: BlockQuoteProps) {
-  const { level = 1 } = props
-  return (
-    <>{`
-${Array(level).fill('>').join('')}`}</>
-  )
+  return <></>
 }

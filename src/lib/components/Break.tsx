@@ -1,5 +1,10 @@
 import React from '../index'
 
-export default function Break() {
-  return <>{'\n'}</>
+export interface BreakProps {
+  lines?: number
+}
+
+export default function Break(props: BreakProps) {
+  const { lines = 1 } = props
+  return <>{'\n'.repeat(lines)}</>
 }
