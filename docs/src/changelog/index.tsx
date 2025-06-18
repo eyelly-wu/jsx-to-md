@@ -7,7 +7,7 @@ import React, {
   render,
   TableOfContents,
 } from '@lib'
-import renderLanguage, { initI18N } from '../utils'
+import { initI18N, renderLanguage, getText } from '../utils'
 import BaseChangeLog from './ChangeLog'
 
 function V_0_8_6() {
@@ -315,6 +315,7 @@ function V_0_12_0() {
     />
   )
 }
+
 function V_0_12_1() {
   return (
     <BaseChangeLog
@@ -359,6 +360,62 @@ ${t('第二行文本')}`}
   )
 }
 
+function V_0_12_2() {
+  return (
+    <BaseChangeLog
+      version="0.12.2"
+      date="2025-06-18"
+      api={{
+        removed: [
+          'U',
+          t('{0}移除{1}属性', getText('BlockQuote'), getText('level')),
+        ],
+        fixed: [
+          'U',
+          [
+            t('修复以下场景生成目录在{0}中导航不正确', ' `Github` '),
+            [
+              'U',
+              t('标题中存在{0}', getText(':')),
+              t('标题中存在{0}', getText('：')),
+            ],
+          ],
+          [
+            t('修复{0}对于多行文本渲染的问题', ' `BlockQuote` '),
+            [
+              'U',
+              <>
+                <Bold>{t('示例')}</Bold>
+                <CodeBlock
+                  langType="jsx"
+                  code={`<BlockQuote>
+  {\`${t('第一行文本')}
+
+${t('第二行文本')}\`}
+</BlockQuote>`}
+                />
+                <p>{t('{0}生成的内容：', t('修复前'))}</p>
+                <Break lines={2} />
+                {`> ${t('第一行文本')}
+
+> ${t('第二行文本')}`}
+                <Break lines={2} />
+                <p>{t('{0}生成的内容：', t('修复后'))}</p>
+                <Break />
+                <BlockQuote>
+                  {`${t('第一行文本')}
+
+${t('第二行文本')}`}
+                </BlockQuote>
+              </>,
+            ],
+          ],
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -367,6 +424,7 @@ export default function ChangeLog(props) {
       <H1 skip>{t('更新日志')}</H1>
       {renderLanguage('CHANGELOG')}
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_12_2 />
       <V_0_12_1 />
       <V_0_12_0 />
       <V_0_11_6 />

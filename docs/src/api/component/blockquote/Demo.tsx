@@ -7,11 +7,11 @@ export default function () {
       <Break />
       <BlockQuote>
         {t('嵌套引用')}
-        <BlockQuote level={2}>
+        <BlockQuote>
           Nest Block Quote Text1
-          <BlockQuote level={3}>
+          <BlockQuote>
             Nest Block Quote Text2
-            <BlockQuote level={4}>Nest Block Quote Text3</BlockQuote>
+            <BlockQuote>Nest Block Quote Text3</BlockQuote>
           </BlockQuote>
         </BlockQuote>
       </BlockQuote>

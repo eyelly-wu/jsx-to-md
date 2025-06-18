@@ -8,7 +8,7 @@ export function getAnchor(text: string): string {
       .replaceAll('`', ' ')
       .replace(/ +$/, '')
       .replace(/ +/g, '-')
-      .replace(/(\[)|(\])|[.()（）?？,，']|(\*\*)/g, '')
+      .replace(/(\[)|(\])|[.()（）?？,，':：]|(\*\*)/g, '')
   )
 }
 

@@ -81,7 +81,6 @@
   "普通引用": "General reference",
   "嵌套引用": "Nested Reference",
   "引用块": "Block Quote",
-  "层级，适用于多层嵌套的场景": "Hierarchy, suitable for multi nested scenes",
   "行内代码": "Inline code",
   "代码块": "Code block",
   "代码内容": "Code content",
@@ -213,5 +212,6 @@
   "第二行文本": "Second line of text",
   "{0}生成的内容：": "Content generated {0}:",
   "修复前": "before fix",
-  "修复后": "after fix"
+  "修复后": "after fix",
+  "{0}移除{1}属性": "Remove {1} property from {0}"
 }

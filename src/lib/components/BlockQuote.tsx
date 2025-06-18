@@ -1,7 +1,6 @@
 import React from '.././index'
 
 type BlockQuoteProps = {
-  level?: number
   children: string | unknown
 }
 

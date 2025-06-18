@@ -2,12 +2,16 @@
 # Changelog
 
 
-English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/docs/dist/CHANGELOG_zh-CN.md)
+English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.2/docs/dist/CHANGELOG_zh-CN.md)
 
 
 <details >
   <summary>Table of Contents</summary>
 
+  &emsp;&emsp;[[0.12.2] - 2025-06-18](#0122---2025-06-18)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0122-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0122-api-fixed)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Removed](#0122-api-removed)<br/>
   &emsp;&emsp;[[0.12.1] - 2025-06-17](#0121---2025-06-17)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0121-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0121-api-added)<br/>
@@ -64,6 +68,42 @@ English | [简体中文](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/doc
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.12.2] - 2025-06-18
+
+<h3 id="0122-api">API</h3>
+
+<h4 id="0122-api-fixed">Fixed</h4>
+
+* Fix incorrect navigation of the generated directory in  `Github`  for the following scenarios
+   *  `:`  exists in the title
+   *  `：`  exists in the title
+* Fix the issue of  `BlockQuote`  rendering multi line text
+   * **Example**
+```jsx
+<BlockQuote>
+  {`First line of text
+
+Second line of text`}
+</BlockQuote>
+```
+<p>Content generated before fix:</p>
+
+> First line of text
+
+> Second line of text
+
+<p>Content generated after fix:</p>
+
+> First line of text<br/>
+>
+> Second line of text<br/>
+
+
+<h4 id="0122-api-removed">Removed</h4>
+
+* Remove  `level`  property from  `BlockQuote` 
+
 
 ## [0.12.1] - 2025-06-17
 

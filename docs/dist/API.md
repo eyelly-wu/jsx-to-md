@@ -22,7 +22,6 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#font-sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Block Quote](#block-quote)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#block-quote-component-list)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Attribute Description](#block-quote-attribute-description)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Sample Code](#block-quote-sample-code)<br/>
   &emsp;&emsp;&emsp;&emsp;[Code](#code)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Component List](#code-component-list)<br/>
@@ -416,12 +415,6 @@ export default function () {
 * BlockQuote
 
 
-<h4 id="block-quote-attribute-description">Attribute Description</h4>
-
-|Attribute Name|Type|Whether it is necessary|Default|description|
-|:-:|:-:|:-:|:-:|:-|
-|level|number|false|1|Hierarchy, suitable for multi nested scenes|
-
 <h4 id="block-quote-sample-code">Sample Code</h4>
 
 <details open="true">
@@ -437,11 +430,11 @@ export default function () {
       <Break />
       <BlockQuote>
         Nested Reference
-        <BlockQuote level={2}>
+        <BlockQuote>
           Nest Block Quote Text1
-          <BlockQuote level={3}>
+          <BlockQuote>
             Nest Block Quote Text2
-            <BlockQuote level={4}>Nest Block Quote Text3</BlockQuote>
+            <BlockQuote>Nest Block Quote Text3</BlockQuote>
           </BlockQuote>
         </BlockQuote>
       </BlockQuote>

@@ -9,15 +9,7 @@ export default function BlockQuote() {
       title={t('引用块')}
       intro={null}
       componentList={['U', 'BlockQuote']}
-      propertyDescription={[
-        {
-          name: 'level',
-          type: 'number',
-          required: 'false',
-          default: 1,
-          description: <>{t('层级，适用于多层嵌套的场景')}</>,
-        },
-      ]}
+      propertyDescription={[]}
       demoCodePath={join(__dirname, 'Demo.tsx')}
       DemoComponent={Demo}
     />

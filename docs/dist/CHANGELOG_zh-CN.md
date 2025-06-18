@@ -2,12 +2,16 @@
 # 更新日志
 
 
-[English](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.1/docs/dist/CHANGELOG.md) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.2/docs/dist/CHANGELOG.md) | 简体中文
 
 
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.12.2] - 2025-06-18](#0122---2025-06-18)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0122-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0122-api-fixed)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Removed](#0122-api-removed)<br/>
   &emsp;&emsp;[[0.12.1] - 2025-06-17](#0121---2025-06-17)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0121-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#0121-api-added)<br/>
@@ -64,6 +68,42 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.12.2] - 2025-06-18
+
+<h3 id="0122-api">API</h3>
+
+<h4 id="0122-api-fixed">Fixed</h4>
+
+* 修复以下场景生成目录在 `Github` 中导航不正确
+   * 标题中存在 `:` 
+   * 标题中存在 `：` 
+* 修复 `BlockQuote` 对于多行文本渲染的问题
+   * **示例**
+```jsx
+<BlockQuote>
+  {`第一行文本
+
+第二行文本`}
+</BlockQuote>
+```
+<p>修复前生成的内容：</p>
+
+> 第一行文本
+
+> 第二行文本
+
+<p>修复后生成的内容：</p>
+
+> 第一行文本<br/>
+>
+> 第二行文本<br/>
+
+
+<h4 id="0122-api-removed">Removed</h4>
+
+*  `BlockQuote` 移除 `level` 属性
+
 
 ## [0.12.1] - 2025-06-17
 

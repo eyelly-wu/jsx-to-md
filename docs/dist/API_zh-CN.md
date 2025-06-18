@@ -22,7 +22,6 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[示例代码](#字体-示例代码)<br/>
   &emsp;&emsp;&emsp;&emsp;[引用块](#引用块)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[组件列表](#引用块-组件列表)<br/>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[属性说明](#引用块-属性说明)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[示例代码](#引用块-示例代码)<br/>
   &emsp;&emsp;&emsp;&emsp;[代码](#代码)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[组件列表](#代码-组件列表)<br/>
@@ -416,12 +415,6 @@ export default function () {
 * BlockQuote
 
 
-<h4 id="引用块-属性说明">属性说明</h4>
-
-|属性名|类型|是否必须|默认值|说明|
-|:-:|:-:|:-:|:-:|:-|
-|level|number|false|1|层级，适用于多层嵌套的场景|
-
 <h4 id="引用块-示例代码">示例代码</h4>
 
 <details open="true">
@@ -437,11 +430,11 @@ export default function () {
       <Break />
       <BlockQuote>
         嵌套引用
-        <BlockQuote level={2}>
+        <BlockQuote>
           Nest Block Quote Text1
-          <BlockQuote level={3}>
+          <BlockQuote>
             Nest Block Quote Text2
-            <BlockQuote level={4}>Nest Block Quote Text3</BlockQuote>
+            <BlockQuote>Nest Block Quote Text3</BlockQuote>
           </BlockQuote>
         </BlockQuote>
       </BlockQuote>

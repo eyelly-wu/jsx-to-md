@@ -42,8 +42,14 @@ export default function Template(props: TemplateProps) {
       {intro}
       <H4 id={getId(componentListTitle)}>{componentListTitle}</H4>
       <List items={componentList} />
-      <H4 id={getId(propertyDescriptionTitle)}>{propertyDescriptionTitle}</H4>
-      <Table columns={getComponentColumns()} data={propertyDescription} />
+      {propertyDescription.length && (
+        <>
+          <H4 id={getId(propertyDescriptionTitle)}>
+            {propertyDescriptionTitle}
+          </H4>
+          <Table columns={getComponentColumns()} data={propertyDescription} />
+        </>
+      )}
       {typeof getTypeDescription === 'function' ? (
         <>
           <H4 id={getId(typeDescriptionTitle)}>{typeDescriptionTitle}</H4>

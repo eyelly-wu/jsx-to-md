@@ -128,14 +128,14 @@ export default function renderElement(
           (index === 0 ? '\n' : '') +
           renderStr
             .split('\n')
-            .map((item) => {
+            .map((item, mapIndex) => {
               let prefix = '> '
               let suffix = '<br/>'
 
               if (item.startsWith('>')) {
                 prefix = '>'
               } else if (item === '') {
-                prefix = ''
+                prefix = index === 1 && mapIndex === 0 ? '' : '>'
               }
 
               if (item.endsWith('<br/>') || item === '') {

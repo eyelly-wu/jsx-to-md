@@ -27,6 +27,7 @@ describe('BlockQuote', () => {
         </BlockQuote>
       </>,
     )
+
     expect(res).toBe(`Text
 > Block Quote Text<br/>
 >> Nest Block Quote Text1<br/>
@@ -40,14 +41,19 @@ describe('BlockQuote', () => {
         Text
         <BlockQuote>
           {`first line
+
 second line
+
 third line          `}
         </BlockQuote>
       </>,
     )
+
     expect(res).toBe(`Text
 > first line<br/>
+>
 > second line<br/>
+>
 > third line          <br/>`)
   })
 
