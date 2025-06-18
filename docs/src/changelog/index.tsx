@@ -416,6 +416,24 @@ ${t('第二行文本')}`}
   )
 }
 
+function V_0_12_3() {
+  return (
+    <BaseChangeLog
+      version="0.12.3"
+      date="2025-06-18"
+      api={{
+        fixed: [
+          'U',
+          [
+            t('修复以下场景生成目录在{0}中导航不正确', ' `Github` '),
+            ['U', t('标题中存在{0}', getText('@'))],
+          ],
+        ],
+      }}
+    />
+  )
+}
+
 export default function ChangeLog(props) {
   initI18N(props)
 
@@ -424,6 +442,7 @@ export default function ChangeLog(props) {
       <H1 skip>{t('更新日志')}</H1>
       {renderLanguage('CHANGELOG')}
       <TableOfContents text={t('目录')} open={false} />
+      <V_0_12_3 />
       <V_0_12_2 />
       <V_0_12_1 />
       <V_0_12_0 />

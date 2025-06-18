@@ -24,6 +24,7 @@ describe('utils', () => {
       'a,，，，,b': '#ab',
       '2025-06-18 14:56:42': '#2025-06-18-145642',
       '2025-06-18 14：56：42': '#2025-06-18-145642',
+      'eyelly.wu@gmail.com': '#eyellywugmailcom',
     }
     Object.entries(textExpectResMap).forEach(([t, r]) => {
       expect(getAnchor(t)).toBe(r)

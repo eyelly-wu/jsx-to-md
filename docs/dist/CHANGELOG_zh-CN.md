@@ -2,12 +2,15 @@
 # 更新日志
 
 
-[English](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.2/docs/dist/CHANGELOG.md) | 简体中文
+[English](https://github.com/eyelly-wu/jsx-to-md/blob/v0.12.3/docs/dist/CHANGELOG.md) | 简体中文
 
 
 <details >
   <summary>目录</summary>
 
+  &emsp;&emsp;[[0.12.3] - 2025-06-18](#0123---2025-06-18)<br/>
+  &emsp;&emsp;&emsp;&emsp;[API](#0123-api)<br/>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0123-api-fixed)<br/>
   &emsp;&emsp;[[0.12.2] - 2025-06-18](#0122---2025-06-18)<br/>
   &emsp;&emsp;&emsp;&emsp;[API](#0122-api)<br/>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Fixed](#0122-api-fixed)<br/>
@@ -68,6 +71,16 @@
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Added](#086-api-added)<br/>
 
 </details>
+
+## [0.12.3] - 2025-06-18
+
+<h3 id="0123-api">API</h3>
+
+<h4 id="0123-api-fixed">Fixed</h4>
+
+* 修复以下场景生成目录在 `Github` 中导航不正确
+   * 标题中存在 `@` 
+
 
 ## [0.12.2] - 2025-06-18
 
