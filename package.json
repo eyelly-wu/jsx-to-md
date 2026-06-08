@@ -50,7 +50,7 @@
     "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
     "rimraf": "^3.0.2",
-    "vitest": "^0.23.4"
+    "vitest": "^3.2.6"
   },
   "dependencies": {
     "@types/node": "^18.11.10",
